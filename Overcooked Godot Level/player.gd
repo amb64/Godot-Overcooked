@@ -19,7 +19,7 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("move_left","move_right","move_forward","move_back")
+	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
@@ -29,20 +29,3 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-	
-func _on_interact_range_entered(body):
-	pass
-		
-func pick_up_object(item):
-	print("Picking up item.")
-	add_child(item)
-	item.translation = Vector3(0, 2, 0)
-
-
-func _on_interaction_area_body_entered(body):
-	print("Collision")
-	if Input.is_action_just_pressed("interact") and body.is_in_group("Items"):
-		print("Interacting with item!")
-		body = body.get_parent()
-		body = body.get_parent()
-		pick_up_object(body)
