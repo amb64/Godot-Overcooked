@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckywmkltisw3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgnvj"]
+albedo_color = Color(0.988235, 0.894118, 0.905882, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_82ys3"]
+material = SubResource("StandardMaterial3D_cgnvj")
+size = Vector3(1.5, 1, 4)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ni335"]
+data = PackedVector3Array(-0.75, 0.5, 2, 0.75, 0.5, 2, -0.75, -0.5, 2, 0.75, 0.5, 2, 0.75, -0.5, 2, -0.75, -0.5, 2, 0.75, 0.5, -2, -0.75, 0.5, -2, 0.75, -0.5, -2, -0.75, 0.5, -2, -0.75, -0.5, -2, 0.75, -0.5, -2, 0.75, 0.5, 2, 0.75, 0.5, -2, 0.75, -0.5, 2, 0.75, 0.5, -2, 0.75, -0.5, -2, 0.75, -0.5, 2, -0.75, 0.5, -2, -0.75, 0.5, 2, -0.75, -0.5, -2, -0.75, 0.5, 2, -0.75, -0.5, 2, -0.75, -0.5, -2, 0.75, 0.5, 2, -0.75, 0.5, 2, 0.75, 0.5, -2, -0.75, 0.5, 2, -0.75, 0.5, -2, 0.75, 0.5, -2, -0.75, -0.5, 2, 0.75, -0.5, 2, -0.75, -0.5, -2, 0.75, -0.5, 2, 0.75, -0.5, -2, -0.75, -0.5, -2)
+
+[node name="ServingArea" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_82ys3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ni335")
