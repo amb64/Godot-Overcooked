@@ -41,7 +41,6 @@ func _on_body_entered(body:Node3D):
 	if(counterHolder.get_child_count() < 1):
 		return
 	
-	print("i swear to fuck")
 	counterItem = counterHolder.get_child(0)
 
 func _on_body_exited(body:Node3D):
