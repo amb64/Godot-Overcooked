@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://1g4sfq7jeix7"]
+
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://interaction/counter/counter.tscn" id="1_lbaci"]
+[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://interaction/item/item.tscn" id="2_7s4cu"]
+
+[node name="CounterItem" instance=ExtResource("1_lbaci")]
+
+[node name="Item" parent="ItemHolder" index="0" instance=ExtResource("2_7s4cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139168, 0.385809, -0.0933194)
