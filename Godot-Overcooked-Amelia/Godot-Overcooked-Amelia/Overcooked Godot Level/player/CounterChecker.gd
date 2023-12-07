@@ -16,13 +16,13 @@ func _ready():
 func _process(delta):
 	var isInteracting : bool = Input.is_action_just_pressed("interact")
 	#pickup
-	if(isInteracting && overCounter && !holdingItem):
+	if(isInteracting && overCounter && !holdingItem && counter_has_item()):
 		counterItem.reparent(playerHolder, false)
 		holdingItem = true
 		pass
 
 	#drop
-	elif(isInteracting && overCounter && holdingItem):
+	elif(isInteracting && overCounter && holdingItem && !counter_has_item()):
 		counterItem.reparent(counterHolder, false)
 		holdingItem = false
 		pass
@@ -51,3 +51,5 @@ func _on_body_exited(body:Node3D):
 	print("exited")
 	overCounter = false
 	
+func counter_has_item() -> bool:
+	return counterHolder.get_child_count() > 0
