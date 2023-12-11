@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c2636bqje3hxa"]
+[gd_scene load_steps=36 format=3 uid="uid://c2636bqje3hxa"]
 
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player.tscn" id="1_hlot7"]
 [ext_resource type="PackedScene" uid="uid://cto1vwvno0fm2" path="res://prefabs/counter.tscn" id="3_1o407"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cqoagqrwg7ebh" path="res://prefabs/serving_area.tscn" id="6_kqpmn"]
 [ext_resource type="PackedScene" uid="uid://b6amgk4aeajni" path="res://prefabs/bin.tscn" id="7_xp1m1"]
 [ext_resource type="PackedScene" uid="uid://byusqjg426ti" path="res://prefabs/plate_return.tscn" id="8_4o3cx"]
+[ext_resource type="Material" uid="uid://bnkpxx0lof1gc" path="res://prefabs/Grid.tres" id="9_eobkp"]
 
 [sub_resource type="Gradient" id="Gradient_e7fpw"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
@@ -86,6 +87,18 @@ data = PackedVector3Array(0, 0.05, 0, 0, 0.05, 0, 0, 0.047, 0.171, 0, 0.05, 0, 0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5lviq"]
 data = PackedVector3Array(-1.75, 0.05, 0.5, 1.75, 0.05, 0.5, -1.75, -0.05, 0.5, 1.75, 0.05, 0.5, 1.75, -0.05, 0.5, -1.75, -0.05, 0.5, 1.75, 0.05, -0.5, -1.75, 0.05, -0.5, 1.75, -0.05, -0.5, -1.75, 0.05, -0.5, -1.75, -0.05, -0.5, 1.75, -0.05, -0.5, 1.75, 0.05, 0.5, 1.75, 0.05, -0.5, 1.75, -0.05, 0.5, 1.75, 0.05, -0.5, 1.75, -0.05, -0.5, 1.75, -0.05, 0.5, -1.75, 0.05, -0.5, -1.75, 0.05, 0.5, -1.75, -0.05, -0.5, -1.75, 0.05, 0.5, -1.75, -0.05, 0.5, -1.75, -0.05, -0.5, 1.75, 0.05, 0.5, -1.75, 0.05, 0.5, 1.75, 0.05, -0.5, -1.75, 0.05, 0.5, -1.75, 0.05, -0.5, 1.75, 0.05, -0.5, -1.75, -0.05, 0.5, 1.75, -0.05, 0.5, -1.75, -0.05, -0.5, 1.75, -0.05, 0.5, 1.75, -0.05, -0.5, -1.75, -0.05, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k3b40"]
+material = ExtResource("9_eobkp")
+size = Vector3(20, 0.1, 13)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1vtyx"]
+material = ExtResource("9_eobkp")
+size = Vector3(0.1, 0.1, 13)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wf1qi"]
+material = ExtResource("9_eobkp")
+size = Vector3(20, 0.1, 0.1)
 
 [node name="Node3D" type="Node3D"]
 
@@ -312,3 +325,149 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 1,
 
 [node name="Plate_Return" parent="." instance=ExtResource("8_4o3cx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, 2)
+
+[node name="Grid" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("BoxMesh_k3b40")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Grid"]
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+mesh = SubResource("BoxMesh_1vtyx")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="Grid"]
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+mesh = SubResource("BoxMesh_wf1qi")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="Grid"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+mesh = SubResource("BoxMesh_wf1qi")
