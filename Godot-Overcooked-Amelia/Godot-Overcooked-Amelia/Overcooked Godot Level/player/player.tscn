@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn6g4khocwvw1"]
+[gd_scene load_steps=9 format=3 uid="uid://dn6g4khocwvw1"]
 
 [ext_resource type="Script" path="res://player/RigidBody3DController.gd" id="1_526f1"]
 [ext_resource type="Script" path="res://player/CounterChecker.gd" id="2_ee83l"]
@@ -11,7 +11,12 @@ material = SubResource("StandardMaterial3D_3nxyb")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ol63t"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wgcf"]
+transparency = 1
+albedo_color = Color(0, 0.67451, 0, 0.247059)
+
 [sub_resource type="BoxMesh" id="BoxMesh_epkss"]
+material = SubResource("StandardMaterial3D_1wgcf")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_24dg6"]
 
@@ -41,6 +46,7 @@ playerHolder = NodePath("../ItemHolder")
 shape = SubResource("BoxShape3D_ol63t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/Director/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_epkss")
 
 [node name="ItemHolder" type="Node3D" parent="RigidBody3D/Director"]

@@ -44,7 +44,6 @@ func _on_body_entered(body:Node3D):
 	
 	var count = counterHolder.get_child_count()
 	counterItem = counterHolder.get_child(count-1) #get last item
-	(counterItem as Node3D).translate(Vector3(0,-count+1,0))
 
 func _on_body_exited(body:Node3D):
 	if(body.name != "CounterBody"):
@@ -56,8 +55,11 @@ func counter_has_item() -> bool:
 	return counterHolder.get_child_count() > 0
 
 func pickup():
-	counterItem.reparent(playerHolder, false)
 	holdingItem = true
+
+	counterItem.position.y -= counterItem.position.y
+
+	counterItem.reparent(playerHolder, false)
 
 func drop():
 	if(counter_has_item() && !isMultiCounter):
@@ -65,6 +67,6 @@ func drop():
 
 	var count = counterHolder.get_child_count()
 	playerHolder.get_child(0).reparent(counterHolder, false) #if .getchild is somehow null then i will not be happy
-	(counterHolder.get_child(count) as Node3D).translate(Vector3(0,count,0))
+	(counterHolder.get_child(count) as Node3D).position.y += count
 
 	holdingItem = false
