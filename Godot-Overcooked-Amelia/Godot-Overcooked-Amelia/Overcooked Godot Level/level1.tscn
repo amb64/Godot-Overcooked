@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bccj7fr5yjkss"]
+[gd_scene load_steps=15 format=3 uid="uid://bccj7fr5yjkss"]
 
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="1_gek5r"]
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://interaction/counter/counter.tscn" id="1_udar4"]
-[ext_resource type="PackedScene" uid="uid://1g4sfq7jeix7" path="res://interaction/counter/counter_item.tscn" id="3_g8y61"]
+[ext_resource type="PackedScene" uid="uid://cg51vq4mj08jo" path="res://interaction/counter/counterItem.tscn" id="2_hidjo"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://interaction/counter/counter.tscn" id="3_g8y61"]
+[ext_resource type="PackedScene" uid="uid://oac5k1mlv7ti" path="res://interaction/counter/counterMulti.tscn" id="3_s4d4s"]
 
 [sub_resource type="Gradient" id="Gradient_qfw53"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
@@ -101,13 +102,17 @@ shape = SubResource("ConcavePolygonShape3D_qdhq8")
 
 [node name="Counters" type="Node3D" parent="Level"]
 
-[node name="Counter" parent="Level/Counters" instance=ExtResource("1_udar4")]
+[node name="Counter" parent="Level/Counters" instance=ExtResource("3_g8y61")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, -5.47966)
 
-[node name="CounterItem" parent="Level/Counters" instance=ExtResource("3_g8y61")]
-transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, -2.63618, 1.01524, -5.51779)
-visibility_parent = NodePath(".")
-skeleton = NodePath("../../..")
+[node name="Counter2" parent="Level/Counters" instance=ExtResource("2_hidjo")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.28587, 0.986009, -5.2789)
+
+[node name="Counter3" parent="Level/Counters" instance=ExtResource("2_hidjo")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.33823, 0.965785, -5.26292)
+
+[node name="Counter4" parent="Level/Counters" instance=ExtResource("3_s4d4s")]
+transform = Transform3D(0.000980536, -0.00285788, -0.999995, -0.000978964, 0.999995, -0.00285884, 0.999999, 0.000981749, 0.000977747, 3.4684, 1, -5.52889)
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 9.83267, 6.7)
