@@ -1,12 +1,11 @@
-[gd_scene load_steps=30 format=3 uid="uid://c2636bqje3hxa"]
+[gd_scene load_steps=29 format=3 uid="uid://c2636bqje3hxa"]
 
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="1_hlot7"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/interaction/counter/counter.tscn" id="1_t7t6c"]
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://prefabs/plate.tscn" id="3_ex4y8"]
 [ext_resource type="PackedScene" uid="uid://bobro4nwx8ysr" path="res://prefabs/cutting_board.tscn" id="4_8i1pa"]
-[ext_resource type="PackedScene" uid="uid://2ya7ebrxext7" path="res://prefabs/ingredient_boxes/salmon_box.tscn" id="5_qul6r"]
+[ext_resource type="PackedScene" uid="uid://bmpvrrravsrmb" path="res://prefabs/ingredient_boxes/plain.tscn" id="5_mghh2"]
 [ext_resource type="PackedScene" uid="uid://cqoagqrwg7ebh" path="res://prefabs/serving_area.tscn" id="6_kqpmn"]
-[ext_resource type="PackedScene" uid="uid://c1xwvy5yqxvp4" path="res://prefabs/ingredient_boxes/tuna_box.tscn" id="6_rb211"]
 [ext_resource type="PackedScene" uid="uid://b6amgk4aeajni" path="res://prefabs/bin.tscn" id="7_xp1m1"]
 [ext_resource type="PackedScene" uid="uid://byusqjg426ti" path="res://prefabs/plate_return.tscn" id="8_4o3cx"]
 [ext_resource type="Material" uid="uid://bnkpxx0lof1gc" path="res://prefabs/Grid.tres" id="9_eobkp"]
@@ -211,10 +210,10 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0.
 
 [node name="Ingredient Boxes" type="Node" parent="Level"]
 
-[node name="Salmon_Box" parent="Level/Ingredient Boxes" groups=["box"] instance=ExtResource("5_qul6r")]
+[node name="Salmon Box" parent="Level/Ingredient Boxes" groups=["salmon"] instance=ExtResource("5_mghh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, 2)
 
-[node name="Tuna_Box" parent="Level/Ingredient Boxes" groups=["box"] instance=ExtResource("6_rb211")]
+[node name="Tuna Box" parent="Level/Ingredient Boxes" groups=["tuna"] instance=ExtResource("5_mghh2")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 0.5, 5)
 
 [node name="Serving_Area" parent="Level" instance=ExtResource("6_kqpmn")]

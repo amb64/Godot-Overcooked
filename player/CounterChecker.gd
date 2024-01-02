@@ -1,6 +1,7 @@
 extends Area3D
 
 @export var playerHolder : Node3D
+var counterParent : Node3D
 var counterHolder : Node3D
 var counterItem : Node3D
 var playerItem : Node3D
@@ -26,6 +27,12 @@ func _process(delta):
 	elif(isInteracting && overCounter && holdingItem):
 		drop()
 		pass
+		
+	#interacting with item box - spawn an item
+	elif(isInteracting && overCounter && !counter_has_item() && isbox()):
+		var item = counterParent.spawn()
+		item.reparent(counterHolder, false)
+		pass
 
 
 
@@ -34,7 +41,8 @@ func _on_body_entered(body:Node3D):
 		return
 	
 	overCounter = true
-	var counterParent : Node3D = body.get_parent().get_parent()
+	#var counterParent : Node3D = body.get_parent().get_parent()
+	counterParent = body.get_parent().get_parent()
 	counterHolder = counterParent.get_child(0)
 
 	isMultiCounter = counterHolder.name == "MultiItemHolder"
@@ -70,3 +78,6 @@ func drop():
 	(counterHolder.get_child(count) as Node3D).position.y += count
 
 	holdingItem = false
+	
+func isbox():
+	return counterParent.is_in_group("box")

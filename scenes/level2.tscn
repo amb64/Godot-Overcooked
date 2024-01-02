@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://prefabs/plate.tscn" id="3_6hl5f"]
 [ext_resource type="PackedScene" uid="uid://b6amgk4aeajni" path="res://prefabs/bin.tscn" id="3_ewt3i"]
 [ext_resource type="PackedScene" uid="uid://bobro4nwx8ysr" path="res://prefabs/cutting_board.tscn" id="3_r21oq"]
-[ext_resource type="PackedScene" uid="uid://bmpvrrravsrmb" path="res://prefabs/ingredient_box.tscn" id="5_gojqp"]
+[ext_resource type="PackedScene" uid="uid://bmpvrrravsrmb" path="res://prefabs/ingredient_boxes/plain.tscn" id="5_gojqp"]
 [ext_resource type="PackedScene" uid="uid://cqoagqrwg7ebh" path="res://prefabs/serving_area.tscn" id="6_18qry"]
 [ext_resource type="PackedScene" uid="uid://byusqjg426ti" path="res://prefabs/plate_return.tscn" id="7_k1ujk"]
 [ext_resource type="PackedScene" uid="uid://cbtpp5y1ag055" path="res://prefabs/grid.tscn" id="9_yhncx"]
