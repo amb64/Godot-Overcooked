@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bccj7fr5yjkss"]
+[gd_scene load_steps=16 format=3 uid="uid://bccj7fr5yjkss"]
 
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="1_gek5r"]
+[ext_resource type="PackedScene" uid="uid://b2wilj06v76dm" path="res://interaction/counter/counterItem2.tscn" id="2_cdhao"]
 [ext_resource type="PackedScene" uid="uid://cg51vq4mj08jo" path="res://interaction/counter/counterItem.tscn" id="2_hidjo"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://interaction/counter/counter.tscn" id="3_g8y61"]
+[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://interaction/item/item.tscn" id="3_p5po8"]
 
 [sub_resource type="Gradient" id="Gradient_qfw53"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
@@ -102,20 +104,17 @@ shape = SubResource("ConcavePolygonShape3D_qdhq8")
 [node name="Counters" type="Node3D" parent="Level"]
 
 [node name="Counter" parent="Level/Counters" instance=ExtResource("3_g8y61")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.93994, -5.18684)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 1.06316, -5.63589)
 
-[node name="Counter2" parent="Level/Counters" instance=ExtResource("2_hidjo")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.25311, 0.940618, -5.19468)
+[node name="Counter2" parent="Level/Counters" instance=ExtResource("2_cdhao")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.1726, 1, -5.47985)
 
-[node name="Counter3" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("2_hidjo")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.48445, 0.940618, -5.19468)
-item_slots = [NodePath("ItemSlots/Slot1"), NodePath("ItemSlots/Slot2")]
+[node name="Item" parent="Level/Counters/Counter2/ItemSlots/Slot1" index="0" instance=ExtResource("3_p5po8")]
 
-[node name="Slot1" parent="Level/Counters/Counter3/ItemSlots" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.487148, 0.633422)
+[node name="Counter3" parent="Level/Counters" instance=ExtResource("2_hidjo")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, -5.18359)
 
-[node name="Slot2" type="Node3D" parent="Level/Counters/Counter3/ItemSlots" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.487148, -0.50561)
+[node name="Item" parent="Level/Counters/Counter3/ItemSlots/Slot1" index="0" instance=ExtResource("3_p5po8")]
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 9.83267, 6.7)
@@ -123,4 +122,5 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 9.83267
 [node name="Player" parent="." instance=ExtResource("1_gek5r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04341, 0)
 
+[editable path="Level/Counters/Counter2"]
 [editable path="Level/Counters/Counter3"]

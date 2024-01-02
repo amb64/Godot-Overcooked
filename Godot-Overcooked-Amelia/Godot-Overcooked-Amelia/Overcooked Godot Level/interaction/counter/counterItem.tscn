@@ -1,11 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cg51vq4mj08jo"]
+[gd_scene load_steps=2 format=3 uid="uid://cg51vq4mj08jo"]
 
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://interaction/counter/counter.tscn" id="1_e0vdt"]
-[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://interaction/item/item.tscn" id="2_k7tkn"]
 
 [node name="Counter" node_paths=PackedStringArray("item_slots") instance=ExtResource("1_e0vdt")]
-item_slots = [null]
-
-[node name="ItemSlots_Slot1#Item" parent="." index="0" instance=ExtResource("2_k7tkn")]
+item_slots = [NodePath("ItemSlots/Slot1"), NodePath("ItemSlots/Slot2")]
 
 [node name="Slot1" type="Node3D" parent="ItemSlots" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502058, 0.557515)
+
+[node name="Slot2" type="Node3D" parent="ItemSlots" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.472706, -0.763164)
