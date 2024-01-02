@@ -12,6 +12,6 @@ func _process(delta):
 
 
 func spawn():
-	var item = preload("res://prefabs/raw_ingredients/salmon.tscn").instantiate()
+	var item = load("res://prefabs/raw_ingredients/salmon.tscn").instantiate()
 	add_child(item)
 	return item
