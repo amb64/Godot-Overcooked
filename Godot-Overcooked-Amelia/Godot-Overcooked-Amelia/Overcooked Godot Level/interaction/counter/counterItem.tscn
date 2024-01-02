@@ -3,8 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://interaction/counter/counter.tscn" id="1_e0vdt"]
 [ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://interaction/item/item.tscn" id="2_k7tkn"]
 
-[node name="Counter" node_paths=PackedStringArray("item_slots") instance=ExtResource("1_e0vdt")]
-item_slots = [null]
+[node name="Counter" instance=ExtResource("1_e0vdt")]
 
 [node name="ItemSlots_Slot1#Item" parent="." index="0" instance=ExtResource("2_k7tkn")]
 
