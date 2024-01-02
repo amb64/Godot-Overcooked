@@ -43,4 +43,7 @@ func get_item_count() -> int:
 	return slots
 
 func is_slot_occupied(index : int) -> bool:
+	if(item_slots.size()) == 0:
+		return true
+		
 	return item_slots[index].get_child_count() > 0
