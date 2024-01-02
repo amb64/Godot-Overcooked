@@ -101,13 +101,11 @@ shape = SubResource("ConcavePolygonShape3D_qdhq8")
 
 [node name="Counters" type="Node3D" parent="Level"]
 
-[node name="Counter" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_g8y61")]
+[node name="Counter" parent="Level/Counters" instance=ExtResource("3_g8y61")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.93994, -5.18684)
-item_slots = [null]
 
-[node name="Counter2" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("2_hidjo")]
+[node name="Counter2" parent="Level/Counters" instance=ExtResource("2_hidjo")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.25311, 0.940618, -5.19468)
-item_slots = [null]
 
 [node name="Counter3" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("2_hidjo")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.48445, 0.940618, -5.19468)

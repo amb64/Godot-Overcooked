@@ -14,7 +14,7 @@ data = PackedVector3Array(-0.75, 0.5, 1, 0.75, 0.5, 1, -0.75, -0.5, 1, 0.75, 0.5
 
 [node name="Counter" type="Node3D" node_paths=PackedStringArray("item_slots")]
 script = ExtResource("1_5apf3")
-item_slots = [null]
+item_slots = [NodePath("")]
 
 [node name="CounterMesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000374317, 0, -0.0252056)
