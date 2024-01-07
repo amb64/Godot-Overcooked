@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh5n44m6rkqqw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8fko0"]
+albedo_color = Color(0.478431, 0.298039, 0.180392, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
+material = SubResource("StandardMaterial3D_8fko0")
+size = Vector3(1.5, 1, 2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0xxgy"]
+data = PackedVector3Array(-0.75, 0.5, 1, 0.75, 0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, -1, 0.75, -0.5, -1, -0.75, 0.5, -1, -0.75, -0.5, -1, 0.75, -0.5, -1, 0.75, 0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, -1, 0.75, -0.5, 1, -0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, 0.5, 1, -0.75, 0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, 0.5, -1, 0.75, 0.5, -1, -0.75, -0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, -0.5, 1, 0.75, -0.5, -1, -0.75, -0.5, -1)
+
+[node name="Counter" type="Node3D"]
+
+[node name="ItemHolder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000374317, 0.868759, -0.0252056)
+
+[node name="CounterMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000374317, 0, -0.0252056)
+mesh = SubResource("BoxMesh_fdo3b")
+
+[node name="CounterBody" type="StaticBody3D" parent="CounterMesh"]
+
+[node name="CounterColliderShape" type="CollisionShape3D" parent="CounterMesh/CounterBody"]
+shape = SubResource("ConcavePolygonShape3D_0xxgy")
