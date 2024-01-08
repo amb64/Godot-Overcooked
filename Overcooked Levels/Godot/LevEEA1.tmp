@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cts5iruhul5yo"]
+
+[ext_resource type="MeshLibrary" uid="uid://k16fvnt1dyqi" path="res://Overcooked Meshes.tres" id="1_35fee"]
+
+[node name="Node" type="Node"]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_35fee")
