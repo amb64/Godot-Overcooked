@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://ydrt1ota3ydt"]
+
+[ext_resource type="Script" path="res://Scenes/FoodLevels.gd" id="1_ec8si"]
+[ext_resource type="PackedScene" uid="uid://ct3lxpyb6rbrc" path="res://test_level.tscn" id="1_ufisn"]
+[ext_resource type="PackedScene" uid="uid://yrn3dp0a1ki5" path="res://src/Player/Player.tscn" id="2_kpnst"]
+[ext_resource type="PackedScene" uid="uid://58qpm1imogif" path="res://src/UXUI/PauseMenu.tscn" id="3_8xvtr"]
+[ext_resource type="PackedScene" uid="uid://db1fdkniwgypp" path="res://src/UXUI/HUD.tscn" id="4_dxv7h"]
+[ext_resource type="PackedScene" uid="uid://b3v0q21ip6wxn" path="res://src/UXUI/cout_down_ui.tscn" id="5_jsfpc"]
+[ext_resource type="PackedScene" uid="uid://di60k0eurs2n1" path="res://src/UXUI/stats_board_ui.tscn" id="6_toug1"]
+[ext_resource type="PackedScene" uid="uid://bfgjqt2lj4050" path="res://src/Components/camera.tscn" id="7_qruye"]
+
+[node name="FoodLevels" type="Node3D"]
+script = ExtResource("1_ec8si")
+
+[node name="Canvas" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="Canvas" instance=ExtResource("3_8xvtr")]
+visible = false
+
+[node name="HUD" parent="Canvas" instance=ExtResource("4_dxv7h")]
+visible = false
+
+[node name="CoutDownUI" parent="Canvas" instance=ExtResource("5_jsfpc")]
+
+[node name="StatsBoardUI" parent="Canvas" instance=ExtResource("6_toug1")]
+process_priority = 1
+visible = false
+
+[node name="TestLevel" parent="." instance=ExtResource("1_ufisn")]
+
+[node name="TestLevel2" parent="." instance=ExtResource("1_ufisn")]
+
+[node name="TestLevel3" parent="." instance=ExtResource("1_ufisn")]
+
+[node name="Camera" parent="." instance=ExtResource("7_qruye")]
+transform = Transform3D(1, 0, 0, 0, 0.914268, 0.40511, 0, -0.40511, 0.914268, 0, 5.72569, 7.05325)
+
+[node name="Player" parent="." instance=ExtResource("2_kpnst")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0912, 0)

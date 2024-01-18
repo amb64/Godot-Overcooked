@@ -1,0 +1,295 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqjbtsu1jcben"]
+
+[ext_resource type="Script" path="res://src/UXUI/OptionsMenu.gd" id="1_apjq0"]
+[ext_resource type="PackedScene" uid="uid://cy86asgwodbdp" path="res://src/UXUI/InputButton.tscn" id="2_ryc7h"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_apjq0")
+
+[node name="Menu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 280.0
+offset_right = 628.0
+offset_bottom = 430.0
+
+[node name="VideoButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Video"
+
+[node name="AudioButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Audio"
+
+[node name="ControlsButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
+[node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="Video" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Video"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 280.0
+offset_right = 676.0
+offset_bottom = 395.0
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="Video/VBoxContainer"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "1280x720"
+popup/item_0/id = 0
+popup/item_1/text = "1920x1080"
+popup/item_1/id = 1
+
+[node name="FullScreenOptionsButton" type="OptionButton" parent="Video/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "Full Screen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Full screen Borderless"
+popup/item_2/id = 2
+
+[node name="ColourBlindOptionButton" type="OptionButton" parent="Video/VBoxContainer"]
+layout_mode = 2
+item_count = 1
+selected = 0
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+
+[node name="VsyncCheckBox" type="CheckBox" parent="Video/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScreenShakeCheckBox" type="CheckBox" parent="Video/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Video"]
+layout_mode = 2
+offset_left = 352.0
+offset_top = 289.0
+offset_right = 565.0
+offset_bottom = 315.0
+text = "Resolution"
+
+[node name="Label2" type="Label" parent="Video"]
+layout_mode = 2
+offset_left = 352.0
+offset_top = 316.0
+offset_right = 565.0
+offset_bottom = 342.0
+text = "Screen"
+
+[node name="Label3" type="Label" parent="Video"]
+layout_mode = 2
+offset_left = 352.0
+offset_top = 343.0
+offset_right = 565.0
+offset_bottom = 369.0
+text = "Colour blindness"
+
+[node name="Label4" type="Label" parent="Video"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 384.0
+offset_right = 397.0
+offset_bottom = 410.0
+text = "Vsync"
+
+[node name="Label5" type="Label" parent="Video"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 416.0
+offset_right = 454.0
+offset_bottom = 442.0
+text = "Screen shake"
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Audio"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 288.0
+offset_right = 680.0
+offset_bottom = 344.0
+
+[node name="MasterSlider" type="HSlider" parent="Audio/VBoxContainer"]
+layout_mode = 2
+min_value = -50.0
+max_value = 50.0
+
+[node name="MusicSlider" type="HSlider" parent="Audio/VBoxContainer"]
+layout_mode = 2
+min_value = -50.0
+max_value = 50.0
+
+[node name="SFXSlider" type="HSlider" parent="Audio/VBoxContainer"]
+layout_mode = 2
+min_value = -50.0
+max_value = 50.0
+
+[node name="Label" type="Label" parent="Audio"]
+layout_mode = 2
+offset_left = 408.0
+offset_top = 272.0
+offset_right = 560.0
+offset_bottom = 298.0
+text = "Master volime"
+
+[node name="Label2" type="Label" parent="Audio"]
+layout_mode = 2
+offset_left = 408.0
+offset_top = 302.0
+offset_right = 560.0
+offset_bottom = 328.0
+text = "Music volume"
+
+[node name="Label3" type="Label" parent="Audio"]
+layout_mode = 2
+offset_left = 408.0
+offset_top = 332.0
+offset_right = 560.0
+offset_bottom = 358.0
+text = "SFX volume"
+
+[node name="Controls" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 232.0
+offset_right = 560.0
+offset_bottom = 370.0
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="InputButton" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+
+[node name="InputButton2" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+action = "backward"
+
+[node name="InputButton3" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+action = "left"
+
+[node name="InputButton4" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+action = "right"
+
+[node name="InputButton5" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+action = "interact"
+
+[node name="InputButton6" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+action = "escape"
+
+[node name="Label" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 248.0
+offset_right = 461.0
+offset_bottom = 274.0
+text = "Forward"
+
+[node name="Label2" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 278.0
+offset_right = 461.0
+offset_bottom = 304.0
+text = "Backward"
+
+[node name="Label3" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 308.0
+offset_right = 461.0
+offset_bottom = 334.0
+text = "Left"
+
+[node name="Label4" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 338.0
+offset_right = 461.0
+offset_bottom = 364.0
+text = "Right"
+
+[node name="Label5" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 384.0
+offset_top = 368.0
+offset_right = 461.0
+offset_bottom = 394.0
+text = "Interact"
+
+[node name="Label6" type="Label" parent="Controls"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 400.0
+offset_right = 431.0
+offset_bottom = 426.0
+text = "Escape"
+
+[node name="BackButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 536.0
+offset_top = 472.0
+offset_right = 573.0
+offset_bottom = 503.0
+text = "Exit"
+
+[connection signal="pressed" from="Menu/VBoxContainer/VideoButton" to="." method="_on_video_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/AudioButton" to="." method="_on_audio_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="item_selected" from="Video/VBoxContainer/ResolutionOptionButton" to="." method="_on_resolution_option_button_item_selected"]
+[connection signal="item_selected" from="Video/VBoxContainer/FullScreenOptionsButton" to="." method="_on_full_screen_options_button_item_selected"]
+[connection signal="item_selected" from="Video/VBoxContainer/ColourBlindOptionButton" to="." method="_on_colour_blind_option_button_item_selected"]
+[connection signal="pressed" from="Video/VBoxContainer/VsyncCheckBox" to="." method="_on_vsync_check_box_pressed"]
+[connection signal="pressed" from="Video/VBoxContainer/ScreenShakeCheckBox" to="." method="_on_screen_shake_check_box_pressed"]
+[connection signal="value_changed" from="Audio/VBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Audio/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Audio/VBoxContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1w811aaok70t"]
+
+[ext_resource type="Script" path="res://src/UXUI/MainMenu.gd" id="1_lec4c"]
+[ext_resource type="PackedScene" uid="uid://bqjbtsu1jcben" path="res://src/UXUI/OptionsMenu.tscn" id="2_qob6l"]
+[ext_resource type="PackedScene" uid="uid://c84y4ct4aqumf" path="res://src/UXUI/Lobby.tscn" id="3_xrffy"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_oi2if"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y2ng1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g0juk"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_lec4c")
+
+[node name="Menu" type="Control" parent="."]
+process_priority = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 280.0
+offset_right = 628.0
+offset_bottom = 464.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="HostButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Play (Host)"
+
+[node name="JoinButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Join"
+
+[node name="OptionsButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("2_qob6l")]
+
+[node name="Lobby" parent="." instance=ExtResource("3_xrffy")]
+visible = false
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(6.59847, 0, 0, 0, 1, 0, 0, 0, 5.36472, 0, -0.0991437, 0)
+mesh = SubResource("PlaneMesh_oi2if")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(3.34381, 0, 0, 0, 1.93378, 0, 0, 0, 1.45745, -1.08947, 0.455335, -1.01647)
+mesh = SubResource("BoxMesh_y2ng1")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.983472, 0, 0, 0, 1.18967, 0, 0, 0, 1.45745, 0.969692, 0.086746, -1.01647)
+mesh = SubResource("BoxMesh_g0juk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.957299, 0, 0.289099, 0, 1, 0, -0.289099, 0, 0.957299, 2.39072, 1.38034, 4.1378)
+
+[node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="Menu/VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

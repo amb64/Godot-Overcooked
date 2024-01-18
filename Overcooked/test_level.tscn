@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct3lxpyb6rbrc"]
+
+[ext_resource type="Script" path="res://test_level.gd" id="1_55ffe"]
+[ext_resource type="PackedScene" uid="uid://w4infiu0xuyv" path="res://src/Player/FoodTruck.tscn" id="2_fkuhw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_00whh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqnpq"]
+size = Vector3(6.56119, 0.122213, 5.82151)
+
+[node name="TestLevel" type="Node3D"]
+script = ExtResource("1_55ffe")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.224622, 0.704879, -0.672822, 0.0601874, 0.699184, 0.712404, 0.972585, 0.119526, -0.199477, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(6.56836, 0, 0, 0, 0.116966, 0, 0, 0, 5.80305, 0, 0, 0)
+mesh = SubResource("BoxMesh_00whh")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_dqnpq")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+spawn_path = NodePath("../Spawner/0")
+spawn_limit = 4
+
+[node name="Spawner" type="Node3D" parent="."]
+
+[node name="0" type="Node3D" parent="Spawner" groups=["SpawnPos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="1" type="Node3D" parent="Spawner" groups=["SpawnPos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="2" type="Node3D" parent="Spawner" groups=["SpawnPos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="3" type="Node3D" parent="Spawner" groups=["SpawnPos"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="FoodTruck" parent="." instance=ExtResource("2_fkuhw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65794, 0)
