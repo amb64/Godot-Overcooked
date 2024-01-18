@@ -15,7 +15,7 @@ point_count = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfvl4"]
 size = Vector3(1, 1, 2.0613)
 
-[node name="FoodTruck" type="CharacterBody3D" groups=["Player"]]
+[node name="FoodTruck" type="CharacterBody3D" groups=["FoodTruck"]]
 script = ExtResource("1_eaqvr")
 
 [node name="Body" type="MeshInstance3D" parent="."]

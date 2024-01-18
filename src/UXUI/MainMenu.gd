@@ -3,7 +3,10 @@ extends Node
 func _ready():
 	$Menu.visible = true
 	$OptionsMenu.visible = false
+<<<<<<< Updated upstream:src/UXUI/MainMenu.gd
 	#$Lobby.visible = false
+=======
+>>>>>>> Stashed changes:Overcooked/src/UXUI/MainMenu.gd
 
 func _on_host_button_pressed():
 	get_parent().load_world()

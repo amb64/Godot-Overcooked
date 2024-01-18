@@ -36,3 +36,4 @@ transform = Transform3D(2.02585, 0, 0, 0, 2.06887, 0, 0, 0, 1, 0, 1.20376, 0)
 texture = SubResource("GradientTexture2D_w28i4")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

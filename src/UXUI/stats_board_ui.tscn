@@ -22,10 +22,10 @@ color = Color(0, 0, 0, 0.568627)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 560.0
-offset_top = 400.0
-offset_right = 639.0
-offset_bottom = 431.0
+offset_left = 752.0
+offset_top = 560.0
+offset_right = 1096.0
+offset_bottom = 672.0
 text = "Continue"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

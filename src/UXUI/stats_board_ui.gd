@@ -1,5 +1,4 @@
 extends Control
 
 func _on_button_pressed():
-	get_node("./../../../WorldTour").visible = true
-	get_node("./../FoodLevels").visible = false
+	get_parent().get_parent().get_parent().returnTour()

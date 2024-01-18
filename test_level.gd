@@ -1,7 +1,7 @@
 extends Node3D
 
 ## Used to show how long the game lasts.
-var isStarting: bool = false
+var isStarting: bool = true
 @export var mins: int = 0
 var secs: int = 2
 var milisec: int = 60
@@ -11,20 +11,7 @@ var tips: int = 0
 @export var canMove: bool = false
 var isGameOver: bool = false
 
-func _ready():
-	self.visible = false
-
 func _process(delta):
-	#var index = 0
-	#for i in GameManager.Players:
-		#var currentPlayer = PlayerScene.instantiate()
-		#currentPlayer.name = str(GameManager.Players[i].id)
-		#add_child(currentPlayer)
-		#for spawn in get_tree().get_nodes_in_group("SpawnPos"):
-			#if spawn.name == str(index):
-				#currentPlayer.global_position = spawn.global_position
-		#index += 1
-	
 	if isStarting:
 		# Make sure everyone is loaded in once loaded in fully start
 		# Once time is finish load a stat board
@@ -38,7 +25,7 @@ func _process(delta):
 			$Canvas/HUD.visible = false
 
 		$Canvas/HUD/TipPanel/TipLabel.text = str(tips)
-		
+
 		$Canvas/CoutDownUI/Particle3.emitting = true
 		await get_tree().create_timer(1).timeout
 		$Canvas/CoutDownUI/Particle2.emitting = true
