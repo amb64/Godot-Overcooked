@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://db1fdkniwgypp"]
+
+[ext_resource type="PackedScene" uid="uid://dxla2l2t126bj" path="res://src/UXUI/List.tscn" id="1_45xhq"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimerPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1576.0
+offset_top = 64.0
+offset_right = 1896.0
+offset_bottom = 160.0
+
+[node name="TimerLabel" type="Label" parent="TimerPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.111
+anchor_right = 0.957
+anchor_bottom = 0.889
+offset_left = 0.0879998
+offset_top = 0.00799942
+offset_right = -0.0879974
+offset_bottom = -0.00800323
+text = "##:##"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TipPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1576.0
+offset_top = 176.0
+offset_right = 1896.0
+offset_bottom = 272.0
+
+[node name="TipLabel" type="Label" parent="TipPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.146
+anchor_right = 0.929
+anchor_bottom = 0.889
+offset_left = 3.184
+offset_top = -0.00800037
+offset_right = -0.0480042
+offset_bottom = -1.672
+text = "##"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="List" parent="." instance=ExtResource("1_45xhq")]
+layout_mode = 1
+
+[node name="TimerAnimation" type="AnimationPlayer" parent="."]
+
+[node name="TipAnimation" type="AnimationPlayer" parent="."]
+
+[node name="TipSFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
