@@ -3,7 +3,7 @@ extends Node
 func _ready():
 	$Menu.visible = true
 	$OptionsMenu.visible = false
-	$Lobby.visible = false
+	#$Lobby.visible = false
 
 func _on_host_button_pressed():
 	get_parent().load_world()
