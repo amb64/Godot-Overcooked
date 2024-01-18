@@ -20,8 +20,10 @@ offset_bottom = 40.0
 [node name="ColorRect" type="ColorRect" parent="Menu"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 28.8
-anchor_bottom = 16.2
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_right = -0.00012207
+offset_bottom = -0.00012207
 color = Color(0, 0, 0, 0.239216)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
@@ -30,10 +32,11 @@ anchors_preset = -1
 anchor_top = 6.4
 anchor_right = 28.8
 anchor_bottom = 16.2
-offset_left = 560.0
-offset_top = 24.0
-offset_right = -522.0
-offset_bottom = -267.0
+offset_left = 864.0
+offset_top = 144.0
+offset_right = -218.0
+offset_bottom = -115.0
+scale = Vector2(2, 2)
 theme_override_constants/separation = 20
 
 [node name="ReturnButton" type="Button" parent="Menu/VBoxContainer"]

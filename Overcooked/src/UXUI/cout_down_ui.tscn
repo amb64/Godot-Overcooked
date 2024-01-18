@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Particle1" type="CPUParticles2D" parent="."]
-position = Vector2(576, 320)
+position = Vector2(960, 512)
 emitting = false
 amount = 1
 lifetime = 0.8
@@ -33,7 +33,7 @@ scale_amount_curve = SubResource("Curve_bpe24")
 color_ramp = SubResource("Gradient_3avgx")
 
 [node name="Particle2" type="CPUParticles2D" parent="."]
-position = Vector2(576, 320)
+position = Vector2(960, 512)
 emitting = false
 amount = 1
 lifetime = 0.8
@@ -44,7 +44,7 @@ scale_amount_curve = SubResource("Curve_bpe24")
 color_ramp = SubResource("Gradient_3avgx")
 
 [node name="Particle3" type="CPUParticles2D" parent="."]
-position = Vector2(576, 320)
+position = Vector2(960, 512)
 emitting = false
 amount = 1
 lifetime = 0.8
@@ -55,7 +55,7 @@ scale_amount_curve = SubResource("Curve_bpe24")
 color_ramp = SubResource("Gradient_3avgx")
 
 [node name="ParticleGo" type="CPUParticles2D" parent="."]
-position = Vector2(576, 320)
+position = Vector2(960, 512)
 emitting = false
 amount = 1
 lifetime = 0.8

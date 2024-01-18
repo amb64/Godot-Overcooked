@@ -14,10 +14,10 @@ script = ExtResource("1_ae0bw")
 
 [node name="TimerPanel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1024.0
-offset_top = 16.0
-offset_right = 1136.0
-offset_bottom = 64.0
+offset_left = 1576.0
+offset_top = 64.0
+offset_right = 1896.0
+offset_bottom = 160.0
 
 [node name="TimerLabel" type="Label" parent="TimerPanel"]
 layout_mode = 1
@@ -36,10 +36,10 @@ vertical_alignment = 1
 
 [node name="TipPanel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1024.0
-offset_top = 80.0
-offset_right = 1136.0
-offset_bottom = 128.0
+offset_left = 1576.0
+offset_top = 176.0
+offset_right = 1896.0
+offset_bottom = 272.0
 
 [node name="TipLabel" type="Label" parent="TipPanel"]
 layout_mode = 1

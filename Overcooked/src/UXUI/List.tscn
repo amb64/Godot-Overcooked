@@ -16,7 +16,7 @@ script = ExtResource("1_wwm60")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 576.0
+offset_right = 896.0
 offset_bottom = 64.0
 texture = ExtResource("2_yf770")
 
@@ -26,29 +26,29 @@ texture = ExtResource("2_yf770")
 layout_mode = 1
 anchor_right = 0.125
 anchor_bottom = 0.5
-offset_left = 48.0
-offset_top = 24.0
-offset_right = 48.0
-offset_bottom = 24.0
+offset_left = 72.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 16.0
 rotation = 0.194381
 
 [node name="Orders2" parent="." instance=ExtResource("1_gno1w")]
 layout_mode = 1
 anchor_right = 0.125
 anchor_bottom = 0.5
-offset_left = 168.0
-offset_top = 48.0
-offset_right = 168.0
-offset_bottom = 48.0
+offset_left = 216.0
+offset_top = 40.0
+offset_right = 216.0
+offset_bottom = 40.0
 rotation = 0.0159701
 
 [node name="Orders3" parent="." instance=ExtResource("1_gno1w")]
 layout_mode = 1
 anchor_right = 0.125
 anchor_bottom = 0.5
-offset_left = 288.0
+offset_left = 368.0
 offset_top = 48.0
-offset_right = 288.0
+offset_right = 368.0
 offset_bottom = 48.0
 rotation = -0.0407658
 
@@ -56,9 +56,9 @@ rotation = -0.0407658
 layout_mode = 1
 anchor_right = 0.125
 anchor_bottom = 0.5
-offset_left = 392.0
+offset_left = 528.0
 offset_top = 48.0
-offset_right = 392.0
+offset_right = 528.0
 offset_bottom = 48.0
 rotation = -0.208379
 
@@ -66,8 +66,8 @@ rotation = -0.208379
 layout_mode = 1
 anchor_right = 0.125
 anchor_bottom = 0.5
-offset_left = 488.0
+offset_left = 728.0
 offset_top = 32.0
-offset_right = 488.0
+offset_right = 728.0
 offset_bottom = 32.0
 rotation = -0.202548
