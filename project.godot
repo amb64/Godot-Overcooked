@@ -10,14 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Overcooked Godot Level"
+config/name="Overcooked Godot Level BACKUP"
 run/main_scene="res://countertesting.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-InteractionManager="*res://interaction/interaction area/InteractionManager.tscn"
 
 [dotnet]
 

@@ -1,5 +1,6 @@
-extends Node3D
 class_name Counter
+extends Node3D
+
 
 @export var item_slots : Array[Node3D]
 

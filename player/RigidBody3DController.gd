@@ -2,7 +2,7 @@ extends RigidBody3D
 
 @export var director : Node3D
 
-const SPEED = 0.1
+@export var SPEED : float = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,4 +23,4 @@ func _physics_process(delta):
 
 	if(linear_velocity.length() < 5):
 		#apply_force(direction * SPEED) #more slippery
-		position += direction * SPEED   #more rigid
+		position += direction * SPEED * delta   #more rigid

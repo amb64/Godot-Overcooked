@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bccj7fr5yjkss"]
+[gd_scene load_steps=16 format=3 uid="uid://bccj7fr5yjkss"]
 
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://interaction/counter/counter.tscn" id="1_y5eii"]
 [ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://interaction/item/item.tscn" id="2_e0hoi"]
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="3_7la52"]
+[ext_resource type="PackedScene" uid="uid://cw08pv8s8cqtw" path="res://interaction/counter/counterSpawner.tscn" id="4_r8yuh"]
+[ext_resource type="PackedScene" uid="uid://c8bp221rdnnv1" path="res://interaction/counter/counterDeleter.tscn" id="5_duvpc"]
 
 [sub_resource type="Gradient" id="Gradient_qfw53"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
@@ -122,8 +124,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.485698, -0.677755)
 [node name="Slot2" type="Node3D" parent="Level/Counters/Counter2/ItemSlots" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.509373, 0.751082)
 
-[node name="Counter3" parent="Level/Counters" instance=ExtResource("1_y5eii")]
+[node name="NonInteractable" parent="Level/Counters" instance=ExtResource("1_y5eii")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.26933, 1, -6.32247)
+
+[node name="Spawner" parent="Level/Counters" instance=ExtResource("4_r8yuh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.00584, 0.996629, -6.17366)
+is_droppable = false
+
+[node name="Deleter" parent="Level/Counters" instance=ExtResource("5_duvpc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.30601, 1.02137, -6.26116)
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 9.83267, 6.7)

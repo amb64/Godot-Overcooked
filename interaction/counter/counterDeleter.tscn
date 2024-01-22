@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8bp221rdnnv1"]
+
+[ext_resource type="Script" path="res://interaction/counter/counterDeleter.gd" id="1_00f51"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wimdt"]
+albedo_color = Color(0.384314, 0.384314, 0.384314, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
+material = SubResource("StandardMaterial3D_wimdt")
+size = Vector3(1.5, 1, 2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0xxgy"]
+data = PackedVector3Array(-0.75, 0.5, 1, 0.75, 0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, -1, 0.75, -0.5, -1, -0.75, 0.5, -1, -0.75, -0.5, -1, 0.75, -0.5, -1, 0.75, 0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, -1, 0.75, -0.5, 1, -0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, 0.5, 1, -0.75, 0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, 0.5, -1, 0.75, 0.5, -1, -0.75, -0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, -0.5, 1, 0.75, -0.5, -1, -0.75, -0.5, -1)
+
+[node name="Counter" type="Node3D"]
+script = ExtResource("1_00f51")
+
+[node name="CounterMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000374317, 0, -0.0252056)
+mesh = SubResource("BoxMesh_fdo3b")
+
+[node name="CounterBody" type="StaticBody3D" parent="CounterMesh"]
+
+[node name="CounterColliderShape" type="CollisionShape3D" parent="CounterMesh/CounterBody"]
+shape = SubResource("ConcavePolygonShape3D_0xxgy")
+
+[node name="ItemSlots" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.526348, 0)

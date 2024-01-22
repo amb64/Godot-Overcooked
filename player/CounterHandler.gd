@@ -8,15 +8,17 @@ var is_holding_item : bool = false
 
 var counter : Counter
 
-func _ready():
-	print(player_item_holder.name)
-	pass
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var is_interacting : bool = Input.is_action_just_pressed("interact")
+	
+	#pickup on spawner
+	if(is_interacting && is_over_counter && !is_holding_item && counter is CounterSpawner):
+		pickup()
+		pass
 
-	if(is_interacting && is_over_counter && !is_holding_item && counter_has_item()):
+	#pickup on regular
+	elif(is_interacting && is_over_counter && !is_holding_item && counter_has_item()):
 		pickup()
 		pass
 
@@ -25,15 +27,15 @@ func _process(delta):
 		drop()
 		pass
 
-func _on_body_entered(body:Node3D):
+func _on_body_entered(body : Node3D):
 	#could be done with godot layers or something for more flexibility
-	if(body.name != "CounterBody"):
-		return
 	
-	is_over_counter = true
-	counter = body.get_parent().get_parent()
+	if(body.get_parent().get_parent() is Counter):
+		is_over_counter = true
+		counter = body.get_parent().get_parent()
 
-func _on_body_exited(body:Node3D):
+func _on_body_exited(_body : Node3D):
+	counter = null
 	is_over_counter = false
 	
 func counter_has_item() -> bool:
@@ -42,12 +44,9 @@ func counter_has_item() -> bool:
 func counter_is_free() -> bool:
 	return counter.get_free_slots() > 0
 
+#success is returned by pickup or drop as a boolean
 func pickup():
-	counter.pickup(player_item_holder)
-	
-	is_holding_item = true
+	is_holding_item = counter.pickup(player_item_holder)
 
 func drop():
-	counter.drop(player_item_holder)
-
-	is_holding_item = false
+	is_holding_item = !counter.drop(player_item_holder)
