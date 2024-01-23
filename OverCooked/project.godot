@@ -19,6 +19,13 @@ config/icon="res://icon.svg"
 
 Config="*res://Globals/Config.gd"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
+
 [input]
 
 forward={

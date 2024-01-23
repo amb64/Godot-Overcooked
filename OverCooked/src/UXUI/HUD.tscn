@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://db1fdkniwgypp"]
+[gd_scene load_steps=3 format=3 uid="uid://db1fdkniwgypp"]
 
 [ext_resource type="PackedScene" uid="uid://dxla2l2t126bj" path="res://src/UXUI/List.tscn" id="1_45xhq"]
+[ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://Assets/font/FogSans-Re46.otf" id="1_kqkhy"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -28,6 +29,8 @@ offset_left = 0.0879998
 offset_top = 0.00799942
 offset_right = -0.0879974
 offset_bottom = -0.00800323
+theme_override_fonts/font = ExtResource("1_kqkhy")
+theme_override_font_sizes/font_size = 30
 text = "##:##"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -50,6 +53,8 @@ offset_left = 3.184
 offset_top = -0.00800037
 offset_right = -0.0480042
 offset_bottom = -1.672
+theme_override_fonts/font = ExtResource("1_kqkhy")
+theme_override_font_sizes/font_size = 30
 text = "##"
 horizontal_alignment = 1
 vertical_alignment = 1
