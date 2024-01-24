@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dn6g4khocwvw1"]
 
 [ext_resource type="Script" path="res://player/RigidBody3DController.gd" id="1_526f1"]
-[ext_resource type="Script" path="res://player/CounterChecker.gd" id="2_ee83l"]
+[ext_resource type="Script" path="res://player/CounterHandler.gd" id="2_8rywc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nxyb"]
 albedo_color = Color(0.415686, 0.396078, 0.972549, 1)
@@ -37,10 +37,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00435472, -0.00448704, -4.
 mesh = SubResource("CapsuleMesh_8ieor")
 skeleton = NodePath("../../..")
 
-[node name="Area3D" type="Area3D" parent="RigidBody3D/Director" node_paths=PackedStringArray("playerHolder")]
-transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 0, 0.0710565, 1.5)
-script = ExtResource("2_ee83l")
-playerHolder = NodePath("../ItemHolder")
+[node name="Area3D" type="Area3D" parent="RigidBody3D/Director" node_paths=PackedStringArray("player_item_holder")]
+transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 0, 0.0710565, 0.861561)
+script = ExtResource("2_8rywc")
+player_item_holder = NodePath("../ItemHolder")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Director/Area3D"]
 shape = SubResource("BoxShape3D_ol63t")
@@ -49,7 +49,7 @@ shape = SubResource("BoxShape3D_ol63t")
 mesh = SubResource("BoxMesh_epkss")
 
 [node name="ItemHolder" type="Node3D" parent="RigidBody3D/Director"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0310211, -0.0196157, 0.993621)
 
 [node name="PlayerBody" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("CapsuleShape3D_24dg6")
