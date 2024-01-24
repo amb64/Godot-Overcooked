@@ -1,13 +1,13 @@
 [gd_scene load_steps=26 format=3 uid="uid://b2k2y68puhb47"]
 
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="1_k07at"]
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/interaction/counter/counter.tscn" id="2_8s43x"]
-[ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://prefabs/plate.tscn" id="3_6hl5f"]
-[ext_resource type="PackedScene" uid="uid://b6amgk4aeajni" path="res://prefabs/bin.tscn" id="3_ewt3i"]
-[ext_resource type="PackedScene" uid="uid://bobro4nwx8ysr" path="res://prefabs/cutting_board.tscn" id="3_r21oq"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives/counter.tscn" id="2_8s43x"]
+[ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://prefabs/items/plate.tscn" id="3_6hl5f"]
+[ext_resource type="PackedScene" uid="uid://b6amgk4aeajni" path="res://prefabs/counters/bin.tscn" id="3_ewt3i"]
+[ext_resource type="PackedScene" uid="uid://bobro4nwx8ysr" path="res://prefabs/counters/cutting_board.tscn" id="3_r21oq"]
 [ext_resource type="PackedScene" uid="uid://bmpvrrravsrmb" path="res://prefabs/ingredient_boxes/plain.tscn" id="5_gojqp"]
-[ext_resource type="PackedScene" uid="uid://cqoagqrwg7ebh" path="res://prefabs/serving_area.tscn" id="6_18qry"]
-[ext_resource type="PackedScene" uid="uid://byusqjg426ti" path="res://prefabs/plate_return.tscn" id="7_k1ujk"]
+[ext_resource type="PackedScene" uid="uid://cqoagqrwg7ebh" path="res://prefabs/counters/serving_area.tscn" id="6_18qry"]
+[ext_resource type="PackedScene" uid="uid://byusqjg426ti" path="res://prefabs/counters/plate_return.tscn" id="7_k1ujk"]
 [ext_resource type="PackedScene" uid="uid://cbtpp5y1ag055" path="res://prefabs/grid.tscn" id="9_yhncx"]
 
 [sub_resource type="Gradient" id="Gradient_gktrc"]
@@ -64,6 +64,12 @@ data = PackedVector3Array(-10.5, 1.5, 0.5, 10.5, 1.5, 0.5, -10.5, -1.5, 0.5, 10.
 data = PackedVector3Array(-10.5, 1.5, 0.5, 10.5, 1.5, 0.5, -10.5, -1.5, 0.5, 10.5, 1.5, 0.5, 10.5, -1.5, 0.5, -10.5, -1.5, 0.5, 10.5, 1.5, -0.5, -10.5, 1.5, -0.5, 10.5, -1.5, -0.5, -10.5, 1.5, -0.5, -10.5, -1.5, -0.5, 10.5, -1.5, -0.5, 10.5, 1.5, 0.5, 10.5, 1.5, -0.5, 10.5, -1.5, 0.5, 10.5, 1.5, -0.5, 10.5, -1.5, -0.5, 10.5, -1.5, 0.5, -10.5, 1.5, -0.5, -10.5, 1.5, 0.5, -10.5, -1.5, -0.5, -10.5, 1.5, 0.5, -10.5, -1.5, 0.5, -10.5, -1.5, -0.5, 10.5, 1.5, 0.5, -10.5, 1.5, 0.5, 10.5, 1.5, -0.5, -10.5, 1.5, 0.5, -10.5, 1.5, -0.5, 10.5, 1.5, -0.5, -10.5, -1.5, 0.5, 10.5, -1.5, 0.5, -10.5, -1.5, -0.5, 10.5, -1.5, 0.5, 10.5, -1.5, -0.5, -10.5, -1.5, -0.5)
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Counters_Counter9_ItemHolder#Plate" parent="." instance=ExtResource("3_6hl5f")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, -0.368759, 0.0252056)
+
+[node name="Counters_Counter10_ItemHolder#Plate2" parent="." instance=ExtResource("3_6hl5f")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374079, -0.368759, 0.0252056)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_t875u")
@@ -156,14 +162,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0.
 [node name="Counter10" parent="Counters" instance=ExtResource("2_8s43x")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0.5, 4)
 
-[node name="Plate2" parent="Counters/Counter10/ItemHolder" index="0" instance=ExtResource("3_6hl5f")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374079, -0.368759, 0.0252056)
-
 [node name="Counter9" parent="Counters" instance=ExtResource("2_8s43x")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0.5, 4)
-
-[node name="Plate" parent="Counters/Counter9/ItemHolder" index="0" instance=ExtResource("3_6hl5f")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, -0.368759, 0.0252056)
 
 [node name="Counter4" parent="Counters" instance=ExtResource("2_8s43x")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0.5, 0)

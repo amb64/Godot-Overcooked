@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cg51vq4mj08jo"]
 
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/interaction/counter/counter.tscn" id="1_e0vdt"]
-[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://prefabs/interaction/item/item.tscn" id="2_k7tkn"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives/primitives_old/counter.tscn" id="1_e0vdt"]
+[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://prefabs/items/item.tscn" id="2_k7tkn"]
 
 [node name="Counter" instance=ExtResource("1_e0vdt")]
 

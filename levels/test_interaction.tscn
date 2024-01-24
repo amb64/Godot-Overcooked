@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://bccj7fr5yjkss"]
 
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="1_gek5r"]
-[ext_resource type="PackedScene" uid="uid://cg51vq4mj08jo" path="res://prefabs/interaction/counter/counterItem.tscn" id="2_hidjo"]
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/interaction/counter/counter.tscn" id="3_g8y61"]
-[ext_resource type="PackedScene" uid="uid://oac5k1mlv7ti" path="res://prefabs/interaction/counter/counterMulti.tscn" id="3_s4d4s"]
+[ext_resource type="PackedScene" uid="uid://cg51vq4mj08jo" path="res://prefabs/counters/primitives_old/counterItem.tscn" id="2_hidjo"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives_old/counter.tscn" id="3_g8y61"]
+[ext_resource type="PackedScene" uid="uid://oac5k1mlv7ti" path="res://prefabs/counters/primitives_old/counterMulti.tscn" id="3_s4d4s"]
 
 [sub_resource type="Gradient" id="Gradient_qfw53"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)

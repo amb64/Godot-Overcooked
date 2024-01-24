@@ -1,13 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://cw08pv8s8cqtw"]
 
-[ext_resource type="Script" path="res://interaction/counter/counterSpawner.gd" id="1_qblcf"]
-[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://interaction/item/item.tscn" id="2_7ckn6"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yslrg"]
-albedo_color = Color(0.458103, 0.574557, 0.227581, 1)
+[ext_resource type="Script" path="res://prefabs/counters/primitives/counterSpawner.gd" id="1_qblcf"]
+[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://prefabs/items/item.tscn" id="2_7ckn6"]
+[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://materials/counter.tres" id="3_1kp27"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
-material = SubResource("StandardMaterial3D_yslrg")
+material = ExtResource("3_1kp27")
 size = Vector3(1.5, 1, 2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0xxgy"]

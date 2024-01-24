@@ -13,14 +13,14 @@ func _ready():
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var input_dir : Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var direction : Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
 	#getting director in the same direction as the movement
 	if direction:
-		var difference = director.rotation.y - Vector2(input_dir.x, -input_dir.y).angle() #radians
+		var difference : float = director.rotation.y - Vector2(input_dir.x, -input_dir.y).angle() #radians
 		director.rotate(Vector3.DOWN,difference - PI /2)
 
 	if(linear_velocity.length() < 5):
-		#apply_force(direction * SPEED) #more slippery
+		#apply_force(direction * SPEED * delta) #more slippery
 		position += direction * SPEED * delta   #more rigid

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqoagqrwg7ebh"]
 
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/interaction/counter/counter.tscn" id="1_583ox"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives/counter.tscn" id="1_lf4sb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mp0b"]
 albedo_color = Color(1, 0.788235, 0.87451, 1)
@@ -14,11 +14,18 @@ data = PackedVector3Array(-1.75, 0.05, 0.5, 1.75, 0.05, 0.5, -1.75, -0.05, 0.5, 
 
 [node name="Serving_Area" type="Node3D"]
 
-[node name="Counter" parent="." instance=ExtResource("1_583ox")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+[node name="Counter2" parent="." node_paths=PackedStringArray("item_slots") instance=ExtResource("1_lf4sb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
+item_slots = [NodePath("Slot1"), NodePath("Slot2"), NodePath("Slot3")]
 
-[node name="Counter2" parent="." instance=ExtResource("1_583ox")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+[node name="Slot1" type="Node3D" parent="Counter2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.555426, 0)
+
+[node name="Slot2" type="Node3D" parent="Counter2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.555426, 0.5)
+
+[node name="Slot3" type="Node3D" parent="Counter2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.555426, -0.5)
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.5, 0)

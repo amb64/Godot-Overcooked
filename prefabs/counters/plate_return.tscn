@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://byusqjg426ti"]
 
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/interaction/counter/counter.tscn" id="1_rbajp"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives_old/counter.tscn" id="1_rbajp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kqqwm"]
 albedo_color = Color(0.803922, 0.803922, 0.803922, 1)
@@ -17,6 +17,9 @@ data = PackedVector3Array(0, 0.05, 0, 0, 0.05, 0, 0, 0.047, 0.171, 0, 0.05, 0, 0
 [node name="Plate_Return" type="Node3D"]
 
 [node name="Counter" parent="." instance=ExtResource("1_rbajp")]
+
+[node name="Node3D" type="Node3D" parent="Counter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.567571, 0)
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

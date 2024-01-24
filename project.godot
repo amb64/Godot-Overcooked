@@ -11,17 +11,21 @@ config_version=5
 [application]
 
 config/name="Overcooked Godot Level"
-run/main_scene="res://scenes/level1.tscn"
+run/main_scene="res://levels/level1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-InteractionManager="*res://interaction/interaction area/InteractionManager.tscn"
 
 [dotnet]
 
 project/assembly_name="Overcooked Godot Level"
+
+[file_customization]
+
+folder_colors={
+"res://materials/": "green",
+"res://player/": "gray",
+"res://prefabs/counters/primitives_old/": "gray"
+}
 
 [input]
 

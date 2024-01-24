@@ -29,7 +29,7 @@ func _process(_delta):
 
 func _on_body_entered(body : Node3D):
 	#could be done with godot layers or something for more flexibility
-	
+	#print(body.get_parent().get_parent().name)
 	if(body.get_parent().get_parent() is Counter):
 		is_over_counter = true
 		counter = body.get_parent().get_parent()

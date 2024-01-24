@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://bccj7fr5yjkss"]
 
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://interaction/counter/counter.tscn" id="1_y5eii"]
-[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="3_7la52"]
-[ext_resource type="PackedScene" uid="uid://cw08pv8s8cqtw" path="res://interaction/counter/counterSpawner.tscn" id="4_r8yuh"]
-[ext_resource type="PackedScene" uid="uid://c8bp221rdnnv1" path="res://interaction/counter/counterDeleter.tscn" id="5_duvpc"]
+[ext_resource type="PackedScene" uid="uid://c8bp221rdnnv1" path="res://prefabs/counters/primitives/counterDeleter.tscn" id="1_ln073"]
+[ext_resource type="PackedScene" uid="uid://cw08pv8s8cqtw" path="res://prefabs/counters/primitives/counterSpawner.tscn" id="2_flxop"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives/primitives_old/counter.tscn" id="3_5f06b"]
+[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="4_gg2si"]
 
 [sub_resource type="Gradient" id="Gradient_qfw53"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
@@ -102,27 +102,27 @@ shape = SubResource("ConcavePolygonShape3D_qdhq8")
 
 [node name="Counters" type="Node3D" parent="Level"]
 
-[node name="Deleter" parent="Level/Counters" instance=ExtResource("5_duvpc")]
+[node name="Deleter" parent="Level/Counters" instance=ExtResource("1_ln073")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.30601, 1.02137, -6.37462)
 
-[node name="DroppableSpawner" parent="Level/Counters" instance=ExtResource("4_r8yuh")]
+[node name="DroppableSpawner" parent="Level/Counters" instance=ExtResource("2_flxop")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.18903, 0.979494, -6.36495)
 
-[node name="Spawner" parent="Level/Counters" instance=ExtResource("4_r8yuh")]
+[node name="Spawner" parent="Level/Counters" instance=ExtResource("2_flxop")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0927, 0.996629, -6.3276)
 is_droppable = false
 
-[node name="NonInteractable" parent="Level/Counters" instance=ExtResource("1_y5eii")]
+[node name="NonInteractable" parent="Level/Counters" instance=ExtResource("3_5f06b")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.91346, 1, -6.32247)
 
-[node name="Counter2" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("1_y5eii")]
+[node name="Counter2" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_5f06b")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.22129, 0.988948, -6.28846)
 item_slots = [NodePath("Slot")]
 
 [node name="Slot" type="Node3D" parent="Level/Counters/Counter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.508138, 0)
 
-[node name="Counter3" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("1_y5eii")]
+[node name="Counter3" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_5f06b")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.32965, 0.988948, -6.28846)
 item_slots = [NodePath("Slot"), NodePath("Slot2")]
 
@@ -135,11 +135,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.508138, -0.656137)
 [node name="LinkedCounter" type="Node3D" parent="Level/Counters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1852, 0, 0)
 
-[node name="Counter" parent="Level/Counters/LinkedCounter" node_paths=PackedStringArray("item_slots") instance=ExtResource("1_y5eii")]
+[node name="Counter" parent="Level/Counters/LinkedCounter" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_5f06b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84282, 1.02623, -3.40867)
 item_slots = [NodePath("../Node3D")]
 
-[node name="Counter2" parent="Level/Counters/LinkedCounter" node_paths=PackedStringArray("item_slots") instance=ExtResource("1_y5eii")]
+[node name="Counter2" parent="Level/Counters/LinkedCounter" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_5f06b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84282, 1.02623, -0.417022)
 item_slots = [NodePath("../Node3D")]
 
@@ -149,5 +149,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84282, 1.67527, -1.97306)
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 9.83267, 6.7)
 
-[node name="Player" parent="." instance=ExtResource("3_7la52")]
+[node name="Player" parent="." instance=ExtResource("4_gg2si")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04341, 0)
