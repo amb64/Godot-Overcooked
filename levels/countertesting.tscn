@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c8bp221rdnnv1" path="res://prefabs/counters/primitives/counterDeleter.tscn" id="1_ln073"]
 [ext_resource type="PackedScene" uid="uid://cw08pv8s8cqtw" path="res://prefabs/counters/primitives/counterSpawner.tscn" id="2_flxop"]
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives/primitives_old/counter.tscn" id="3_5f06b"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives_old/OLDCOUNTER.tscn" id="3_5f06b"]
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="4_gg2si"]
 
 [sub_resource type="Gradient" id="Gradient_qfw53"]

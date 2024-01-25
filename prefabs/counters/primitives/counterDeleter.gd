@@ -6,6 +6,10 @@ func pickup(_source : Node3D) -> bool:
 	
 #returns true if placing item is successful
 func drop(source : Node3D) -> bool:
+	#cant throw away certain items
+	if source.get_child(0).name == "Plate":
+		return false
+	
 	source.get_child(0).queue_free()
 	return true
 
