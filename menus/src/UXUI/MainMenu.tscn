@@ -1,8 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1w811aaok70t"]
 
+<<<<<<< Updated upstream:menus/src/UXUI/MainMenu.tscn
 [ext_resource type="Script" path="res://menus/src/UXUI/MainMenu.gd" id="1_lec4c"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://menus/assets/font/FogSans-Re46.otf" id="2_q8fg1"]
 [ext_resource type="PackedScene" uid="uid://bqjbtsu1jcben" path="res://menus/src/UXUI/OptionsMenu.tscn" id="2_qob6l"]
+=======
+[ext_resource type="Script" path="res://src/UXUI/MainMenu.gd" id="1_lec4c"]
+[ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="2_q8fg1"]
+[ext_resource type="PackedScene" uid="uid://bqjbtsu1jcben" path="res://src/UXUI/OptionsMenu.tscn" id="2_qob6l"]
+>>>>>>> Stashed changes:src/UXUI/MainMenu.tscn
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_oi2if"]
 

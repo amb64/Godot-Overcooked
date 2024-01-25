@@ -11,14 +11,23 @@ config_version=5
 [application]
 
 config/name="Overcooked Godot Level"
+<<<<<<< Updated upstream
 run/main_scene="res://levels/level1.tscn"
+=======
+run/main_scene="res://scenes/levels/level1.tscn"
+>>>>>>> Stashed changes
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
+<<<<<<< Updated upstream
 Global="*res://menus/globals/Global.gd"
 Config="*res://menus/globals/Config.gd"
+=======
+Global="*res://autoloads/Global.gd"
+Config="*res://autoloads/Config.gd"
+>>>>>>> Stashed changes
 
 [dotnet]
 
@@ -28,7 +37,10 @@ project/assembly_name="Overcooked Godot Level"
 
 folder_colors={
 "res://materials/": "green",
+<<<<<<< Updated upstream
 "res://player/": "gray",
+=======
+>>>>>>> Stashed changes
 "res://prefabs/counters/primitives_old/": "gray"
 }
 
