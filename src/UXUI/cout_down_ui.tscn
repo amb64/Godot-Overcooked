@@ -1,16 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://b3v0q21ip6wxn"]
 
-<<<<<<< Updated upstream:menus/src/UXUI/cout_down_ui.tscn
-[ext_resource type="Texture2D" uid="uid://dxaewr2eevpns" path="res://Assets/particles/1.png" id="1_07d6y"]
-[ext_resource type="Texture2D" uid="uid://hc53e2lcxsgl" path="res://Assets/particles/2.png" id="2_glal3"]
-[ext_resource type="Texture2D" uid="uid://bmuu3k6rigoc4" path="res://Assets/particles/3.png" id="3_qh5k6"]
-[ext_resource type="Texture2D" uid="uid://wdc8k2p0udj5" path="res://Assets/particles/GO.png" id="4_gyk1b"]
-=======
 [ext_resource type="Texture2D" uid="uid://dxaewr2eevpns" path="res://assets/particles/1.png" id="1_07d6y"]
 [ext_resource type="Texture2D" uid="uid://hc53e2lcxsgl" path="res://assets/particles/2.png" id="2_glal3"]
 [ext_resource type="Texture2D" uid="uid://bmuu3k6rigoc4" path="res://assets/particles/3.png" id="3_qh5k6"]
 [ext_resource type="Texture2D" uid="uid://wdc8k2p0udj5" path="res://assets/particles/GO.png" id="4_gyk1b"]
->>>>>>> Stashed changes:src/UXUI/cout_down_ui.tscn
 
 [sub_resource type="Curve" id="Curve_bpe24"]
 _data = [Vector2(0, 0.505494), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]

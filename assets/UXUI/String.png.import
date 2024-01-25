@@ -3,24 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dei20sd68wmma"
-<<<<<<<< Updated upstream:menus/assets/UXUI/String.png.import
-path="res://.godot/imported/String.png-86e6495e8d6196b2bb4d752c03366f52.ctex"
-========
 path="res://.godot/imported/String.png-b14cf3856182ddec251018023f8de629.ctex"
->>>>>>>> Stashed changes:assets/UXUI/String.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< Updated upstream:menus/assets/UXUI/String.png.import
-source_file="res://menus/assets/UXUI/String.png"
-dest_files=["res://.godot/imported/String.png-86e6495e8d6196b2bb4d752c03366f52.ctex"]
-========
 source_file="res://assets/UXUI/String.png"
 dest_files=["res://.godot/imported/String.png-b14cf3856182ddec251018023f8de629.ctex"]
->>>>>>>> Stashed changes:assets/UXUI/String.png.import
 
 [params]
 

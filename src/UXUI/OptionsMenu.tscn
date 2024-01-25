@@ -1,15 +1,8 @@
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 [gd_scene load_steps=4 format=3 uid="uid://bqjbtsu1jcben"]
 
 [ext_resource type="Script" path="res://src/UXUI/OptionsMenu.gd" id="1_apjq0"]
 [ext_resource type="PackedScene" uid="uid://cy86asgwodbdp" path="res://src/UXUI/InputButton.tscn" id="2_ryc7h"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="3_3afyl"]
-=======
-[gd_scene load_steps=3 format=3 uid="uid://bqjbtsu1jcben"]
-
-[ext_resource type="Script" path="res://src/UXUI/OptionsMenu.gd" id="1_apjq0"]
-[ext_resource type="PackedScene" uid="uid://cy86asgwodbdp" path="res://src/UXUI/InputButton.tscn" id="2_ryc7h"]
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -30,7 +23,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.433
@@ -47,44 +39,24 @@ theme_override_constants/separation = 18
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-layout_mode = 0
-offset_left = 864.0
-offset_top = 384.0
-offset_right = 964.0
-offset_bottom = 534.0
-scale = Vector2(2, 2)
-
-[node name="VideoButton" type="Button" parent="Menu/VBoxContainer"]
-layout_mode = 2
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Video"
 
 [node name="AudioButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Audio"
 
 [node name="ControlsButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Controls"
 
 [node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Exit"
 
 [node name="Video" type="Control" parent="."]
@@ -96,7 +68,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 [node name="Label" type="Label" parent="Video"]
 layout_mode = 2
 offset_left = 784.0
@@ -155,18 +126,6 @@ offset_right = 1287.0
 offset_bottom = 404.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
-=======
-[node name="VBoxContainer" type="VBoxContainer" parent="Video"]
-layout_mode = 0
-offset_left = 968.0
-offset_top = 384.0
-offset_right = 1183.0
-offset_bottom = 541.0
-scale = Vector2(2, 2)
-
-[node name="ResolutionOptionButton" type="OptionButton" parent="Video/VBoxContainer"]
-layout_mode = 2
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 item_count = 2
 selected = 0
 popup/item_0/text = "1280x720"
@@ -174,7 +133,6 @@ popup/item_0/id = 0
 popup/item_1/text = "1920x1080"
 popup/item_1/id = 1
 
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 [node name="FullScreenOptionsButton" type="OptionButton" parent="Video"]
 layout_mode = 2
 offset_left = 1072.0
@@ -183,10 +141,6 @@ offset_right = 1322.0
 offset_bottom = 460.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
-=======
-[node name="FullScreenOptionsButton" type="OptionButton" parent="Video/VBoxContainer"]
-layout_mode = 2
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 item_count = 3
 selected = 0
 popup/item_0/text = "Full Screen"
@@ -196,7 +150,6 @@ popup/item_1/id = 1
 popup/item_2/text = "Full screen Borderless"
 popup/item_2/id = 2
 
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 [node name="ColourBlindOptionButton" type="OptionButton" parent="Video"]
 layout_mode = 2
 offset_left = 1072.0
@@ -205,16 +158,11 @@ offset_right = 1287.0
 offset_bottom = 516.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
-=======
-[node name="ColourBlindOptionButton" type="OptionButton" parent="Video/VBoxContainer"]
-layout_mode = 2
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 item_count = 1
 selected = 0
 popup/item_0/text = "Default"
 popup/item_0/id = 0
 
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 [node name="VsyncCheckBox" type="CheckBox" parent="Video"]
 layout_mode = 2
 offset_left = 1072.0
@@ -232,58 +180,6 @@ offset_right = 1096.0
 offset_bottom = 632.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 15
-=======
-[node name="VsyncCheckBox" type="CheckBox" parent="Video/VBoxContainer"]
-layout_mode = 2
-
-[node name="ScreenShakeCheckBox" type="CheckBox" parent="Video/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Video"]
-layout_mode = 2
-offset_left = 544.0
-offset_top = 392.0
-offset_right = 757.0
-offset_bottom = 418.0
-scale = Vector2(2, 2)
-text = "Resolution"
-
-[node name="Label2" type="Label" parent="Video"]
-layout_mode = 2
-offset_left = 544.0
-offset_top = 455.0
-offset_right = 757.0
-offset_bottom = 481.0
-scale = Vector2(2, 2)
-text = "Screen"
-
-[node name="Label3" type="Label" parent="Video"]
-layout_mode = 2
-offset_left = 544.0
-offset_top = 535.0
-offset_right = 757.0
-offset_bottom = 561.0
-scale = Vector2(2, 2)
-text = "Colour blindness"
-
-[node name="Label4" type="Label" parent="Video"]
-layout_mode = 0
-offset_left = 544.0
-offset_top = 583.0
-offset_right = 589.0
-offset_bottom = 609.0
-scale = Vector2(2, 2)
-text = "Vsync"
-
-[node name="Label5" type="Label" parent="Video"]
-layout_mode = 0
-offset_left = 544.0
-offset_top = 647.0
-offset_right = 646.0
-offset_bottom = 673.0
-scale = Vector2(2, 2)
-text = "Screen shake"
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 
 [node name="Audio" type="Control" parent="."]
 visible = false
@@ -291,7 +187,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 [node name="Label" type="Label" parent="Audio"]
 layout_mode = 2
 offset_left = 608.0
@@ -300,61 +195,20 @@ offset_right = 802.0
 offset_bottom = 570.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-[node name="VBoxContainer" type="VBoxContainer" parent="Audio"]
-layout_mode = 0
-offset_left = 912.0
-offset_top = 440.0
-offset_right = 1064.0
-offset_bottom = 496.0
-scale = Vector2(2, 2)
-
-[node name="MasterSlider" type="HSlider" parent="Audio/VBoxContainer"]
-layout_mode = 2
-min_value = -50.0
-max_value = 50.0
-
-[node name="MusicSlider" type="HSlider" parent="Audio/VBoxContainer"]
-layout_mode = 2
-min_value = -50.0
-max_value = 50.0
-
-[node name="SFXSlider" type="HSlider" parent="Audio/VBoxContainer"]
-layout_mode = 2
-min_value = -50.0
-max_value = 50.0
-
-[node name="Label" type="Label" parent="Audio"]
-layout_mode = 2
-offset_left = 648.0
-offset_top = 432.0
-offset_right = 800.0
-offset_bottom = 458.0
-scale = Vector2(2, 2)
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Master volime"
 
 [node name="Label2" type="Label" parent="Audio"]
 layout_mode = 2
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_left = 608.0
 offset_top = 568.0
 offset_right = 797.0
 offset_bottom = 610.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-offset_left = 648.0
-offset_top = 472.0
-offset_right = 800.0
-offset_bottom = 498.0
-scale = Vector2(2, 2)
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Music volume"
 
 [node name="Label3" type="Label" parent="Audio"]
 layout_mode = 2
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_left = 608.0
 offset_top = 608.0
 offset_right = 769.0
@@ -421,42 +275,21 @@ theme_override_font_sizes/font_size = 20
 text = "####"
 
 [node name="Controls" type="Control" parent="."]
-=======
-offset_left = 648.0
-offset_top = 512.0
-offset_right = 800.0
-offset_bottom = 538.0
-scale = Vector2(2, 2)
-text = "SFX volume"
-
-[node name="Controls" type="Control" parent="."]
-visible = false
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Controls"]
 layout_mode = 0
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_left = 1072.0
 offset_top = 376.0
 offset_right = 1112.0
 offset_bottom = 667.0
 theme_override_constants/separation = 15
-=======
-offset_left = 1024.0
-offset_top = 192.0
-offset_right = 1064.0
-offset_bottom = 438.0
-scale = Vector2(2, 2)
-theme_override_constants/separation = 12
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 alignment = 1
 
 [node name="InputButton" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
@@ -487,129 +320,69 @@ action = "move_right"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
-=======
-text = "#"
-
-[node name="InputButton2" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
-layout_mode = 2
-text = "#"
-action = "backward"
-
-[node name="InputButton3" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
-layout_mode = 2
-text = "#"
-action = "left"
-
-[node name="InputButton4" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
-layout_mode = 2
-text = "#"
-action = "right"
-
-[node name="InputButton5" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
-layout_mode = 2
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "#"
 action = "interact"
 
 [node name="InputButton6" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
-=======
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "#"
 action = "escape"
 
 [node name="Label" type="Label" parent="Controls"]
 layout_mode = 2
 offset_left = 872.0
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_top = 376.0
 offset_right = 949.0
 offset_bottom = 404.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-offset_top = 200.0
-offset_right = 949.0
-offset_bottom = 226.0
-scale = Vector2(2, 2)
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Forward"
 
 [node name="Label2" type="Label" parent="Controls"]
 layout_mode = 2
 offset_left = 872.0
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_top = 424.0
 offset_right = 963.0
 offset_bottom = 456.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-offset_top = 288.0
-offset_right = 949.0
-offset_bottom = 314.0
-scale = Vector2(2, 2)
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Backward"
 
 [node name="Label3" type="Label" parent="Controls"]
 layout_mode = 2
 offset_left = 872.0
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_top = 472.0
 offset_right = 907.0
 offset_bottom = 500.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-offset_top = 376.0
-offset_right = 949.0
-offset_bottom = 402.0
-scale = Vector2(2, 2)
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Left"
 
 [node name="Label4" type="Label" parent="Controls"]
 layout_mode = 2
 offset_left = 872.0
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_top = 520.0
 offset_right = 921.0
 offset_bottom = 548.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-offset_top = 464.0
-offset_right = 949.0
-offset_bottom = 490.0
-scale = Vector2(2, 2)
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Right"
 
 [node name="Label5" type="Label" parent="Controls"]
 layout_mode = 2
 offset_left = 872.0
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_top = 568.0
 offset_right = 948.0
 offset_bottom = 596.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-offset_top = 544.0
-offset_right = 949.0
-offset_bottom = 570.0
-scale = Vector2(2, 2)
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Interact"
 
 [node name="Label6" type="Label" parent="Controls"]
 layout_mode = 0
 offset_left = 872.0
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 offset_top = 616.0
 offset_right = 938.0
 offset_bottom = 644.0
@@ -630,29 +403,12 @@ offset_right = -0.640015
 offset_bottom = -0.28009
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-=======
-offset_top = 624.0
-offset_right = 926.0
-offset_bottom = 650.0
-scale = Vector2(2, 2)
-text = "Escape"
-
-[node name="BackButton" type="Button" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 896.0
-offset_top = 744.0
-offset_right = 992.0
-offset_bottom = 775.0
-scale = Vector2(2, 2)
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 text = "Exit"
 
 [connection signal="pressed" from="Menu/VBoxContainer/VideoButton" to="." method="_on_video_button_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/AudioButton" to="." method="_on_audio_button_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-<<<<<<< Updated upstream:menus/src/UXUI/Opt5448.tmp
 [connection signal="item_selected" from="Video/ResolutionOptionButton" to="." method="_on_resolution_option_button_item_selected"]
 [connection signal="item_selected" from="Video/FullScreenOptionsButton" to="." method="_on_full_screen_options_button_item_selected"]
 [connection signal="item_selected" from="Video/ColourBlindOptionButton" to="." method="_on_colour_blind_option_button_item_selected"]
@@ -661,14 +417,4 @@ text = "Exit"
 [connection signal="value_changed" from="Audio/MasterSlider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="Audio/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="Audio/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
-=======
-[connection signal="item_selected" from="Video/VBoxContainer/ResolutionOptionButton" to="." method="_on_resolution_option_button_item_selected"]
-[connection signal="item_selected" from="Video/VBoxContainer/FullScreenOptionsButton" to="." method="_on_full_screen_options_button_item_selected"]
-[connection signal="item_selected" from="Video/VBoxContainer/ColourBlindOptionButton" to="." method="_on_colour_blind_option_button_item_selected"]
-[connection signal="pressed" from="Video/VBoxContainer/VsyncCheckBox" to="." method="_on_vsync_check_box_pressed"]
-[connection signal="pressed" from="Video/VBoxContainer/ScreenShakeCheckBox" to="." method="_on_screen_shake_check_box_pressed"]
-[connection signal="value_changed" from="Audio/VBoxContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
-[connection signal="value_changed" from="Audio/VBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
-[connection signal="value_changed" from="Audio/VBoxContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
->>>>>>> Stashed changes:src/UXUI/Opt5448.tmp
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

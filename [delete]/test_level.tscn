@@ -1,17 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://ct3lxpyb6rbrc"]
 
-<<<<<<<< Updated upstream:menus/test_level.tscn
-[ext_resource type="Script" path="res://menus/test_level.gd" id="1_55ffe"]
-[ext_resource type="PackedScene" uid="uid://yrn3dp0a1ki5" path="res://menus/src/Player/Player.tscn" id="2_lf0ke"]
-[ext_resource type="PackedScene" uid="uid://b3v0q21ip6wxn" path="res://menus/src/UXUI/cout_down_ui.tscn" id="3_2u0ci"]
-[ext_resource type="PackedScene" uid="uid://db1fdkniwgypp" path="res://menus/src/UXUI/HUD.tscn" id="3_pyyfn"]
-[ext_resource type="PackedScene" uid="uid://di60k0eurs2n1" path="res://menus/src/UXUI/stats_board_ui.tscn" id="4_mk415"]
-========
 [ext_resource type="Script" path="res://[delete]/test_level.gd" id="1_55ffe"]
 [ext_resource type="PackedScene" uid="uid://b3v0q21ip6wxn" path="res://src/UXUI/cout_down_ui.tscn" id="3_2u0ci"]
 [ext_resource type="PackedScene" uid="uid://db1fdkniwgypp" path="res://src/UXUI/HUD.tscn" id="3_pyyfn"]
 [ext_resource type="PackedScene" uid="uid://di60k0eurs2n1" path="res://src/UXUI/stats_board_ui.tscn" id="4_mk415"]
->>>>>>>> Stashed changes:[delete]/test_level.tscn
 
 [sub_resource type="BoxMesh" id="BoxMesh_00whh"]
 

@@ -1,10 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://w4infiu0xuyv"]
 
-<<<<<<<< Updated upstream:menus/src/Player/FoodTruck.tscn
-[ext_resource type="Script" path="res://menus/src/Components/NextLevel.gd" id="1_eaqvr"]
-========
 [ext_resource type="Script" path="res://src/Components/nextlevel/NextLevel.gd" id="1_eaqvr"]
->>>>>>>> Stashed changes:src/Entitys/FoodTruck/FoodTruck.tscn
 
 [sub_resource type="BoxMesh" id="BoxMesh_5scx8"]
 

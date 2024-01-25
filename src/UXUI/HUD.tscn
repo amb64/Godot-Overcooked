@@ -1,11 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://db1fdkniwgypp"]
 
 [ext_resource type="PackedScene" uid="uid://dxla2l2t126bj" path="res://src/UXUI/List.tscn" id="1_45xhq"]
-<<<<<<< Updated upstream:menus/src/UXUI/HUD.tscn
-[ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://Assets/font/FogSans-Re46.otf" id="1_kqkhy"]
-=======
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="1_kqkhy"]
->>>>>>> Stashed changes:src/UXUI/HUD.tscn
 
 [node name="HUD" type="Control"]
 layout_mode = 3
