@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://prefabs/items/plate.tscn" id="1_ucdqg"]
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="2_e8cls"]
-[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives_old/counter.tscn" id="3_l5mg2"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives/counter.tscn" id="3_k8fun"]
 [ext_resource type="PackedScene" uid="uid://bobro4nwx8ysr" path="res://prefabs/counters/cutting_board.tscn" id="4_qircf"]
 [ext_resource type="PackedScene" uid="uid://2ya7ebrxext7" path="res://prefabs/ingredient_boxes/salmon_box.tscn" id="5_kt4ud"]
 [ext_resource type="PackedScene" uid="uid://c1xwvy5yqxvp4" path="res://prefabs/ingredient_boxes/tuna_box.tscn" id="6_qyuar"]
@@ -78,18 +78,6 @@ size = Vector3(20, 0.1, 0.1)
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Level_Counters_Counter44_ItemHolder#Plate4" parent="." instance=ExtResource("1_ucdqg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, -0.368759, 0.0252056)
-
-[node name="Level_Counters_Counter43_ItemHolder#Plate3" parent="." instance=ExtResource("1_ucdqg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, -0.368759, 0.0252056)
-
-[node name="Level_Counters_Counter42_ItemHolder#Plate2" parent="." instance=ExtResource("1_ucdqg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, -0.368759, 0.0252056)
-
-[node name="Level_Counters_Counter41_ItemHolder#Plate" parent="." instance=ExtResource("1_ucdqg")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, -0.368759, 0.0252056)
-
 [node name="Level" type="Node" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Level"]
@@ -157,47 +145,59 @@ shape = SubResource("ConcavePolygonShape3D_fj14c")
 
 [node name="Counters" type="Node" parent="Level"]
 
-[node name="Counter23" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
+[node name="Counter" parent="Level/Counters" instance=ExtResource("3_k8fun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, -6)
 
-[node name="Counter24" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
+[node name="Counter2" parent="Level/Counters" instance=ExtResource("3_k8fun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, -4)
 
-[node name="Counter26" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
+[node name="Counter3" parent="Level/Counters" instance=ExtResource("3_k8fun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, 0)
 
-[node name="Counter28" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
+[node name="Counter4" parent="Level/Counters" instance=ExtResource("3_k8fun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, 4)
 
-[node name="Counter35" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, 4)
-
-[node name="Counter39" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, -4)
-
-[node name="Counter40" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, -6)
-
-[node name="Counter29" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
+[node name="Counter5" parent="Level/Counters" instance=ExtResource("3_k8fun")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0.5, 5)
 
-[node name="Counter41" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0.5, 0)
-
-[node name="Counter42" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0.5, 0)
-
-[node name="Counter43" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0.5, 0)
-
-[node name="Counter44" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0.5, 0)
-
-[node name="Counter32" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
+[node name="Counter6" parent="Level/Counters" instance=ExtResource("3_k8fun")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0.5, 5)
 
-[node name="Counter34" parent="Level/Counters" instance=ExtResource("3_l5mg2")]
+[node name="Counter7" parent="Level/Counters" instance=ExtResource("3_k8fun")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 0.5, 5)
+
+[node name="Counter8" parent="Level/Counters" instance=ExtResource("3_k8fun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, 4)
+
+[node name="Counter9" parent="Level/Counters" instance=ExtResource("3_k8fun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, -4)
+
+[node name="Counter10" parent="Level/Counters" instance=ExtResource("3_k8fun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, -5)
+
+[node name="Counter11" parent="Level/Counters" instance=ExtResource("3_k8fun")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0.5, 0)
+
+[node name="Plate1" parent="Level/Counters/Counter11/ItemSlots" index="0" instance=ExtResource("1_ucdqg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, 0.55, 0.0252056)
+
+[node name="Counter12" parent="Level/Counters" instance=ExtResource("3_k8fun")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0.5, 0)
+
+[node name="Plate2" parent="Level/Counters/Counter12/ItemSlots" index="0" instance=ExtResource("1_ucdqg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, 0.55, 0.0252056)
+
+[node name="Counter13" parent="Level/Counters" instance=ExtResource("3_k8fun")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0.5, 0)
+
+[node name="Plate3" parent="Level/Counters/Counter13/ItemSlots" index="0" instance=ExtResource("1_ucdqg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, 0.55, 0.0252056)
+
+[node name="Counter14" parent="Level/Counters" instance=ExtResource("3_k8fun")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0.5, 0)
+
+[node name="Plate4" parent="Level/Counters/Counter14/ItemSlots" index="0" instance=ExtResource("1_ucdqg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, 0.55, 0.0252056)
 
 [node name="Plates" type="Node" parent="Level"]
 
@@ -373,17 +373,7 @@ mesh = SubResource("BoxMesh_wf1qi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
 mesh = SubResource("BoxMesh_wf1qi")
 
-[editable path="Level/Counters/Counter23"]
-[editable path="Level/Counters/Counter24"]
-[editable path="Level/Counters/Counter26"]
-[editable path="Level/Counters/Counter28"]
-[editable path="Level/Counters/Counter35"]
-[editable path="Level/Counters/Counter39"]
-[editable path="Level/Counters/Counter40"]
-[editable path="Level/Counters/Counter29"]
-[editable path="Level/Counters/Counter41"]
-[editable path="Level/Counters/Counter42"]
-[editable path="Level/Counters/Counter43"]
-[editable path="Level/Counters/Counter44"]
-[editable path="Level/Counters/Counter32"]
-[editable path="Level/Counters/Counter34"]
+[editable path="Level/Counters/Counter11"]
+[editable path="Level/Counters/Counter12"]
+[editable path="Level/Counters/Counter13"]
+[editable path="Level/Counters/Counter14"]
