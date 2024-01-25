@@ -1,0 +1,153 @@
+[gd_scene load_steps=15 format=3 uid="uid://bccj7fr5yjkss"]
+
+[ext_resource type="PackedScene" uid="uid://c8bp221rdnnv1" path="res://prefabs/counters/primitives/counterDeleter.tscn" id="1_ln073"]
+[ext_resource type="PackedScene" uid="uid://cw08pv8s8cqtw" path="res://prefabs/counters/primitives/counterSpawner.tscn" id="2_flxop"]
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://prefabs/counters/primitives_old/OLDCOUNTER.tscn" id="3_5f06b"]
+[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://player/player.tscn" id="4_gg2si"]
+
+[sub_resource type="Gradient" id="Gradient_qfw53"]
+offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
+colors = PackedColorArray(0.282353, 0.658824, 0.8, 1, 0.87395, 0.87395, 0.87395, 1, 0.282353, 0.658824, 0.8, 1, 1, 1, 1, 1, 0.282353, 0.658824, 0.8, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tmhvd"]
+gradient = SubResource("Gradient_qfw53")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_uic4y"]
+panorama = SubResource("GradientTexture1D_tmhvd")
+
+[sub_resource type="Sky" id="Sky_tgnfe"]
+sky_material = SubResource("PanoramaSkyMaterial_uic4y")
+
+[sub_resource type="Environment" id="Environment_ujos2"]
+background_mode = 2
+sky = SubResource("Sky_tgnfe")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vilb"]
+albedo_color = Color(0.823529, 0.819608, 0.823529, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ou6j7"]
+material = SubResource("StandardMaterial3D_1vilb")
+size = Vector3(25, 1, 15)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5bhfw"]
+data = PackedVector3Array(-12.5, 0.5, 7.5, 12.5, 0.5, 7.5, -12.5, -0.5, 7.5, 12.5, 0.5, 7.5, 12.5, -0.5, 7.5, -12.5, -0.5, 7.5, 12.5, 0.5, -7.5, -12.5, 0.5, -7.5, 12.5, -0.5, -7.5, -12.5, 0.5, -7.5, -12.5, -0.5, -7.5, 12.5, -0.5, -7.5, 12.5, 0.5, 7.5, 12.5, 0.5, -7.5, 12.5, -0.5, 7.5, 12.5, 0.5, -7.5, 12.5, -0.5, -7.5, 12.5, -0.5, 7.5, -12.5, 0.5, -7.5, -12.5, 0.5, 7.5, -12.5, -0.5, -7.5, -12.5, 0.5, 7.5, -12.5, -0.5, 7.5, -12.5, -0.5, -7.5, 12.5, 0.5, 7.5, -12.5, 0.5, 7.5, 12.5, 0.5, -7.5, -12.5, 0.5, 7.5, -12.5, 0.5, -7.5, 12.5, 0.5, -7.5, -12.5, -0.5, 7.5, 12.5, -0.5, 7.5, -12.5, -0.5, -7.5, 12.5, -0.5, 7.5, 12.5, -0.5, -7.5, -12.5, -0.5, -7.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ssm3"]
+size = Vector3(25, 5, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qdhq8"]
+data = PackedVector3Array(-12.5, 2.5, 0.5, 12.5, 2.5, 0.5, -12.5, -2.5, 0.5, 12.5, 2.5, 0.5, 12.5, -2.5, 0.5, -12.5, -2.5, 0.5, 12.5, 2.5, -0.5, -12.5, 2.5, -0.5, 12.5, -2.5, -0.5, -12.5, 2.5, -0.5, -12.5, -2.5, -0.5, 12.5, -2.5, -0.5, 12.5, 2.5, 0.5, 12.5, 2.5, -0.5, 12.5, -2.5, 0.5, 12.5, 2.5, -0.5, 12.5, -2.5, -0.5, 12.5, -2.5, 0.5, -12.5, 2.5, -0.5, -12.5, 2.5, 0.5, -12.5, -2.5, -0.5, -12.5, 2.5, 0.5, -12.5, -2.5, 0.5, -12.5, -2.5, -0.5, 12.5, 2.5, 0.5, -12.5, 2.5, 0.5, 12.5, 2.5, -0.5, -12.5, 2.5, 0.5, -12.5, 2.5, -0.5, 12.5, 2.5, -0.5, -12.5, -2.5, 0.5, 12.5, -2.5, 0.5, -12.5, -2.5, -0.5, 12.5, -2.5, 0.5, 12.5, -2.5, -0.5, -12.5, -2.5, -0.5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Level" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Level"]
+environment = SubResource("Environment_ujos2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, -0.432322, 0.901719, 0, -0.901719, -0.432322, 0.048789, 6.24144, 6.78514)
+
+[node name="Floor" type="MeshInstance3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.129937, -0.0139914, -0.165645)
+mesh = SubResource("BoxMesh_ou6j7")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/Floor"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_5bhfw")
+
+[node name="Walls" type="Node3D" parent="Level"]
+
+[node name="Wall" type="MeshInstance3D" parent="Level/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -8)
+mesh = SubResource("BoxMesh_8ssm3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/Walls/Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Walls/Wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qdhq8")
+
+[node name="Wall2" type="MeshInstance3D" parent="Level/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 8)
+mesh = SubResource("BoxMesh_8ssm3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/Walls/Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Walls/Wall2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qdhq8")
+
+[node name="Wall3" type="MeshInstance3D" parent="Level/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13, 2, 0)
+mesh = SubResource("BoxMesh_8ssm3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/Walls/Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Walls/Wall3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qdhq8")
+
+[node name="Wall4" type="MeshInstance3D" parent="Level/Walls"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13, 2, 0)
+mesh = SubResource("BoxMesh_8ssm3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/Walls/Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/Walls/Wall4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qdhq8")
+
+[node name="Counters" type="Node3D" parent="Level"]
+
+[node name="Deleter" parent="Level/Counters" instance=ExtResource("1_ln073")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.30601, 1.02137, -6.37462)
+
+[node name="DroppableSpawner" parent="Level/Counters" instance=ExtResource("2_flxop")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.18903, 0.979494, -6.36495)
+
+[node name="Spawner" parent="Level/Counters" instance=ExtResource("2_flxop")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0927, 0.996629, -6.3276)
+is_droppable = false
+
+[node name="NonInteractable" parent="Level/Counters" instance=ExtResource("3_5f06b")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.91346, 1, -6.32247)
+
+[node name="Counter2" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_5f06b")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.22129, 0.988948, -6.28846)
+item_slots = [NodePath("Slot")]
+
+[node name="Slot" type="Node3D" parent="Level/Counters/Counter2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.508138, 0)
+
+[node name="Counter3" parent="Level/Counters" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_5f06b")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.32965, 0.988948, -6.28846)
+item_slots = [NodePath("Slot"), NodePath("Slot2")]
+
+[node name="Slot" type="Node3D" parent="Level/Counters/Counter3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.508138, 0.517974)
+
+[node name="Slot2" type="Node3D" parent="Level/Counters/Counter3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.508138, -0.656137)
+
+[node name="LinkedCounter" type="Node3D" parent="Level/Counters"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1852, 0, 0)
+
+[node name="Counter" parent="Level/Counters/LinkedCounter" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_5f06b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84282, 1.02623, -3.40867)
+item_slots = [NodePath("../Node3D")]
+
+[node name="Counter2" parent="Level/Counters/LinkedCounter" node_paths=PackedStringArray("item_slots") instance=ExtResource("3_5f06b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84282, 1.02623, -0.417022)
+item_slots = [NodePath("../Node3D")]
+
+[node name="Node3D" type="Node3D" parent="Level/Counters/LinkedCounter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84282, 1.67527, -1.97306)
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 9.83267, 6.7)
+
+[node name="Player" parent="." instance=ExtResource("4_gg2si")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.04341, 0)

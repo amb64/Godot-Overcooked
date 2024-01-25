@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cy86asgwodbdp"]
-
-[ext_resource type="Script" path="res://src/UXUI/InputButton.gd" id="1_hxd5k"]
-
-[node name="InputButton" type="Button"]
-offset_right = 8.0
-offset_bottom = 8.0
-script = ExtResource("1_hxd5k")
-action = "forward"
