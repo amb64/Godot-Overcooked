@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bh1jadrabdsjc"]
+[gd_scene load_steps=16 format=3 uid="uid://bh1jadrabdsjc"]
 
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="1_ub4kn"]
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://src/Components/items/plate.tscn" id="2_nvui0"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cqoagqrwg7ebh" path="res://src/Components/counters/serving_area.tscn" id="5_cjq6d"]
 [ext_resource type="PackedScene" uid="uid://byusqjg426ti" path="res://src/Components/counters/plate_return.tscn" id="6_3pkhk"]
 [ext_resource type="PackedScene" uid="uid://bmpvrrravsrmb" path="res://src/Components/ingredient_boxes/plain.tscn" id="7_tp63r"]
+[ext_resource type="PackedScene" uid="uid://bfgjqt2lj4050" path="res://src/Components/camera.tscn" id="8_l3ksx"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ddvow"]
 
@@ -47,7 +48,7 @@ mesh = SubResource("BoxMesh_yyadc")
 shape = SubResource("BoxShape3D_bpta4")
 
 [node name="Road middle" type="MeshInstance3D" parent="Floors"]
-transform = Transform3D(15.2041, 0, 0, 0, 1, 0, 0, 0, 3.29681, 0, 0, 0.0201602)
+transform = Transform3D(14.9977, 0, 0, 0, 1, 0, 0, 0, 3.29681, 0.0145407, 0, 0.0201602)
 mesh = SubResource("BoxMesh_3gd6x")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floors/Road middle"]
@@ -58,39 +59,39 @@ shape = SubResource("BoxShape3D_yq255")
 [node name="Counters" type="Node" parent="."]
 
 [node name="Counter" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.52346, 0.982864, 2.91233)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.40695, 0.982864, 2.91233)
 
 [node name="Counter2" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.53163, 0.965723, 2.9032)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.44082, 0.965723, 2.9032)
 
 [node name="Counter3" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.58942, 0.968324, 2.91418)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.46014, 0.968324, 2.91418)
 
 [node name="Plate" parent="Counters/Counter3/ItemSlots" index="0" instance=ExtResource("2_nvui0")]
 
 [node name="Counter4" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.70936, 0.956897, 3.16095)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72181, 0.956897, 3.16095)
 
 [node name="Counter5" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.70709, 0.952713, 7.06443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71984, 0.952713, 7.06443)
 
 [node name="Counter6" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7025, 0.961589, 10.9827)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71961, 0.961589, 10.9827)
 
 [node name="Counter7" parent="Counters" instance=ExtResource("1_ub4kn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.70668, 0.95878, 12.9425)
 
 [node name="Counter8" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.76781, 0.964299, 6.58939)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.73201, 0.964299, 6.58939)
 
 [node name="Counter9" parent="Counters" instance=ExtResource("1_ub4kn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72416, 0.961797, 10.5599)
 
 [node name="Counter10" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.70333, 0.957122, 12.4922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72036, 0.957122, 12.4922)
 
 [node name="Counter11" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.80275, 0.961306, -2.91932)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.79018, 0.961306, -2.91932)
 
 [node name="Counter12" parent="Counters" instance=ExtResource("1_ub4kn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.79085, 0.954204, -4.8575)
@@ -99,10 +100,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.79085, 0.954204, -4.8575)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.78889, 0.946762, -6.70806)
 
 [node name="Counter14" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.51294, 0.937044, -12.898)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.51294, 0.937044, -12.9501)
 
 [node name="Counter15" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.51896, 0.980526, -12.6794)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.51896, 0.980526, -12.633)
 
 [node name="Counter16" parent="Counters" instance=ExtResource("1_ub4kn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52585, 0.962312, -10.6627)
@@ -111,10 +112,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52585, 0.962312, -10.6627)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.54214, 0.960192, -6.77707)
 
 [node name="Counter18" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.34365, 0.965946, -3.14512)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.34365, 0.965946, -3.18292)
 
 [node name="Counter19" parent="Counters" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.36681, 0.9676, -3.15727)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.36681, 0.9676, -3.15524)
 
 [node name="Counter20" parent="Counters" instance=ExtResource("1_ub4kn")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.37829, 0.967395, -3.15818)
@@ -127,7 +128,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.617
 [node name="Cutting boards" type="Node" parent="."]
 
 [node name="Cutting_Board" parent="Cutting boards" instance=ExtResource("3_x8nlm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7018, 0.952204, 5.11618)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71426, 0.952204, 5.11618)
 
 [node name="Cutting_Board2" parent="Cutting boards" instance=ExtResource("3_x8nlm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71311, 0.960302, 9.02889)
@@ -135,10 +136,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71311, 0.960302, 9.02889)
 [node name="Cooking pots" type="Node" parent="."]
 
 [node name="Counterpot" parent="Cooking pots" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.78925, 0.983873, 4.59381)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.72739, 0.983873, 4.59381)
 
 [node name="Counterpot2" parent="Cooking pots" instance=ExtResource("1_ub4kn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.74876, 0.966563, 8.57629)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.73175, 0.966563, 8.57629)
 
 [node name="Bins" type="Node" parent="."]
 
@@ -148,10 +149,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.79836, 0.953206, -10.6096)
 [node name="Serving Stations_plate return" type="Node" parent="."]
 
 [node name="Serving_Area" parent="Serving Stations_plate return" instance=ExtResource("5_cjq6d")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5562, 0.942519, -12.9324)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5562, 0.942519, -12.9565)
 
 [node name="Plate_Return" parent="Serving Stations_plate return" instance=ExtResource("6_3pkhk")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.40667, 0.937644, -12.9264)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.40667, 0.937644, -12.9522)
 
 [node name="Item Givers" type="Node" parent="."]
 
@@ -165,6 +166,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5504, 0.962988, -4.84012)
 
 [node name="Counter" parent="Fire Extinguishers" instance=ExtResource("1_ub4kn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7917, 0.950867, -8.66632)
+
+[node name="Camera" type="Node" parent="."]
+
+[node name="Camera" parent="Camera" instance=ExtResource("8_l3ksx")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 13.4988, 0)
 
 [editable path="Counters/Counter3"]
 [editable path="Counters/Counter21"]
