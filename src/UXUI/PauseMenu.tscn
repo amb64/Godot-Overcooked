@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://58qpm1imogif"]
+[gd_scene load_steps=11 format=3 uid="uid://58qpm1imogif"]
 
 [ext_resource type="PackedScene" uid="uid://bqjbtsu1jcben" path="res://src/UXUI/OptionsMenu.tscn" id="1_65ljy"]
 [ext_resource type="Script" path="res://src/UXUI/PauseMenu.gd" id="1_cb55b"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="2_24ela"]
+[ext_resource type="StyleBox" uid="uid://dt373x02xlmyb" path="res://materials/UXUI/Button1Normal.tres" id="3_cdvrr"]
+[ext_resource type="StyleBox" uid="uid://bcb5qj0pcogko" path="res://materials/UXUI/Button1Hover.tres" id="4_ss5f0"]
+[ext_resource type="StyleBox" uid="uid://dh2vqu8bmbcwm" path="res://materials/UXUI/Button1Pressed.tres" id="5_q00o7"]
+[ext_resource type="StyleBox" uid="uid://bhbf6r4t6m65f" path="res://materials/UXUI/ButtonFocus.tres" id="6_ep4oe"]
+[ext_resource type="StyleBox" uid="uid://dj8t756h4bqjd" path="res://materials/UXUI/Button2Normal.tres" id="6_l14ta"]
+[ext_resource type="StyleBox" uid="uid://c6l0ot5dy2fij" path="res://materials/UXUI/Button2Hover.tres" id="7_p7pnv"]
+[ext_resource type="StyleBox" uid="uid://1ulot5p4who5" path="res://materials/UXUI/Button2Pressed.tres" id="8_2m7rj"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -31,28 +38,42 @@ color = Color(0, 0, 0, 0.239216)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 21.6
-anchor_top = 12.8
+anchor_top = 11.8
 anchor_right = 28.8
-anchor_bottom = 17.6
-offset_bottom = -2.0
+anchor_bottom = 18.6
 theme_override_constants/separation = 20
 
 [node name="ReturnButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_24ela")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_cdvrr")
+theme_override_styles/hover = ExtResource("4_ss5f0")
+theme_override_styles/pressed = ExtResource("5_q00o7")
+theme_override_styles/focus = ExtResource("6_ep4oe")
 text = "Return"
 
 [node name="OptionsButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_24ela")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("6_l14ta")
+theme_override_styles/hover = ExtResource("7_p7pnv")
+theme_override_styles/pressed = ExtResource("8_2m7rj")
+theme_override_styles/focus = ExtResource("6_ep4oe")
 text = "Options"
 
 [node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_24ela")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_cdvrr")
+theme_override_styles/hover = ExtResource("4_ss5f0")
+theme_override_styles/pressed = ExtResource("5_q00o7")
+theme_override_styles/focus = ExtResource("6_ep4oe")
 text = "Exit"
 
 [node name="OptionsMenu" parent="." instance=ExtResource("1_65ljy")]

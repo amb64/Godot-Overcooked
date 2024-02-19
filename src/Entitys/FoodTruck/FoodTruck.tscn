@@ -1,58 +1,54 @@
-[gd_scene load_steps=7 format=3 uid="uid://w4infiu0xuyv"]
+[gd_scene load_steps=10 format=3 uid="uid://w4infiu0xuyv"]
 
 [ext_resource type="Script" path="res://src/Components/nextlevel/NextLevel.gd" id="1_eaqvr"]
+[ext_resource type="ArrayMesh" uid="uid://cfpln2ci8bgyv" path="res://assets/meshes/cloudsmoke_Mesh.res" id="2_r3slj"]
+[ext_resource type="ArrayMesh" uid="uid://dpvu8txmde48r" path="res://assets/meshes/truck_Cube_003.res" id="3_ltqld"]
+[ext_resource type="Texture2D" uid="uid://cu7f4h3dlcrd5" path="res://assets/textures/truck_Wheel.png" id="4_81ijg"]
+[ext_resource type="ArrayMesh" uid="uid://d155wxob1ftho" path="res://assets/meshes/truck_Cylinder_006.res" id="4_m1igs"]
+[ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://assets/meshes/truck_Cylinder_005.res" id="5_q2auu"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_5scx8"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfvl4"]
+size = Vector3(0.8479, 0.879395, 1.59321)
 
-[sub_resource type="SphereMesh" id="SphereMesh_ybvjf"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_63jb8"]
+albedo_texture = ExtResource("4_81ijg")
 
 [sub_resource type="Curve" id="Curve_7446d"]
 _data = [Vector2(0, 0.536842), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.79812, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_6cute"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_yfvl4"]
-size = Vector3(1, 1, 2.0613)
-
 [node name="FoodTruck" type="CharacterBody3D" groups=["FoodTruck"]]
 script = ExtResource("1_eaqvr")
 
-[node name="Body" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.56061, 0, 0, 0.269733)
-mesh = SubResource("BoxMesh_5scx8")
-
-[node name="GPUParticles3D" type="CPUParticles3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.348694, -0.615577)
-emitting = false
-amount = 3
-mesh = SubResource("SphereMesh_ybvjf")
-gravity = Vector3(0, 0, 0)
-scale_amount_curve = SubResource("Curve_7446d")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 0.522879, 0, 0, 0, 0.334428, 0, -0.220823, 0.66757)
-mesh = SubResource("BoxMesh_5scx8")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(-1.27529e-08, -0.0680274, 1.83588e-08, 0, -2.97357e-09, -0.42, 0.291752, -2.97357e-09, 8.02488e-16, 0.470069, -0.422334, 0.362946)
-mesh = SubResource("CylinderMesh_6cute")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(-1.27529e-08, -0.0680274, 1.83588e-08, 0, -2.97357e-09, -0.42, 0.291752, -2.97357e-09, 8.02488e-16, 0.470069, -0.422334, -0.282966)
-mesh = SubResource("CylinderMesh_6cute")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(-1.27529e-08, -0.0680274, 1.83588e-08, 0, -2.97357e-09, -0.42, 0.291752, -2.97357e-09, 8.02488e-16, -0.466714, -0.422334, 0.362946)
-mesh = SubResource("CylinderMesh_6cute")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Body"]
-transform = Transform3D(-1.27529e-08, -0.0680274, 1.83588e-08, 0, -2.97357e-09, -0.42, 0.291752, -2.97357e-09, 8.02488e-16, -0.466714, -0.422334, -0.282966)
-mesh = SubResource("CylinderMesh_6cute")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.518196)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00158691, -0.0603027, 0.522863)
 shape = SubResource("BoxShape3D_yfvl4")
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.698253, 0.715851, 0, -0.715851, 0.698253, 0, 8.48261, 7.49102)
+transform = Transform3D(1, 0, 0, 0, 0.698253, 0.715851, 0, -0.715851, 0.698253, 0, 7.323, 8.27397)
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.0295026, 0.523758)
+mesh = ExtResource("3_ltqld")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(-1.09659e-08, -0.188172, 0, 0.25087, -8.22527e-09, 0, 0, 0, 0.252105, 0, -1.85783, 0)
+material_overlay = SubResource("ORMMaterial3D_63jb8")
+mesh = ExtResource("4_m1igs")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Body"]
+transform = Transform3D(-1.09659e-08, -0.188172, 0, 0.25087, -8.22527e-09, 0, 0, 0, 0.252105, 0, -1.85783, 0)
+material_overlay = SubResource("ORMMaterial3D_63jb8")
+mesh = ExtResource("5_q2auu")
+skeleton = NodePath("../..")
+
+[node name="GPUParticles3D" type="CPUParticles3D" parent="Body"]
+transform = Transform3D(-0.91947, 0, 1.25446e-07, 0, 0.91947, 0, -8.03825e-08, 0, -1.43493, 0.0354533, -0.319665, 2.48645)
+emitting = false
+amount = 3
+mesh = ExtResource("2_r3slj")
+gravity = Vector3(0, 0, 0)
+scale_amount_min = 0.01
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_7446d")

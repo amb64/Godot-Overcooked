@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://mea1an3v6qag"]
+
+[ext_resource type="Script" path="res://src/UXUI/OptionsSelecter.gd" id="1_mpwlo"]
+[ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="2_o86pa"]
+[ext_resource type="StyleBox" uid="uid://bhbf6r4t6m65f" path="res://materials/UXUI/ButtonFocus.tres" id="3_ao7ek"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmcad"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.360784)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ok4k"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.631373)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgreo"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 0.729412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sn6ou"]
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.901961)
+
+[node name="OptionsSelecter" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 64.0
+script = ExtResource("1_mpwlo")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.2
+anchor_bottom = 1.0
+theme_override_fonts/font = ExtResource("2_o86pa")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmcad")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ok4k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jgreo")
+theme_override_styles/focus = ExtResource("3_ao7ek")
+text = "<"
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_o86pa")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmcad")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ok4k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jgreo")
+theme_override_styles/focus = ExtResource("3_ao7ek")
+text = ">"
+icon_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sn6ou")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+text = "###"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
