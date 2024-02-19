@@ -60,9 +60,9 @@ func load_config():
 	input_remap_keys()
 	
 	if fullscreen == 0:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
-	elif fullscreen == 1:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	elif fullscreen == 1:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	
@@ -95,6 +95,27 @@ func save_config():
 		for key in config_file[section].keys():
 			configFile.set_value(section, key, config_file[section][key])
 		configFile.save(file_path_config)
+	
+	if fullscreen == 0:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	elif fullscreen == 1:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	
+	if vsync:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+	else:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	
+	if screenRes == 0:
+		get_viewport().size = Vector2(1280, 720)
+	if screenRes == 1:
+		get_viewport().size = Vector2(1920, 1080)
+	
+	AudioServer.set_bus_volume_db(0, volumeMaster)
+	AudioServer.set_bus_volume_db(1, volumeMusic)
+	AudioServer.set_bus_volume_db(2, volumeSFX)
 
 # Input map keys
 func input_remap_keys():
