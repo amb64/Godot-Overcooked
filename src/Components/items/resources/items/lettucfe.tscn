@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnemdykrt5ofs"]
+
+[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://src/Components/items/item.tscn" id="1_rf8ai"]
+
+[node name="Item" instance=ExtResource("1_rf8ai")]

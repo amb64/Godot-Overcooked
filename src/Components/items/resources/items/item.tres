@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://c3fbjytce7op8"]
+
+[ext_resource type="Script" path="res://src/Components/items/item.gd" id="1_41t5d"]
+
+[resource]
+script = ExtResource("1_41t5d")
+item_name = &"\"item\""
+ingredients = Array[ExtResource("1_41t5d")]([])
+state = 0
