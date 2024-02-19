@@ -1,0 +1,419 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqjbtsu1jcben"]
+
+[ext_resource type="Script" path="res://src/UXUI/OptionsMenu.gd" id="1_apjq0"]
+[ext_resource type="PackedScene" uid="uid://cy86asgwodbdp" path="res://src/UXUI/InputButton.tscn" id="2_ryc7h"]
+[ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://Assets/font/FogSans-Re46.otf" id="3_3afyl"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_apjq0")
+
+[node name="Menu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.433
+anchor_top = 0.356
+anchor_right = 0.533
+anchor_bottom = 0.593
+offset_left = 64.64
+offset_top = -0.480011
+offset_right = 64.6399
+offset_bottom = -0.440063
+theme_override_constants/separation = 18
+
+[node name="VideoButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Video"
+
+[node name="AudioButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Audio"
+
+[node name="ControlsButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Controls"
+
+[node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[node name="Video" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Video"]
+layout_mode = 2
+offset_left = 784.0
+offset_top = 360.0
+offset_right = 997.0
+offset_bottom = 402.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Resolution"
+
+[node name="Label2" type="Label" parent="Video"]
+layout_mode = 2
+offset_left = 784.0
+offset_top = 416.0
+offset_right = 997.0
+offset_bottom = 458.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Screen"
+
+[node name="Label3" type="Label" parent="Video"]
+layout_mode = 2
+offset_left = 784.0
+offset_top = 472.0
+offset_right = 1018.0
+offset_bottom = 514.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Colour blindness"
+
+[node name="Label4" type="Label" parent="Video"]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 536.0
+offset_right = 867.0
+offset_bottom = 578.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Vsync"
+
+[node name="Label5" type="Label" parent="Video"]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 600.0
+offset_right = 970.0
+offset_bottom = 642.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Screen shake"
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="Video"]
+layout_mode = 2
+offset_left = 1072.0
+offset_top = 368.0
+offset_right = 1287.0
+offset_bottom = 404.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+item_count = 2
+selected = 0
+popup/item_0/text = "1280x720"
+popup/item_0/id = 0
+popup/item_1/text = "1920x1080"
+popup/item_1/id = 1
+
+[node name="FullScreenOptionsButton" type="OptionButton" parent="Video"]
+layout_mode = 2
+offset_left = 1072.0
+offset_top = 424.0
+offset_right = 1322.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+item_count = 3
+selected = 0
+popup/item_0/text = "Full Screen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Full screen Borderless"
+popup/item_2/id = 2
+
+[node name="ColourBlindOptionButton" type="OptionButton" parent="Video"]
+layout_mode = 2
+offset_left = 1072.0
+offset_top = 480.0
+offset_right = 1287.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+item_count = 1
+selected = 0
+popup/item_0/text = "Default"
+popup/item_0/id = 0
+
+[node name="VsyncCheckBox" type="CheckBox" parent="Video"]
+layout_mode = 2
+offset_left = 1072.0
+offset_top = 544.0
+offset_right = 1096.0
+offset_bottom = 568.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 15
+
+[node name="ScreenShakeCheckBox" type="CheckBox" parent="Video"]
+layout_mode = 2
+offset_left = 1072.0
+offset_top = 608.0
+offset_right = 1096.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 15
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Audio"]
+layout_mode = 2
+offset_left = 608.0
+offset_top = 528.0
+offset_right = 802.0
+offset_bottom = 570.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Master volime"
+
+[node name="Label2" type="Label" parent="Audio"]
+layout_mode = 2
+offset_left = 608.0
+offset_top = 568.0
+offset_right = 797.0
+offset_bottom = 610.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Music volume"
+
+[node name="Label3" type="Label" parent="Audio"]
+layout_mode = 2
+offset_left = 608.0
+offset_top = 608.0
+offset_right = 769.0
+offset_bottom = 650.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "SFX volume"
+
+[node name="MasterSlider" type="HSlider" parent="Audio"]
+layout_mode = 2
+offset_left = 832.0
+offset_top = 528.0
+offset_right = 1200.0
+offset_bottom = 568.0
+min_value = -50.0
+max_value = 50.0
+
+[node name="MusicSlider" type="HSlider" parent="Audio"]
+layout_mode = 2
+offset_left = 832.0
+offset_top = 568.0
+offset_right = 1200.0
+offset_bottom = 600.0
+min_value = -50.0
+max_value = 50.0
+
+[node name="SFXSlider" type="HSlider" parent="Audio"]
+layout_mode = 2
+offset_left = 832.0
+offset_top = 600.0
+offset_right = 1200.0
+offset_bottom = 640.0
+min_value = -50.0
+max_value = 50.0
+
+[node name="MasterPer" type="Label" parent="Audio"]
+layout_mode = 0
+offset_left = 1224.0
+offset_top = 536.0
+offset_right = 1279.0
+offset_bottom = 568.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "####"
+
+[node name="MusicPer" type="Label" parent="Audio"]
+layout_mode = 0
+offset_left = 1224.0
+offset_top = 568.0
+offset_right = 1279.0
+offset_bottom = 600.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "####"
+
+[node name="SFXPer" type="Label" parent="Audio"]
+layout_mode = 0
+offset_left = 1224.0
+offset_top = 604.0
+offset_right = 1279.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "####"
+
+[node name="Controls" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls"]
+layout_mode = 0
+offset_left = 1072.0
+offset_top = 376.0
+offset_right = 1112.0
+offset_bottom = 667.0
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="InputButton" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "#"
+
+[node name="InputButton2" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "#"
+action = "backward"
+
+[node name="InputButton3" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "#"
+action = "left"
+
+[node name="InputButton4" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "#"
+action = "right"
+
+[node name="InputButton5" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "#"
+action = "interact"
+
+[node name="InputButton6" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+text = "#"
+action = "escape"
+
+[node name="Label" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 872.0
+offset_top = 376.0
+offset_right = 949.0
+offset_bottom = 404.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Forward"
+
+[node name="Label2" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 872.0
+offset_top = 424.0
+offset_right = 963.0
+offset_bottom = 456.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Backward"
+
+[node name="Label3" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 872.0
+offset_top = 472.0
+offset_right = 907.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Left"
+
+[node name="Label4" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 872.0
+offset_top = 520.0
+offset_right = 921.0
+offset_bottom = 548.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Right"
+
+[node name="Label5" type="Label" parent="Controls"]
+layout_mode = 2
+offset_left = 872.0
+offset_top = 568.0
+offset_right = 948.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Interact"
+
+[node name="Label6" type="Label" parent="Controls"]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 616.0
+offset_right = 938.0
+offset_bottom = 644.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Escape"
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.467
+anchor_top = 0.689
+anchor_right = 0.567
+anchor_bottom = 0.741
+offset_left = -0.640015
+offset_top = -0.119995
+offset_right = -0.640015
+offset_bottom = -0.28009
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[connection signal="pressed" from="Menu/VBoxContainer/VideoButton" to="." method="_on_video_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/AudioButton" to="." method="_on_audio_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="item_selected" from="Video/ResolutionOptionButton" to="." method="_on_resolution_option_button_item_selected"]
+[connection signal="item_selected" from="Video/FullScreenOptionsButton" to="." method="_on_full_screen_options_button_item_selected"]
+[connection signal="item_selected" from="Video/ColourBlindOptionButton" to="." method="_on_colour_blind_option_button_item_selected"]
+[connection signal="pressed" from="Video/VsyncCheckBox" to="." method="_on_vsync_check_box_pressed"]
+[connection signal="pressed" from="Video/ScreenShakeCheckBox" to="." method="_on_screen_shake_check_box_pressed"]
+[connection signal="value_changed" from="Audio/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Audio/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Audio/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
