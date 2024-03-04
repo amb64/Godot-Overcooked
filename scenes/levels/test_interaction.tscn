@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bccj7fr5yjkss"]
 
-[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entitys/Player/player.tscn" id="1_gek5r"]
+[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entities/Player/player.tscn" id="1_gek5r"]
 [ext_resource type="PackedScene" path="res://prefabs/counters/primitives_old/counterItem.tscn" id="2_hidjo"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="3_g8y61"]
 [ext_resource type="PackedScene" path="res://prefabs/counters/primitives_old/counterMulti.tscn" id="3_s4d4s"]

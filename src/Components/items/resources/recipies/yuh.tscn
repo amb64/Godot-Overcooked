@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://chi3i5flwn5qk"]
+
+[ext_resource type="Script" path="res://src/Components/items/resources/recipies/recipes.gd" id="1_ufnju"]
+[ext_resource type="Resource" uid="uid://cg4u1v7uatqyn" path="res://src/Components/items/resources/recipies/test.tres" id="2_r2ix0"]
+
+[node name="Yuh" type="Node"]
+script = ExtResource("1_ufnju")
+recipes = Array[Resource("res://src/Components/items/recipe.gd")]([ExtResource("2_r2ix0")])

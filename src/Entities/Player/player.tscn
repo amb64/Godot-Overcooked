@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dn6g4khocwvw1"]
 
-[ext_resource type="Script" path="res://src/Entitys/Player/RigidBody3DController.gd" id="1_526f1"]
-[ext_resource type="Script" path="res://src/Entitys/Player/CounterHandler.gd" id="2_8rywc"]
+[ext_resource type="Script" path="res://src/Entities/Player/RigidBody3DController.gd" id="1_526f1"]
+[ext_resource type="Script" path="res://src/Entities/Player/CounterHandler.gd" id="2_8rywc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nxyb"]
 albedo_color = Color(0.415686, 0.396078, 0.972549, 1)

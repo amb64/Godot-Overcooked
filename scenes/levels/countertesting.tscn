@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c8bp221rdnnv1" path="res://src/Components/counters/primitives/counterDeleter.tscn" id="1_ln073"]
 [ext_resource type="PackedScene" uid="uid://cw08pv8s8cqtw" path="res://src/Components/counters/primitives/counterSpawner.tscn" id="2_flxop"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="3_5f06b"]
-[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entitys/Player/player.tscn" id="4_gg2si"]
+[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entities/Player/player.tscn" id="4_gg2si"]
 
 [sub_resource type="Gradient" id="Gradient_qfw53"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)

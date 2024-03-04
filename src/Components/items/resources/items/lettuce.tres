@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://ncql8wr71m4w"]
+[gd_resource type="Resource" script_class="BaseItem" load_steps=2 format=3 uid="uid://ncql8wr71m4w"]
 
-[ext_resource type="Script" path="res://src/Components/items/item.gd" id="1_pufqi"]
+[ext_resource type="Script" path="res://src/Components/items/resources/base_item.gd" id="1_wl8r7"]
 
 [resource]
-script = ExtResource("1_pufqi")
+resource_local_to_scene = true
+script = ExtResource("1_wl8r7")
 item_name = &"lettuce"
-ingredients = Array[ExtResource("1_pufqi")]([])
-state = 1
+state = 2

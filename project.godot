@@ -12,18 +12,13 @@ config_version=5
 
 config/name="Overcooked Godot Level"
 run/main_scene="res://scenes/levels/level1.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-Global="*res://autoloads/Global.gd"
-Config="*res://autoloads/Config.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=720
+window/size/viewport_height=480
 
 [dotnet]
 

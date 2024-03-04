@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bmo6sge3pxrsb"]
 
 [ext_resource type="PackedScene" uid="uid://58qpm1imogif" path="res://src/UXUI/PauseMenu.tscn" id="1_ppm5x"]
-[ext_resource type="PackedScene" uid="uid://w4infiu0xuyv" path="res://src/Entitys/FoodTruck/FoodTruck.tscn" id="2_x0c17"]
-[ext_resource type="Script" path="res://src/Entitys/FoodTruck/FoodTruck.gd" id="3_nejca"]
+[ext_resource type="PackedScene" uid="uid://w4infiu0xuyv" path="res://src/Entities/FoodTruck/FoodTruck.tscn" id="2_x0c17"]
+[ext_resource type="Script" path="res://src/Entities/FoodTruck/FoodTruck.gd" id="3_nejca"]
 [ext_resource type="PackedScene" uid="uid://blkuyflhl23b7" path="res://src/Components/nextlevel/NextLevel.tscn" id="4_33ues"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_viykj"]
