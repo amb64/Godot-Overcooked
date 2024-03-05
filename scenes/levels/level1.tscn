@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://src/Components/items/plate.tscn" id="1_ucdqg"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="2_6u3pk"]
-[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entities/Player/player.tscn" id="2_e8cls"]
+[ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entitys/Player/player.tscn" id="2_e8cls"]
 [ext_resource type="PackedScene" uid="uid://bobro4nwx8ysr" path="res://src/Components/counters/cutting_board.tscn" id="4_qircf"]
 [ext_resource type="PackedScene" uid="uid://2ya7ebrxext7" path="res://src/Components/ingredient_boxes/salmon_box.tscn" id="5_kt4ud"]
 [ext_resource type="PackedScene" uid="uid://c1xwvy5yqxvp4" path="res://src/Components/ingredient_boxes/tuna_box.tscn" id="6_qyuar"]
