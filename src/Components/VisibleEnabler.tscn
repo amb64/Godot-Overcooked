@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf702vsb6bap0"]
+
+[ext_resource type="Script" path="res://src/Components/VisibleEnabler.gd" id="1_pue55"]
+
+[node name="VisibleEnabler" type="VisibleOnScreenEnabler3D"]
+script = ExtResource("1_pue55")

@@ -1,18 +1,21 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqjbtsu1jcben"]
+[gd_scene load_steps=9 format=3 uid="uid://bqjbtsu1jcben"]
 
 [ext_resource type="Script" path="res://src/UXUI/OptionsMenu.gd" id="1_apjq0"]
 [ext_resource type="PackedScene" uid="uid://cy86asgwodbdp" path="res://src/UXUI/InputButton.tscn" id="2_ryc7h"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="3_3afyl"]
-[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/textures/UXUI/Button1.png" id="3_tx8w0"]
-[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/textures/UXUI/Button.png" id="3_vuyd1"]
-[ext_resource type="PackedScene" uid="uid://mea1an3v6qag" path="res://src/UXUI/OptionsSelecter.tscn" id="4_i3pvx"]
-[ext_resource type="StyleBox" uid="uid://dt373x02xlmyb" path="res://materials/UXUI/Button1Normal.tres" id="5_t0t4t"]
-[ext_resource type="StyleBox" uid="uid://bcb5qj0pcogko" path="res://materials/UXUI/Button1Hover.tres" id="6_8wix5"]
-[ext_resource type="StyleBox" uid="uid://dj8t756h4bqjd" path="res://materials/UXUI/Button2Normal.tres" id="6_mlg4q"]
-[ext_resource type="StyleBox" uid="uid://c6l0ot5dy2fij" path="res://materials/UXUI/Button2Hover.tres" id="7_nqmxo"]
-[ext_resource type="StyleBox" uid="uid://dh2vqu8bmbcwm" path="res://materials/UXUI/Button1Pressed.tres" id="7_tavq3"]
-[ext_resource type="StyleBox" uid="uid://1ulot5p4who5" path="res://materials/UXUI/Button2Pressed.tres" id="8_kbumr"]
-[ext_resource type="StyleBox" uid="uid://bhbf6r4t6m65f" path="res://materials/UXUI/ButtonFocus.tres" id="8_udpk8"]
+[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/UXUI/Button.png" id="3_vuyd1"]
+[ext_resource type="PackedScene" uid="uid://mea1an3v6qag" path="res://TestOptions.tscn" id="5_py2tl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_co1a7"]
+texture = ExtResource("3_vuyd1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ntabr"]
+texture = ExtResource("3_vuyd1")
+modulate_color = Color(0.792157, 0.792157, 0.792157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xemdh"]
+texture = ExtResource("3_vuyd1")
+modulate_color = Color(0.584314, 0.584314, 0.584314, 1)
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -24,52 +27,13 @@ grow_vertical = 2
 script = ExtResource("1_apjq0")
 
 [node name="Menu" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Button" type="TextureRect" parent="Menu"]
-modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
-layout_mode = 0
-offset_left = 1416.0
-offset_top = 456.0
-offset_right = 2016.0
-offset_bottom = 756.0
-scale = Vector2(0.44, 0.266667)
-texture = ExtResource("3_vuyd1")
-
-[node name="Button2" type="TextureRect" parent="Menu"]
-modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
-layout_mode = 0
-offset_left = 1416.0
-offset_top = 656.0
-offset_right = 2016.0
-offset_bottom = 956.0
-scale = Vector2(0.44, 0.266667)
-texture = ExtResource("3_vuyd1")
-
-[node name="Button4" type="TextureRect" parent="Menu"]
-modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
-layout_mode = 0
-offset_left = 1400.0
-offset_top = 560.0
-offset_right = 2000.0
-offset_bottom = 860.0
-scale = Vector2(0.44, 0.266667)
-texture = ExtResource("3_tx8w0")
-
-[node name="Button5" type="TextureRect" parent="Menu"]
-modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
-layout_mode = 0
-offset_left = 1400.0
-offset_top = 760.0
-offset_right = 2000.0
-offset_bottom = 1060.0
-scale = Vector2(0.44, 0.266667)
-texture = ExtResource("3_tx8w0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
 layout_mode = 1
@@ -78,10 +42,10 @@ anchor_left = 0.433
 anchor_top = 0.296
 anchor_right = 0.604
 anchor_bottom = 0.652
-offset_left = 576.64
-offset_top = 128.32
-offset_right = 512.32
-offset_bottom = 127.84
+offset_left = 24.64
+offset_top = 64.32
+offset_right = -39.6801
+offset_bottom = -0.160034
 theme_override_constants/separation = 18
 
 [node name="VideoButton" type="Button" parent="Menu/VBoxContainer"]
@@ -89,10 +53,9 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("5_t0t4t")
-theme_override_styles/hover = ExtResource("6_8wix5")
-theme_override_styles/pressed = ExtResource("7_tavq3")
-theme_override_styles/focus = ExtResource("8_udpk8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_co1a7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ntabr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xemdh")
 text = "Video"
 
 [node name="AudioButton" type="Button" parent="Menu/VBoxContainer"]
@@ -100,10 +63,9 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("6_mlg4q")
-theme_override_styles/hover = ExtResource("7_nqmxo")
-theme_override_styles/pressed = ExtResource("8_kbumr")
-theme_override_styles/focus = ExtResource("8_udpk8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_co1a7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ntabr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xemdh")
 text = "Audio"
 
 [node name="ControlsButton" type="Button" parent="Menu/VBoxContainer"]
@@ -111,10 +73,9 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("5_t0t4t")
-theme_override_styles/hover = ExtResource("6_8wix5")
-theme_override_styles/pressed = ExtResource("7_tavq3")
-theme_override_styles/focus = ExtResource("8_udpk8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_co1a7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ntabr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xemdh")
 text = "Controls"
 
 [node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
@@ -122,14 +83,12 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("6_mlg4q")
-theme_override_styles/hover = ExtResource("7_nqmxo")
-theme_override_styles/pressed = ExtResource("8_kbumr")
-theme_override_styles/focus = ExtResource("8_udpk8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_co1a7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ntabr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xemdh")
 text = "Exit"
 
 [node name="Video" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -140,9 +99,9 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="Video"]
 layout_mode = 2
 offset_left = 784.0
-offset_top = 320.0
+offset_top = 360.0
 offset_right = 997.0
-offset_bottom = 362.0
+offset_bottom = 402.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
 text = "Resolution"
@@ -150,9 +109,9 @@ text = "Resolution"
 [node name="Label2" type="Label" parent="Video"]
 layout_mode = 2
 offset_left = 784.0
-offset_top = 400.0
+offset_top = 416.0
 offset_right = 997.0
-offset_bottom = 442.0
+offset_bottom = 458.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
 text = "Screen"
@@ -160,9 +119,9 @@ text = "Screen"
 [node name="Label3" type="Label" parent="Video"]
 layout_mode = 2
 offset_left = 784.0
-offset_top = 480.0
+offset_top = 472.0
 offset_right = 1018.0
-offset_bottom = 522.0
+offset_bottom = 514.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
 text = "Colour blindness"
@@ -170,9 +129,9 @@ text = "Colour blindness"
 [node name="Label4" type="Label" parent="Video"]
 layout_mode = 0
 offset_left = 784.0
-offset_top = 560.0
+offset_top = 536.0
 offset_right = 867.0
-offset_bottom = 602.0
+offset_bottom = 578.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
 text = "Vsync"
@@ -180,49 +139,73 @@ text = "Vsync"
 [node name="Label5" type="Label" parent="Video"]
 layout_mode = 0
 offset_left = 784.0
-offset_top = 624.0
+offset_top = 600.0
 offset_right = 970.0
-offset_bottom = 666.0
+offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
 text = "Screen shake"
 
-[node name="Resolution" parent="Video" instance=ExtResource("4_i3pvx")]
-offset_left = 1056.0
-offset_top = 304.0
-offset_right = 1376.0
-offset_bottom = 368.0
-list = Array[StringName]([&"1280x720", &"1920x1080"])
+[node name="ResolutionOptionButton" type="OptionButton" parent="Video"]
+layout_mode = 2
+offset_left = 1072.0
+offset_top = 368.0
+offset_right = 1287.0
+offset_bottom = 404.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+item_count = 2
+selected = 0
+popup/item_0/text = "1280x720"
+popup/item_0/id = 0
+popup/item_1/text = "1920x1080"
+popup/item_1/id = 1
 
-[node name="Screen" parent="Video" instance=ExtResource("4_i3pvx")]
-offset_left = 1056.0
-offset_top = 384.0
-offset_right = 1376.0
-offset_bottom = 448.0
-list = Array[StringName]([&"Fullscreen", &"Fullscreen Borderless", &"Windowed"])
+[node name="FullScreenOptionsButton" type="OptionButton" parent="Video"]
+layout_mode = 2
+offset_left = 1072.0
+offset_top = 424.0
+offset_right = 1322.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+item_count = 3
+selected = 0
+popup/item_0/text = "Full Screen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+popup/item_2/text = "Full screen Borderless"
+popup/item_2/id = 2
 
-[node name="ColourBlind" parent="Video" instance=ExtResource("4_i3pvx")]
-offset_left = 1056.0
-offset_top = 464.0
-offset_right = 1376.0
-offset_bottom = 528.0
-list = Array[StringName]([&"Default", &"Protanopia", &"Deuteranopia", &"Tritanopia", &"Achromatopsia"])
+[node name="ColourBlindOptionButton" type="OptionButton" parent="Video"]
+layout_mode = 2
+offset_left = 1072.0
+offset_top = 480.0
+offset_right = 1287.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
+item_count = 1
+selected = 0
+popup/item_0/text = "Default"
+popup/item_0/id = 0
 
 [node name="VsyncCheckBox" type="CheckBox" parent="Video"]
 layout_mode = 2
 offset_left = 1072.0
-offset_top = 576.0
+offset_top = 544.0
 offset_right = 1096.0
-offset_bottom = 600.0
+offset_bottom = 568.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 15
 
 [node name="ScreenShakeCheckBox" type="CheckBox" parent="Video"]
 layout_mode = 2
 offset_left = 1072.0
-offset_top = 640.0
+offset_top = 608.0
 offset_right = 1096.0
-offset_bottom = 664.0
+offset_bottom = 632.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 15
 
@@ -436,41 +419,48 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
 text = "Escape"
 
-[node name="Button3" type="TextureRect" parent="."]
-visible = false
-modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
-layout_mode = 0
-offset_left = 872.0
-offset_top = 712.0
-offset_right = 1472.0
-offset_bottom = 1012.0
-scale = Vector2(0.44, 0.266667)
-texture = ExtResource("3_vuyd1")
-
 [node name="BackButton" type="Button" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.467
 anchor_top = 0.689
 anchor_right = 0.567
 anchor_bottom = 0.741
-offset_left = -24.64
-offset_top = -40.1199
-offset_right = 39.3601
-offset_bottom = -13.7199
+offset_left = -0.640015
+offset_top = -0.119995
+offset_right = -0.640015
+offset_bottom = -0.28009
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("5_t0t4t")
-theme_override_styles/hover = ExtResource("6_8wix5")
-theme_override_styles/pressed = ExtResource("7_tavq3")
-theme_override_styles/focus = ExtResource("8_udpk8")
 text = "Exit"
+
+[node name="Resolution" parent="." instance=ExtResource("5_py2tl")]
+offset_left = 352.0
+offset_top = 240.0
+offset_right = 672.0
+offset_bottom = 304.0
+list = Array[String](["1280x720", "1920x1080"])
+
+[node name="Screen" parent="." instance=ExtResource("5_py2tl")]
+offset_left = 352.0
+offset_top = 320.0
+offset_right = 672.0
+offset_bottom = 384.0
+list = Array[String](["Fullscreen", "Fullscreen Borderless", "Windowed"])
+
+[node name="ColourBlind" parent="." instance=ExtResource("5_py2tl")]
+offset_left = 352.0
+offset_top = 400.0
+offset_right = 672.0
+offset_bottom = 464.0
 
 [connection signal="pressed" from="Menu/VBoxContainer/VideoButton" to="." method="_on_video_button_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/AudioButton" to="." method="_on_audio_button_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="item_selected" from="Video/ResolutionOptionButton" to="." method="_on_resolution_option_button_item_selected"]
+[connection signal="item_selected" from="Video/FullScreenOptionsButton" to="." method="_on_full_screen_options_button_item_selected"]
+[connection signal="item_selected" from="Video/ColourBlindOptionButton" to="." method="_on_colour_blind_option_button_item_selected"]
 [connection signal="pressed" from="Video/VsyncCheckBox" to="." method="_on_vsync_check_box_pressed"]
 [connection signal="pressed" from="Video/ScreenShakeCheckBox" to="." method="_on_screen_shake_check_box_pressed"]
 [connection signal="value_changed" from="Audio/MasterSlider" to="." method="_on_master_slider_value_changed"]

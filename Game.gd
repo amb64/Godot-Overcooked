@@ -30,4 +30,3 @@ func returnMenu():
 	for n in get_children(true):
 		n.queue_free()
 	add_child(MainMenu.instantiate())
-	#get_node("WorldTour").queue_free() # delete World Tour scene
