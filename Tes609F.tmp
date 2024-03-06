@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://mea1an3v6qag"]
+
+[ext_resource type="Script" path="res://TestOptions.gd" id="1_i2dhf"]
+[ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="2_su1ql"]
+
+[node name="Label" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 64.0
+script = ExtResource("1_i2dhf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("2_su1ql")
+theme_override_font_sizes/font_size = 30
+text = "<"
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 320.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("2_su1ql")
+theme_override_font_sizes/font_size = 30
+text = ">"
+icon_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 256.0
+offset_bottom = 64.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 256.0
+offset_bottom = 64.0
+text = "###"
+horizontal_alignment = 1
+vertical_alignment = 1

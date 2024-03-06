@@ -32,8 +32,8 @@ var config_file = {
 	"Keybinds": {
 		"move_forward": "W",
 		"move_back": "S",
-		"ui_left": "A",
-		"ui_right": "D",
+		"move_left": "A",
+		"move_right": "D",
 		"interact": "E",
 		"escape": "Escape"
 	}
@@ -59,26 +59,7 @@ func load_config():
 
 	input_remap_keys()
 	
-	if fullscreen == 0:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
-	elif fullscreen == 1:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-	
-	if vsync:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
-	else:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
-	
-	if screenRes == 0:
-		get_viewport().size = Vector2(1280, 720)
-	if screenRes == 1:
-		get_viewport().size = Vector2(1920, 1080)
-	
-	AudioServer.set_bus_volume_db(0, volumeMaster)
-	AudioServer.set_bus_volume_db(1, volumeMusic)
-	AudioServer.set_bus_volume_db(2, volumeSFX)
+	config_update()
 
 func save_config():
 	config_file.Video.resolution = screenRes
@@ -95,7 +76,7 @@ func save_config():
 		for key in config_file[section].keys():
 			configFile.set_value(section, key, config_file[section][key])
 		configFile.save(file_path_config)
-
+	config_update()
 # Input map keys
 func input_remap_keys():
 	# Delete all action inputs
@@ -110,3 +91,26 @@ func input_remap_keys():
 		key_event.pressed = true
 		if action:
 			InputMap.action_add_event(action, key_event)
+
+func config_update():
+	if fullscreen == 0:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	elif fullscreen == 1:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	
+	if vsync:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+	else:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	
+	if screenRes == 0:
+		get_viewport().size = Vector2(1280, 720)
+	if screenRes == 1:
+		get_viewport().size = Vector2(1920, 1080)
+	
+	AudioServer.set_bus_volume_db(0, volumeMaster)
+	AudioServer.set_bus_volume_db(1, volumeMusic)
+	AudioServer.set_bus_volume_db(2, volumeSFX)
+	

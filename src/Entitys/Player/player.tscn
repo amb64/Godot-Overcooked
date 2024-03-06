@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://dn6g4khocwvw1"]
 
+[ext_resource type="Script" path="res://src/Entitys/Player/player.gd" id="1_2hrb2"]
 [ext_resource type="Script" path="res://src/Entitys/Player/RigidBody3DController.gd" id="1_526f1"]
-[ext_resource type="Script" path="res://src/Entitys/Player/playerController.gd" id="1_u0dyi"]
 [ext_resource type="Script" path="res://src/Entitys/Player/CounterHandler.gd" id="2_8rywc"]
-[ext_resource type="Script" path="res://src/Entitys/Player/RigidBody3DController2.gd" id="4_3kieq"]
+[ext_resource type="Script" path="res://src/Entitys/Player/RigidBody3D2.gd" id="4_hwpne"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nxyb"]
 albedo_color = Color(0.415686, 0.396078, 0.972549, 1)
@@ -23,7 +23,7 @@ material = SubResource("StandardMaterial3D_1wgcf")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_24dg6"]
 
 [node name="Player" type="Node3D"]
-script = ExtResource("1_u0dyi")
+script = ExtResource("1_2hrb2")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." node_paths=PackedStringArray("director")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00114751, 0.00448704, -0.0010339)
@@ -62,28 +62,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00114751, 0.00448704, -0.0
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
-script = ExtResource("4_3kieq")
-director = NodePath("Director2")
+script = ExtResource("4_hwpne")
+director = NodePath("Director")
 
-[node name="Director2" type="Node3D" parent="RigidBody3D2"]
+[node name="Director" type="Node3D" parent="RigidBody3D2"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2/Director2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2/Director"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00435472, -0.00448704, -4.56572e-05)
 mesh = SubResource("CapsuleMesh_8ieor")
 skeleton = NodePath("../../..")
 
-[node name="Area3D" type="Area3D" parent="RigidBody3D2/Director2" node_paths=PackedStringArray("player_item_holder")]
+[node name="Area3D" type="Area3D" parent="RigidBody3D2/Director" node_paths=PackedStringArray("player_item_holder")]
 transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 0, 0.0710565, 0.861561)
 script = ExtResource("2_8rywc")
 player_item_holder = NodePath("../ItemHolder")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2/Director2/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2/Director/Area3D"]
 shape = SubResource("BoxShape3D_ol63t")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2/Director2/Area3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2/Director/Area3D"]
 mesh = SubResource("BoxMesh_epkss")
 
-[node name="ItemHolder" type="Node3D" parent="RigidBody3D2/Director2"]
+[node name="ItemHolder" type="Node3D" parent="RigidBody3D2/Director"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0310211, -0.0196157, 0.993621)
 
 [node name="PlayerBody" type="CollisionShape3D" parent="RigidBody3D2"]
@@ -91,5 +91,5 @@ shape = SubResource("CapsuleShape3D_24dg6")
 
 [connection signal="body_entered" from="RigidBody3D/Director/Area3D" to="RigidBody3D/Director/Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="RigidBody3D/Director/Area3D" to="RigidBody3D/Director/Area3D" method="_on_body_exited"]
-[connection signal="body_entered" from="RigidBody3D2/Director2/Area3D" to="RigidBody3D2/Director2/Area3D" method="_on_body_entered"]
-[connection signal="body_exited" from="RigidBody3D2/Director2/Area3D" to="RigidBody3D2/Director2/Area3D" method="_on_body_exited"]
+[connection signal="body_entered" from="RigidBody3D2/Director/Area3D" to="RigidBody3D2/Director/Area3D" method="_on_body_entered"]
+[connection signal="body_exited" from="RigidBody3D2/Director/Area3D" to="RigidBody3D2/Director/Area3D" method="_on_body_exited"]

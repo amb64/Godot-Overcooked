@@ -1,14 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1w811aaok70t"]
+[gd_scene load_steps=20 format=3 uid="uid://b1w811aaok70t"]
 
 [ext_resource type="Script" path="res://src/UXUI/MainMenu.gd" id="1_lec4c"]
+[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/textures/UXUI/Button.png" id="2_hxu1x"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="2_q8fg1"]
 [ext_resource type="PackedScene" uid="uid://bqjbtsu1jcben" path="res://src/UXUI/OptionsMenu.tscn" id="2_qob6l"]
+[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/textures/UXUI/Button1.png" id="3_fy4fi"]
+[ext_resource type="StyleBox" uid="uid://dt373x02xlmyb" path="res://materials/UXUI/Button1Normal.tres" id="5_182hq"]
+[ext_resource type="StyleBox" uid="uid://bcb5qj0pcogko" path="res://materials/UXUI/Button1Hover.tres" id="6_wc3f6"]
+[ext_resource type="StyleBox" uid="uid://dh2vqu8bmbcwm" path="res://materials/UXUI/Button1Pressed.tres" id="7_l13rm"]
+[ext_resource type="StyleBox" uid="uid://dj8t756h4bqjd" path="res://materials/UXUI/Button2Normal.tres" id="8_jcwmn"]
+[ext_resource type="StyleBox" uid="uid://bhbf6r4t6m65f" path="res://materials/UXUI/ButtonFocus.tres" id="8_jxvam"]
+[ext_resource type="StyleBox" uid="uid://c6l0ot5dy2fij" path="res://materials/UXUI/Button2Hover.tres" id="9_u834w"]
+[ext_resource type="StyleBox" uid="uid://1ulot5p4who5" path="res://materials/UXUI/Button2Pressed.tres" id="10_2xorh"]
+[ext_resource type="ArrayMesh" uid="uid://dpvu8txmde48r" path="res://assets/meshes/truck_Cube_003.res" id="12_idlf3"]
+[ext_resource type="Texture2D" uid="uid://cu7f4h3dlcrd5" path="res://assets/textures/truck_Wheel.png" id="13_rgyg0"]
+[ext_resource type="PackedScene" uid="uid://eqn8atx3eso6" path="res://src/UXUI/colour_blind_ux.tscn" id="13_vr64p"]
+[ext_resource type="ArrayMesh" uid="uid://d155wxob1ftho" path="res://assets/meshes/truck_Cylinder_006.res" id="14_pelwr"]
+[ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://assets/meshes/truck_Cylinder_005.res" id="15_3vrvj"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_oi2if"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_y2ng1"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_g0juk"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_qnu4t"]
+albedo_texture = ExtResource("13_rgyg0")
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_lec4c")
@@ -17,42 +30,106 @@ script = ExtResource("1_lec4c")
 process_priority = 1
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1416.0
+offset_top = 448.0
+offset_right = 1456.0
+offset_bottom = 488.0
+
+[node name="Button" type="TextureRect" parent="Menu"]
+modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 600.0
+offset_bottom = 308.0
+scale = Vector2(0.44, 0.266667)
+texture = ExtResource("2_hxu1x")
+
+[node name="Button2" type="TextureRect" parent="Menu"]
+modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
+offset_top = 208.0
+offset_right = 600.0
+offset_bottom = 508.0
+scale = Vector2(0.44, 0.266667)
+texture = ExtResource("2_hxu1x")
+
+[node name="Button3" type="TextureRect" parent="Menu"]
+modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
+offset_left = -8.0
+offset_top = 112.0
+offset_right = 592.0
+offset_bottom = 412.0
+scale = Vector2(0.44, 0.266667)
+texture = ExtResource("3_fy4fi")
+
+[node name="Button4" type="TextureRect" parent="Menu"]
+modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
+offset_left = -8.0
+offset_top = 312.0
+offset_right = 592.0
+offset_bottom = 612.0
+scale = Vector2(0.44, 0.266667)
+texture = ExtResource("3_fy4fi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+custom_minimum_size = Vector2(1.515, 6.39)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 21.2
+anchor_left = 35.2
 anchor_top = 11.2
-anchor_right = 26.8
-anchor_bottom = 20.6
-theme_override_constants/separation = 20
+anchor_right = 41.6
+anchor_bottom = 20.8
+offset_left = -1408.0
+offset_top = -448.0
+offset_right = -1408.0
+offset_bottom = -448.0
+theme_override_constants/separation = 23
 alignment = 1
 
 [node name="HostButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_q8fg1")
 theme_override_font_sizes/font_size = 30
-text = "Play (Host)"
+theme_override_styles/normal = ExtResource("5_182hq")
+theme_override_styles/hover = ExtResource("6_wc3f6")
+theme_override_styles/pressed = ExtResource("7_l13rm")
+theme_override_styles/focus = ExtResource("8_jxvam")
+text = "Host"
 
 [node name="JoinButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_q8fg1")
 theme_override_font_sizes/font_size = 30
-disabled = true
+theme_override_styles/normal = ExtResource("8_jcwmn")
+theme_override_styles/hover = ExtResource("9_u834w")
+theme_override_styles/pressed = ExtResource("10_2xorh")
+theme_override_styles/focus = ExtResource("8_jxvam")
 text = "Join"
 
 [node name="OptionsButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_q8fg1")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("5_182hq")
+theme_override_styles/hover = ExtResource("6_wc3f6")
+theme_override_styles/pressed = ExtResource("7_l13rm")
+theme_override_styles/focus = ExtResource("8_jxvam")
 text = "Settings"
 
 [node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_q8fg1")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("8_jcwmn")
+theme_override_styles/hover = ExtResource("9_u834w")
+theme_override_styles/pressed = ExtResource("10_2xorh")
+theme_override_styles/focus = ExtResource("8_jxvam")
 text = "Exit"
 
 [node name="OptionsMenu" parent="." instance=ExtResource("2_qob6l")]
@@ -64,21 +141,35 @@ visible = false
 transform = Transform3D(6.59847, 0, 0, 0, 1, 0, 0, 0, 5.36472, 0, -0.0991437, 0)
 mesh = SubResource("PlaneMesh_oi2if")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(3.34381, 0, 0, 0, 1.93378, 0, 0, 0, 1.45745, -1.08947, 0.455335, -1.01647)
-mesh = SubResource("BoxMesh_y2ng1")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(0.983472, 0, 0, 0, 1.18967, 0, 0, 0, 1.45745, 0.969692, 0.086746, -1.01647)
-mesh = SubResource("BoxMesh_g0juk")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
-transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 0, 0)
+transform = Transform3D(0.986077, -0.0831437, 0.144009, -0.108374, 0.335512, 0.935781, -0.126121, -0.93836, 0.32183, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
 transform = Transform3D(0.957299, 0, 0.289099, 0, 1, 0, -0.289099, 0, 0.957299, 2.39072, 1.38034, 4.1378)
 
+[node name="Body" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.139346, 0, -0.990244, 0, 1, 0, 0.990244, 0, 0.139346, 0, 1.09551, 0)
+mesh = ExtResource("12_idlf3")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-1.52805e-09, -0.026221, -0.249645, 0.25087, -8.22527e-09, 5.33853e-23, -1.08589e-08, -0.186336, 0.0351298, 0, -0.76232, 0)
+material_overlay = SubResource("ORMMaterial3D_qnu4t")
+mesh = ExtResource("14_pelwr")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-1.52805e-09, -0.026221, -0.249645, 0.25087, -8.22527e-09, 5.33853e-23, -1.08589e-08, -0.186336, 0.0351298, 0, -0.76232, 0)
+material_overlay = SubResource("ORMMaterial3D_qnu4t")
+mesh = ExtResource("15_3vrvj")
+skeleton = NodePath("../..")
+
 [node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="ColourBlindUX" parent="." instance=ExtResource("13_vr64p")]
+layer = 1
 
 [connection signal="pressed" from="Menu/VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]

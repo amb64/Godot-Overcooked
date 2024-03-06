@@ -17,13 +17,13 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://autoloads/Global.gd"
 Config="*res://autoloads/Config.gd"
+Global="*res://autoloads/Global.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=720
+window/size/viewport_height=480
 
 [dotnet]
 

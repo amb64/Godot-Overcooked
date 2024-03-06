@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmo6sge3pxrsb"]
+[gd_scene load_steps=8 format=3 uid="uid://bmo6sge3pxrsb"]
 
 [ext_resource type="PackedScene" uid="uid://58qpm1imogif" path="res://src/UXUI/PauseMenu.tscn" id="1_ppm5x"]
+[ext_resource type="PackedScene" uid="uid://eqn8atx3eso6" path="res://src/UXUI/colour_blind_ux.tscn" id="2_lqvkc"]
 [ext_resource type="PackedScene" uid="uid://w4infiu0xuyv" path="res://src/Entitys/FoodTruck/FoodTruck.tscn" id="2_x0c17"]
 [ext_resource type="Script" path="res://src/Entitys/FoodTruck/FoodTruck.gd" id="3_nejca"]
 [ext_resource type="PackedScene" uid="uid://blkuyflhl23b7" path="res://src/Components/nextlevel/NextLevel.tscn" id="4_33ues"]
@@ -15,6 +16,8 @@ size = Vector3(45.9127, 0.122213, 29.7089)
 [node name="Canvas" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="Canvas" instance=ExtResource("1_ppm5x")]
+
+[node name="ColourBlindUX" parent="Canvas" instance=ExtResource("2_lqvkc")]
 
 [node name="FoodTruck" parent="." instance=ExtResource("2_x0c17")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8963, 1.22689, 4.70746)

@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://db1fdkniwgypp"]
+[gd_scene load_steps=7 format=3 uid="uid://db1fdkniwgypp"]
 
+[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/textures/UXUI/Button.png" id="1_7iejm"]
 [ext_resource type="PackedScene" uid="uid://dxla2l2t126bj" path="res://src/UXUI/List.tscn" id="1_45xhq"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="1_kqkhy"]
+[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/textures/UXUI/Button1.png" id="3_3w06e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q7mkd"]
+texture = ExtResource("1_7iejm")
+modulate_color = Color(0.32549, 0.32549, 0.32549, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3cmx"]
+texture = ExtResource("3_3w06e")
+modulate_color = Color(0.32549, 0.32549, 0.32549, 1)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -11,12 +21,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Button" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1576.0
+offset_top = 40.0
+offset_right = 2321.0
+offset_bottom = 400.0
+scale = Vector2(0.44, 0.266667)
+texture = ExtResource("1_7iejm")
+
+[node name="Button3" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1568.0
+offset_top = 160.0
+offset_right = 2313.0
+offset_bottom = 490.0
+scale = Vector2(0.44, 0.266667)
+texture = ExtResource("3_3w06e")
+
 [node name="TimerPanel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 1576.0
-offset_top = 64.0
+offset_top = 32.0
 offset_right = 1896.0
-offset_bottom = 160.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_q7mkd")
 
 [node name="TimerLabel" type="Label" parent="TimerPanel"]
 layout_mode = 1
@@ -38,9 +67,10 @@ vertical_alignment = 1
 [node name="TipPanel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 1576.0
-offset_top = 176.0
+offset_top = 144.0
 offset_right = 1896.0
-offset_bottom = 272.0
+offset_bottom = 240.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_m3cmx")
 
 [node name="TipLabel" type="Label" parent="TipPanel"]
 layout_mode = 1
