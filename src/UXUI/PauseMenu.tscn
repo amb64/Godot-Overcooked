@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://58qpm1imogif"]
+
+[ext_resource type="PackedScene" uid="uid://bqjbtsu1jcben" path="res://src/UXUI/OptionsMenu.tscn" id="1_65ljy"]
+[ext_resource type="Script" path="res://src/UXUI/PauseMenu.gd" id="1_cb55b"]
+[ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="2_24ela"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cb55b")
+
+[node name="Menu" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_right = -0.00012207
+offset_bottom = -0.00012207
+color = Color(0, 0, 0, 0.239216)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 21.6
+anchor_top = 12.8
+anchor_right = 28.8
+anchor_bottom = 17.6
+offset_left = -62.0
+offset_top = -64.0
+offset_right = -62.0
+offset_bottom = -66.0
+theme_override_constants/separation = 20
+
+[node name="ReturnButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_24ela")
+theme_override_font_sizes/font_size = 30
+text = "Return"
+
+[node name="OptionsButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_24ela")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_24ela")
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("1_65ljy")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Menu/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

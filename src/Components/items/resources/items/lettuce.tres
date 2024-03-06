@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://ncql8wr71m4w"]
+
+[ext_resource type="Script" path="res://src/Components/items/item.gd" id="1_pufqi"]
+
+[resource]
+script = ExtResource("1_pufqi")
+item_name = &"lettuce"
+ingredients = Array[ExtResource("1_pufqi")]([])
+state = 1

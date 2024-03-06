@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bobro4nwx8ysr"]
+
+[ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="1_jbycw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgbob"]
+albedo_color = Color(0.952941, 0.72549, 0.67451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_au67w"]
+material = SubResource("StandardMaterial3D_bgbob")
+size = Vector3(1.5, 0.1, 1)
+
+[node name="Cutting_Board" type="Node3D"]
+
+[node name="Counter" parent="." instance=ExtResource("1_jbycw")]
+
+[node name="Board" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_au67w")
+skeleton = NodePath("../..")
