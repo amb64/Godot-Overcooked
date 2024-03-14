@@ -1,3 +1,4 @@
+class_name States 
 enum State{
 	IGNORE,
 	RAW,
@@ -9,3 +10,4 @@ enum State{
 	DONE,
 	OVERCOOKED
 }
+var S : State

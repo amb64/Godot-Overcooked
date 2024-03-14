@@ -7,7 +7,7 @@ const s  = preload("res://src/Components/items/enum.gd")
 @export var state : s.State
 
 func is_equal(item) -> bool:
-	if(item is MixedItem):
+	if(!item is BaseItem):
 		return false
 		
 	return item_name == item.item_name && state == item.state

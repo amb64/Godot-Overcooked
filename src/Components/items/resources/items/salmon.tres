@@ -6,4 +6,4 @@
 resource_local_to_scene = true
 script = ExtResource("1_4vtyi")
 item_name = &"\"salmon\""
-state = 4
+state = 0
