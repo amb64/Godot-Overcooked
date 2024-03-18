@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/Components/items/resource_item.gd" id="1_sw25l"]
 [ext_resource type="Script" path="res://src/Components/items/resources/base_item.gd" id="2_hjnq5"]
 
-[sub_resource type="Resource" id="Resource_636xa"]
+[sub_resource type="Resource" id="Resource_iibf8"]
 resource_local_to_scene = true
 script = ExtResource("2_hjnq5")
 item_name = &"lettuce"
@@ -17,7 +17,7 @@ material = SubResource("StandardMaterial3D_2ndfu")
 
 [node name="Salmon" type="Node3D"]
 script = ExtResource("1_sw25l")
-resource = SubResource("Resource_636xa")
+resource = SubResource("Resource_iibf8")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_v5b1k")

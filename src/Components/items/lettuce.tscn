@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/Components/items/resource_item.gd" id="1_oqol6"]
 [ext_resource type="Script" path="res://src/Components/items/resources/base_item.gd" id="3_4xbgf"]
 
-[sub_resource type="Resource" id="Resource_skm7j"]
+[sub_resource type="Resource" id="Resource_2cge8"]
 resource_local_to_scene = true
 script = ExtResource("3_4xbgf")
 item_name = &"lettue"
@@ -13,7 +13,7 @@ state = 1
 
 [node name="Item" type="Node3D"]
 script = ExtResource("1_oqol6")
-resource = SubResource("Resource_skm7j")
+resource = SubResource("Resource_2cge8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_n6hyd")
