@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxla2l2t126bj"]
+
+[ext_resource type="PackedScene" uid="uid://epp157d7n3jq" path="res://src/UXUI/OrderComponent.tscn" id="1_gno1w"]
+[ext_resource type="Script" path="res://src/UXUI/List.gd" id="1_wwm60"]
+[ext_resource type="Texture2D" uid="uid://dei20sd68wmma" path="res://assets/textures/UXUI/String.png" id="2_pxdht"]
+
+[node name="List" type="Control"]
+layout_mode = 3
+anchor_right = 0.444
+anchor_bottom = 0.198
+offset_right = 0.511963
+offset_bottom = -0.304016
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wwm60")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 840.0
+offset_bottom = 64.0
+texture = ExtResource("2_pxdht")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Orders" parent="." instance=ExtResource("1_gno1w")]
+layout_mode = 1
+anchor_right = 0.125
+anchor_bottom = 0.5
+offset_left = 72.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 16.0
+rotation = 0.194381
+
+[node name="Orders2" parent="." instance=ExtResource("1_gno1w")]
+layout_mode = 1
+anchor_right = 0.125
+anchor_bottom = 0.5
+offset_left = 216.0
+offset_top = 40.0
+offset_right = 216.0
+offset_bottom = 40.0
+rotation = 0.0159701
+
+[node name="Orders3" parent="." instance=ExtResource("1_gno1w")]
+layout_mode = 1
+anchor_right = 0.125
+anchor_bottom = 0.5
+offset_left = 368.0
+offset_top = 48.0
+offset_right = 368.0
+offset_bottom = 48.0
+rotation = -0.0407658
+
+[node name="Orders4" parent="." instance=ExtResource("1_gno1w")]
+layout_mode = 1
+anchor_right = 0.125
+anchor_bottom = 0.5
+offset_left = 528.0
+offset_top = 48.0
+offset_right = 528.0
+offset_bottom = 48.0
+rotation = -0.208379
+
+[node name="Orders5" parent="." instance=ExtResource("1_gno1w")]
+layout_mode = 1
+anchor_right = 0.125
+anchor_bottom = 0.5
+offset_left = 696.0
+offset_top = 24.0
+offset_right = 696.0
+offset_bottom = 24.0
+rotation = -0.202548

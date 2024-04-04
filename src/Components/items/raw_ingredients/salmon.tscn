@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbfp0d4lhvjtp"]
+
+[ext_resource type="Script" path="res://src/Components/items/resources/base_item.gd" id="1_808vj"]
+[ext_resource type="Script" path="res://src/Components/items/resource_item.gd" id="1_qu55h"]
+
+[sub_resource type="Resource" id="Resource_3nubw"]
+resource_local_to_scene = true
+script = ExtResource("1_808vj")
+item_name = &"\"salmon\""
+state = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s5xi7"]
+albedo_color = Color(0, 0.803922, 0.803922, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_v5b1k"]
+material = SubResource("StandardMaterial3D_s5xi7")
+
+[node name="Salmon" type="Node3D"]
+script = ExtResource("1_qu55h")
+resource = SubResource("Resource_3nubw")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_v5b1k")
