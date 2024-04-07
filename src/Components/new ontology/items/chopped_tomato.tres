@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://da0ap23lvykoe"]
+
+[ext_resource type="Script" path="res://src/Components/new ontology/scripts/item.gd" id="1_116jf"]
+
+[resource]
+script = ExtResource("1_116jf")
+name = ""
