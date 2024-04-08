@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csscuuwjtya10"
-path="res://.godot/imported/truck_Wheel.png-130d5759c8696ef782f8e8fc0bdd8bba.ctex"
+uid="uid://ckys5q38v25su"
+path="res://.godot/imported/LockIcon.png-e0afbd5f061f6294eba4d7b7ff4c518d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/meshes/truck_Wheel.png"
-dest_files=["res://.godot/imported/truck_Wheel.png-130d5759c8696ef782f8e8fc0bdd8bba.ctex"]
+source_file="res://assets/UXUI/LockIcon.png"
+dest_files=["res://.godot/imported/LockIcon.png-e0afbd5f061f6294eba4d7b7ff4c518d.ctex"]
 
 [params]
 

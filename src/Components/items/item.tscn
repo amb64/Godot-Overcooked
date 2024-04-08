@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwsjen8c4slew"]
+[gd_scene load_steps=5 format=3 uid="uid://bwsjen8c4slew"]
+
+[ext_resource type="Script" path="res://src/Components/items/resource_item.gd" id="1_txs0e"]
+[ext_resource type="Script" path="res://src/Components/items/resources/base_item.gd" id="2_sssol"]
+
+[sub_resource type="Resource" id="Resource_e34jn"]
+resource_local_to_scene = true
+script = ExtResource("2_sssol")
+item_name = &"\"ite\""
+state = 0
 
 [sub_resource type="SphereMesh" id="SphereMesh_n6hyd"]
 
 [node name="Item" type="Node3D"]
+script = ExtResource("1_txs0e")
+resource = SubResource("Resource_e34jn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_n6hyd")

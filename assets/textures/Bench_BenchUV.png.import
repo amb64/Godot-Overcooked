@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu7f4h3dlcrd5"
-path.s3tc="res://.godot/imported/truck_Wheel.png-519d10f8db491cc819dca6edc0d51e6b.s3tc.ctex"
+uid="uid://2oom5iqkqw2i"
+path.s3tc="res://.godot/imported/Bench_BenchUV.png-90b3ce20bdb1041649a1403d761c9e99.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/textures/truck_Wheel.png"
-dest_files=["res://.godot/imported/truck_Wheel.png-519d10f8db491cc819dca6edc0d51e6b.s3tc.ctex"]
+source_file="res://assets/textures/Bench_BenchUV.png"
+dest_files=["res://.godot/imported/Bench_BenchUV.png-90b3ce20bdb1041649a1403d761c9e99.s3tc.ctex"]
 
 [params]
 
