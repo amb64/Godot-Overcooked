@@ -1,7 +1,14 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cqpkadhunqypn"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cqpkadhunqypn"]
 
-[ext_resource type="Script" path="res://src/Components/new ontology/scripts/item.gd" id="1_2gg5g"]
+[ext_resource type="Script" path="res://src/Components/new ontology/scripts/item.gd" id="1_lkxmv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwcyl"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_prsvd"]
+material = SubResource("StandardMaterial3D_iwcyl")
 
 [resource]
-script = ExtResource("1_2gg5g")
-name = ""
+script = ExtResource("1_lkxmv")
+name = "tomato"
+mesh = SubResource("SphereMesh_prsvd")

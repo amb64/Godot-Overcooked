@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dgtawuxb7gs0t"]
 
 [ext_resource type="Script" path="res://src/Components/items/resource_item.gd" id="1_oqol6"]
-[ext_resource type="Script" path="res://src/Components/items/resources/base_item.gd" id="3_4xbgf"]
+[ext_resource type="Script" path="res://src/Components/items/old/recipies/base_item.gd" id="3_4xbgf"]
 
 [sub_resource type="Resource" id="Resource_2cge8"]
 resource_local_to_scene = true

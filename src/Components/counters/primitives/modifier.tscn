@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbntnslquaowq"]
+
+[ext_resource type="Script" path="res://src/Components/counters/primitives/mod.gd" id="1_5rtgl"]
+[ext_resource type="Resource" uid="uid://bam33kkdpy0ji" path="res://src/Components/new ontology/processes/chopping/choppedtomato.tres" id="2_auf1e"]
+[ext_resource type="PackedScene" uid="uid://bu8vuynvyd7go" path="res://src/Components/new ontology/item instances/tomato.tscn" id="3_pmmqr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chmj8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
+material = SubResource("StandardMaterial3D_chmj8")
+size = Vector3(1.5, 1, 2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0xxgy"]
+data = PackedVector3Array(-0.75, 0.5, 1, 0.75, 0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, -1, 0.75, -0.5, -1, -0.75, 0.5, -1, -0.75, -0.5, -1, 0.75, -0.5, -1, 0.75, 0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, -1, 0.75, -0.5, 1, -0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, 0.5, 1, -0.75, 0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, 0.5, -1, 0.75, 0.5, -1, -0.75, -0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, -0.5, 1, 0.75, -0.5, -1, -0.75, -0.5, -1)
+
+[node name="Counter" type="Node3D" node_paths=PackedStringArray("item_slots")]
+script = ExtResource("1_5rtgl")
+proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("2_auf1e")])
+item_slots = [NodePath("ItemSlots")]
+
+[node name="CounterMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000374317, 0, -0.0252056)
+mesh = SubResource("BoxMesh_fdo3b")
+
+[node name="CounterBody" type="StaticBody3D" parent="CounterMesh"]
+
+[node name="CounterColliderShape" type="CollisionShape3D" parent="CounterMesh/CounterBody"]
+shape = SubResource("ConcavePolygonShape3D_0xxgy")
+
+[node name="ItemSlots" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Item" parent="ItemSlots" instance=ExtResource("3_pmmqr")]

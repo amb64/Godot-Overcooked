@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://btvxt5v3e6rck"]
-
-[ext_resource type="Script" path="res://src/Components/items/resources/recipies/RecipeTable.gd" id="1_n2gyy"]
-[ext_resource type="Resource" uid="uid://d076fg7qhekof" path="res://src/Components/items/resources/recipies/choppedlettuce.tres" id="2_4nvfg"]
-
-[node name="RecipeTable" type="Node"]
-script = ExtResource("1_n2gyy")
-Recipes = Array[Resource("res://src/Components/items/recipe.gd")]([ExtResource("2_4nvfg")])

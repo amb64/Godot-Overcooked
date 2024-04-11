@@ -1,7 +1,7 @@
 extends Counter
 
 const s = preload("res://src/Components/items/enum.gd")
-var table : Table = preload("res://src/Components/items/resources/recipies/RecipeTable.tscn").instantiate()
+var table : Table = preload("res://src/Components/items/old/recipies/recipies/RecipeTable.tscn").instantiate()
 
 func pickup(source : Node3D) -> bool:
 	#change the state here

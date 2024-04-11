@@ -1,9 +1,9 @@
-[gd_scene load_steps=35 format=3 uid="uid://c2636bqje3hxa"]
+[gd_scene load_steps=34 format=3 uid="uid://c2636bqje3hxa"]
 
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://src/Components/items/plate.tscn" id="1_ucdqg"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="2_6u3pk"]
-[ext_resource type="PackedScene" uid="uid://coqsmgr66c1ic" path="res://src/Components/items/raw_ingredients/lettuce.tscn" id="3_xmsnq"]
-[ext_resource type="Script" path="res://src/Components/items/resources/base_item.gd" id="4_pggwq"]
+[ext_resource type="PackedScene" uid="uid://coqsmgr66c1ic" path="res://src/Components/items/old/raw_ingredients/lettuce.tscn" id="3_xmsnq"]
+[ext_resource type="Script" path="res://src/Components/items/old/recipies/base_item.gd" id="4_pggwq"]
 [ext_resource type="PackedScene" uid="uid://bobro4nwx8ysr" path="res://src/Components/counters/cutting_board.tscn" id="4_qircf"]
 [ext_resource type="PackedScene" uid="uid://2ya7ebrxext7" path="res://src/Components/ingredient_boxes/salmon_box.tscn" id="5_kt4ud"]
 [ext_resource type="PackedScene" uid="uid://c1xwvy5yqxvp4" path="res://src/Components/ingredient_boxes/tuna_box.tscn" id="6_qyuar"]
@@ -12,8 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://byusqjg426ti" path="res://src/Components/counters/plate_return.tscn" id="9_f6l13"]
 [ext_resource type="Material" uid="uid://bnkpxx0lof1gc" path="res://src/Components/Grid.tres" id="10_k7s3y"]
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entitys/Player/player.tscn" id="13_hopy1"]
-[ext_resource type="PackedScene" uid="uid://cuaced4l6l6h2" path="res://src/Components/counters/primitives/modifiers/stateSetter.tscn" id="14_ffpfd"]
-[ext_resource type="Resource" uid="uid://d076fg7qhekof" path="res://src/Components/items/resources/recipies/choppedlettuce.tres" id="15_4ay0q"]
+[ext_resource type="PackedScene" uid="uid://dbntnslquaowq" path="res://src/Components/counters/primitives/modifier.tscn" id="13_tdk8t"]
 
 [sub_resource type="Gradient" id="Gradient_e7fpw"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
@@ -68,7 +67,7 @@ data = PackedVector3Array(-10.5, 1.5, 0.5, 10.5, 1.5, 0.5, -10.5, -1.5, 0.5, 10.
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fj14c"]
 data = PackedVector3Array(-10.5, 1.5, 0.5, 10.5, 1.5, 0.5, -10.5, -1.5, 0.5, 10.5, 1.5, 0.5, 10.5, -1.5, 0.5, -10.5, -1.5, 0.5, 10.5, 1.5, -0.5, -10.5, 1.5, -0.5, 10.5, -1.5, -0.5, -10.5, 1.5, -0.5, -10.5, -1.5, -0.5, 10.5, -1.5, -0.5, 10.5, 1.5, 0.5, 10.5, 1.5, -0.5, 10.5, -1.5, 0.5, 10.5, 1.5, -0.5, 10.5, -1.5, -0.5, 10.5, -1.5, 0.5, -10.5, 1.5, -0.5, -10.5, 1.5, 0.5, -10.5, -1.5, -0.5, -10.5, 1.5, 0.5, -10.5, -1.5, 0.5, -10.5, -1.5, -0.5, 10.5, 1.5, 0.5, -10.5, 1.5, 0.5, 10.5, 1.5, -0.5, -10.5, 1.5, 0.5, -10.5, 1.5, -0.5, 10.5, 1.5, -0.5, -10.5, -1.5, 0.5, 10.5, -1.5, 0.5, -10.5, -1.5, -0.5, 10.5, -1.5, 0.5, 10.5, -1.5, -0.5, -10.5, -1.5, -0.5)
 
-[sub_resource type="Resource" id="Resource_4oyui"]
+[sub_resource type="Resource" id="Resource_istme"]
 resource_local_to_scene = true
 script = ExtResource("4_pggwq")
 item_name = &"lettuce"
@@ -168,7 +167,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, -4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, 4)
 
 [node name="Lettuce" parent="Level/Counters/Counter4/ItemSlots" index="0" instance=ExtResource("3_xmsnq")]
-resource = SubResource("Resource_4oyui")
+resource = SubResource("Resource_istme")
 
 [node name="Counter5" parent="Level/Counters" instance=ExtResource("2_6u3pk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, 4)
@@ -383,10 +382,8 @@ mesh = SubResource("BoxMesh_wf1qi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
 mesh = SubResource("BoxMesh_wf1qi")
 
-[node name="Counter2" parent="." instance=ExtResource("14_ffpfd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98807, 0.591759, 3.87139)
-list = Array[Resource("res://src/Components/items/recipe.gd")]([ExtResource("15_4ay0q")])
-result_state = 2
+[node name="Counter" parent="." instance=ExtResource("13_tdk8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00359869, 0.5, 5.19388)
 
 [editable path="Level/Counters/Counter4"]
 [editable path="Level/Counters/Counter10"]

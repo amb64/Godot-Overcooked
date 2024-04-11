@@ -1,0 +1,13 @@
+each counter
+
+list of Proccesses
+check if item is valid in Proccesses
+if so, change the item to the corresponding output
+else, do not modifiy the item
+
+process/ItemIO:
+input item
+output item
+//possible output model
+
+on success, change the item to be the output, and change the model
