@@ -17,3 +17,4 @@ func action(_source : Node3D) -> void:
 		if item.item.is_equal(IO.input):
 			print("yipee")
 			item.item = IO.output
+			return

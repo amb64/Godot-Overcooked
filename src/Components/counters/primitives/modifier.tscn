@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbntnslquaowq"]
+[gd_scene load_steps=8 format=3 uid="uid://dbntnslquaowq"]
 
 [ext_resource type="Script" path="res://src/Components/counters/primitives/mod.gd" id="1_5rtgl"]
 [ext_resource type="Resource" uid="uid://bam33kkdpy0ji" path="res://src/Components/new ontology/processes/chopping/choppedtomato.tres" id="2_auf1e"]
 [ext_resource type="PackedScene" uid="uid://bu8vuynvyd7go" path="res://src/Components/new ontology/item instances/tomato.tscn" id="3_pmmqr"]
+[ext_resource type="Resource" uid="uid://ctm3tirxd23et" path="res://src/Components/new ontology/processes/chopping/choppedtomato2.tres" id="3_wfdtj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chmj8"]
 
@@ -15,7 +16,7 @@ data = PackedVector3Array(-0.75, 0.5, 1, 0.75, 0.5, 1, -0.75, -0.5, 1, 0.75, 0.5
 
 [node name="Counter" type="Node3D" node_paths=PackedStringArray("item_slots")]
 script = ExtResource("1_5rtgl")
-proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("2_auf1e")])
+proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("2_auf1e"), ExtResource("3_wfdtj")])
 item_slots = [NodePath("ItemSlots")]
 
 [node name="CounterMesh" type="MeshInstance3D" parent="."]
