@@ -340,6 +340,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_forward"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton2" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -347,6 +349,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_back"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton3" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -354,6 +358,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_left"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton4" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -361,6 +367,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_right"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton5" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -368,6 +376,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "interact"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton6" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -375,6 +385,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "escape"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="Label" type="Label" parent="Controls"]
 layout_mode = 2
