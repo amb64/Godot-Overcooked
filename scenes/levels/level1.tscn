@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://c2636bqje3hxa"]
+[gd_scene load_steps=35 format=3 uid="uid://c2636bqje3hxa"]
 
+[ext_resource type="Script" path="res://scenes/LevelScript.gd" id="1_ibao1"]
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://src/Components/items/plate.tscn" id="1_ucdqg"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="2_6u3pk"]
 [ext_resource type="PackedScene" uid="uid://coqsmgr66c1ic" path="res://src/Components/items/old/raw_ingredients/lettuce.tscn" id="3_xmsnq"]
@@ -67,7 +68,7 @@ data = PackedVector3Array(-10.5, 1.5, 0.5, 10.5, 1.5, 0.5, -10.5, -1.5, 0.5, 10.
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fj14c"]
 data = PackedVector3Array(-10.5, 1.5, 0.5, 10.5, 1.5, 0.5, -10.5, -1.5, 0.5, 10.5, 1.5, 0.5, 10.5, -1.5, 0.5, -10.5, -1.5, 0.5, 10.5, 1.5, -0.5, -10.5, 1.5, -0.5, 10.5, -1.5, -0.5, -10.5, 1.5, -0.5, -10.5, -1.5, -0.5, 10.5, -1.5, -0.5, 10.5, 1.5, 0.5, 10.5, 1.5, -0.5, 10.5, -1.5, 0.5, 10.5, 1.5, -0.5, 10.5, -1.5, -0.5, 10.5, -1.5, 0.5, -10.5, 1.5, -0.5, -10.5, 1.5, 0.5, -10.5, -1.5, -0.5, -10.5, 1.5, 0.5, -10.5, -1.5, 0.5, -10.5, -1.5, -0.5, 10.5, 1.5, 0.5, -10.5, 1.5, 0.5, 10.5, 1.5, -0.5, -10.5, 1.5, 0.5, -10.5, 1.5, -0.5, 10.5, 1.5, -0.5, -10.5, -1.5, 0.5, 10.5, -1.5, 0.5, -10.5, -1.5, -0.5, 10.5, -1.5, 0.5, 10.5, -1.5, -0.5, -10.5, -1.5, -0.5)
 
-[sub_resource type="Resource" id="Resource_sitnr"]
+[sub_resource type="Resource" id="Resource_vx5b2"]
 resource_local_to_scene = true
 script = ExtResource("4_pggwq")
 item_name = &"lettuce"
@@ -86,6 +87,8 @@ material = ExtResource("10_k7s3y")
 size = Vector3(20, 0.1, 0.1)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_ibao1")
+time = 10.0
 
 [node name="Player" parent="." instance=ExtResource("13_hopy1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.96582, 2.92618)
@@ -167,7 +170,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, -4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, 4)
 
 [node name="Lettuce" parent="Level/Counters/Counter4/ItemSlots" index="0" instance=ExtResource("3_xmsnq")]
-resource = SubResource("Resource_sitnr")
+resource = SubResource("Resource_vx5b2")
 
 [node name="Counter5" parent="Level/Counters" instance=ExtResource("2_6u3pk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, 4)

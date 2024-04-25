@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nbbnhvq7sqq7"
-path="res://.godot/imported/Button.png-d76a396b657ef800470b79aeafd6299c.ctex"
+uid="uid://bif5mj77rdguf"
+path="res://.godot/imported/StarHalfFull.png-c274f05d517432e0d691c77827359612.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/UXUI/Button.png"
-dest_files=["res://.godot/imported/Button.png-d76a396b657ef800470b79aeafd6299c.ctex"]
+source_file="res://assets/UXUI/Icons/StarHalfFull.png"
+dest_files=["res://.godot/imported/StarHalfFull.png-c274f05d517432e0d691c77827359612.ctex"]
 
 [params]
 
