@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dph2sy421r3n4"
-path="res://.godot/imported/Button1.png-a964d27aa929e4e19031cc20aaf8361f.ctex"
+uid="uid://x2hd0vbkvxjm"
+path="res://.godot/imported/TimerIcon.png-09959d1a2343236423c596a04d66d9e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UXUI/Button1.png"
-dest_files=["res://.godot/imported/Button1.png-a964d27aa929e4e19031cc20aaf8361f.ctex"]
+source_file="res://assets/UXUI/Icons/TimerIcon.png"
+dest_files=["res://.godot/imported/TimerIcon.png-09959d1a2343236423c596a04d66d9e6.ctex"]
 
 [params]
 

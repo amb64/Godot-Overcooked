@@ -2,6 +2,9 @@ extends Node
 
 var Levels = {}
 
+var vanPos: Vector3 = Vector3(-14.0, 1.0, 4.0)
+var vanRot: Vector3 = Vector3(0.0, 0.0, 0.0)
+
 ## Drag and drop here. Must be [color=8cf]MainMenu.tscn[/color] file.
 @export var MainMenu: PackedScene # Spawn MainMenu
 ## Drag and drop here. Must be [color=8cf]WorldTour.tscn[/color] file.
@@ -9,6 +12,7 @@ var Levels = {}
 ## Drag and drop here. Must be a [color=8cf]Level scene[/color] tscn file.
 ## Must include a packed scene based on int for next level node or it'll crash.
 @export var levels: Array[PackedScene]
+
 func _ready():
 	Global.Game = self
 	loadLevelConfig()
@@ -55,7 +59,7 @@ func loadLevelConfig():
 func unLockLevelConfig(Level: int):
 	for key in Levels[Level].keys():
 		for point in Levels[Level][key]:
-			if point == bool(): # Checks if its a bool value
+			if point != int(): # Checks if its a bool value
 				Levels[Level][key][point] = true # set the level to be unlocked
 
 # Used for after the game ends to give how many stars
@@ -64,6 +68,7 @@ func editLevelConfig(Level: int, stars: int):
 		for point in Levels[Level][key]:
 			if point == int(): # Checks if its an int value
 				Levels[Level][key][point] = stars # set star amount
+	unLockLevelConfig(Level + 1)
 
 
 # postprocess mechanic

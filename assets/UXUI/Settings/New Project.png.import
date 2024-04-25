@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqxgbapdrhtrp"
-path="res://.godot/imported/StarEmpty.png-28c1e0bc8201d9c497a99f80e0a90a11.ctex"
+uid="uid://cmhjh3ia25d4g"
+path="res://.godot/imported/New Project.png-cf2d44d2d10db94b8e0482bca130e416.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UXUI/StarEmpty.png"
-dest_files=["res://.godot/imported/StarEmpty.png-28c1e0bc8201d9c497a99f80e0a90a11.ctex"]
+source_file="res://assets/UXUI/Settings/New Project.png"
+dest_files=["res://.godot/imported/New Project.png-cf2d44d2d10db94b8e0482bca130e416.ctex"]
 
 [params]
 

@@ -1,5 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://c2636bqje3hxa"]
+[gd_scene load_steps=34 format=3 uid="uid://c2636bqje3hxa"]
 
+[ext_resource type="Script" path="res://scenes/LevelScript.gd" id="1_u7wsv"]
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://src/Components/items/plate.tscn" id="1_ucdqg"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="2_6u3pk"]
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entitys/Player/player.tscn" id="2_e8cls"]
@@ -12,6 +13,7 @@
 [ext_resource type="Material" uid="uid://bnkpxx0lof1gc" path="res://src/Components/Grid.tres" id="10_k7s3y"]
 [ext_resource type="PackedScene" uid="uid://mfnrdf15quje" path="res://src/Components/counters/primitives/modifier.tscn" id="11_ha5jv"]
 [ext_resource type="Resource" uid="uid://cg4u1v7uatqyn" path="res://src/Components/items/resources/recipies/test.tres" id="12_8fpec"]
+[ext_resource type="PackedScene" uid="uid://58qpm1imogif" path="res://src/UXUI/PauseMenu.tscn" id="13_g57vg"]
 
 [sub_resource type="Gradient" id="Gradient_e7fpw"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
@@ -79,6 +81,8 @@ material = ExtResource("10_k7s3y")
 size = Vector3(20, 0.1, 0.1)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_u7wsv")
+time = 2.0
 
 [node name="Level" type="Node" parent="."]
 
@@ -375,6 +379,8 @@ mesh = SubResource("BoxMesh_wf1qi")
 [node name="Counter" parent="." instance=ExtResource("11_ha5jv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.40434, 0.661587, 3.46406)
 recipe = ExtResource("12_8fpec")
+
+[node name="PauseMenu" parent="." instance=ExtResource("13_g57vg")]
 
 [editable path="Level/Counters/Counter10"]
 [editable path="Level/Counters/Counter11"]

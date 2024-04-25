@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckys5q38v25su"
-path="res://.godot/imported/LockIcon.png-e0afbd5f061f6294eba4d7b7ff4c518d.ctex"
+uid="uid://bg3esvxxdsvp5"
+path="res://.godot/imported/FoodNotes.png-1fee20e2dca7b71f931694416d69c0fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UXUI/LockIcon.png"
-dest_files=["res://.godot/imported/LockIcon.png-e0afbd5f061f6294eba4d7b7ff4c518d.ctex"]
+source_file="res://assets/UXUI/Settings/FoodNotes.png"
+dest_files=["res://.godot/imported/FoodNotes.png-1fee20e2dca7b71f931694416d69c0fd.ctex"]
 
 [params]
 

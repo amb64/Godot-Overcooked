@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://w4infiu0xuyv"]
+[gd_scene load_steps=12 format=3 uid="uid://w4infiu0xuyv"]
 
 [ext_resource type="Script" path="res://src/Entitys/FoodTruck/FoodTruck.gd" id="1_q8kfu"]
 [ext_resource type="ArrayMesh" uid="uid://cfpln2ci8bgyv" path="res://assets/meshes/cloudsmoke_Mesh.res" id="2_r3slj"]
@@ -10,6 +10,8 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfvl4"]
 size = Vector3(0.685364, 0.688751, 1.26122)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t804w"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8bvhi"]
 
@@ -24,27 +26,35 @@ script = ExtResource("1_q8kfu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021698, 0.333989, 0.0388317)
 shape = SubResource("BoxShape3D_yfvl4")
 
-[node name="Body" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 2.22045e-16, 0, 0)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, 0.459229, -0.537688, 0, 0.760406, 0.649448, 0.707107, -0.459229, 0.537688, -4.5, 8.5, 4.5)
+
+[node name="P" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.387764, 0, 0, 0, 0.180876, 0, 0, 0, 0.172093, 0, 0.234055, -0.0838297)
+mesh = SubResource("BoxMesh_t804w")
+
+[node name="Body" type="MeshInstance3D" parent="P"]
+transform = Transform3D(-0.773667, 0, -1.524e-07, 0, 1.6586, 0, 6.76361e-08, 0, -1.74325, 5.7263e-16, -1.29401, 0.48712)
 material_override = ExtResource("3_0hjkg")
 mesh = ExtResource("4_g5yle")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Body"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="P/Body"]
 transform = Transform3D(-1.17235, 0, 0, 0, 0.567601, 0, 0, 0, 0.234679, -7.40149e-16, 0.796165, -1.94917)
 mesh = SubResource("BoxMesh_8bvhi")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="TruckBody" type="MeshInstance3D" parent="Body"]
+[node name="TruckBody" type="MeshInstance3D" parent="P/Body"]
 material_override = ExtResource("3_0hjkg")
 mesh = ExtResource("3_acyjp")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="TruckUmbrella" type="MeshInstance3D" parent="Body"]
+[node name="TruckUmbrella" type="MeshInstance3D" parent="P/Body"]
 material_override = ExtResource("3_0hjkg")
 mesh = ExtResource("7_m7e8x")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="GPUParticles3D" type="CPUParticles3D" parent="Body"]
+[node name="GPUParticles3D" type="CPUParticles3D" parent="P/Body"]
 transform = Transform3D(-0.367788, 2.24607e-15, 5.01784e-08, 0, 0.367788, 0, -3.2153e-08, 0, -0.573972, 0.0141813, 0.399132, 2.59086)
 amount = 3
 mesh = ExtResource("2_r3slj")
@@ -53,11 +63,8 @@ scale_amount_min = 0.01
 scale_amount_max = 0.2
 scale_amount_curve = SubResource("Curve_7446d")
 
-[node name="TruckWheels" type="MeshInstance3D" parent="Body"]
+[node name="TruckWheels" type="MeshInstance3D" parent="P/Body"]
 transform = Transform3D(-1.09278e-08, -0.12, 0, 0.25, -5.24537e-09, 0, 0, 0, 0.25, -6.64171e-17, -0.0438052, 0)
 material_override = ExtResource("3_0hjkg")
 mesh = ExtResource("5_n6x30")
-skeleton = NodePath("../..")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.707107, 0.459229, -0.537688, 0, 0.760406, 0.649448, 0.707107, -0.459229, 0.537688, -4.5, 8.5, 4.5)
+skeleton = NodePath("../../..")

@@ -1,11 +1,11 @@
 [gd_scene load_steps=33 format=3 uid="uid://b1w811aaok70t"]
 
 [ext_resource type="Script" path="res://src/UXUI/MainMenu.gd" id="1_lec4c"]
-[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/UXUI/Button.png" id="2_hxu1x"]
+[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/UXUI/Settings/Button.png" id="2_hxu1x"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="2_q8fg1"]
 [ext_resource type="PackedScene" uid="uid://bqjbtsu1jcben" path="res://src/UXUI/OptionsMenu.tscn" id="2_qob6l"]
 [ext_resource type="Texture2D" uid="uid://djh1ay001e0vg" path="res://assets/textures/TitleLogo.png" id="2_unvmm"]
-[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/UXUI/Button1.png" id="3_fy4fi"]
+[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/UXUI/Settings/Button1.png" id="3_fy4fi"]
 [ext_resource type="StyleBox" uid="uid://dt373x02xlmyb" path="res://materials/UXUI/Button1Normal.tres" id="5_182hq"]
 [ext_resource type="StyleBox" uid="uid://bcb5qj0pcogko" path="res://materials/UXUI/Button1Hover.tres" id="6_wc3f6"]
 [ext_resource type="StyleBox" uid="uid://dh2vqu8bmbcwm" path="res://materials/UXUI/Button1Pressed.tres" id="7_l13rm"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://eqn8atx3eso6" path="res://src/UXUI/colour_blind_ux.tscn" id="13_vr64p"]
 [ext_resource type="Material" uid="uid://1q3qxo8bea4a" path="res://materials/FoodTruck.tres" id="13_w3u6d"]
 [ext_resource type="ArrayMesh" uid="uid://cfejdvjpjg3pa" path="res://assets/meshes/truck_Cube_009.res" id="14_gj1xf"]
+[ext_resource type="Material" uid="uid://jn37axupqyqs" path="res://materials/GrassFloor.tres" id="14_ryih7"]
 [ext_resource type="ArrayMesh" uid="uid://5tf2t3vgxvvh" path="res://assets/meshes/truck_Cube_010.res" id="15_awglu"]
 [ext_resource type="ArrayMesh" uid="uid://id4cw18js01x" path="res://assets/meshes/truck_Cylinder_009.res" id="16_ng6xw"]
 [ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://assets/meshes/truck_Cylinder_008.res" id="17_qtk2p"]
@@ -24,9 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://ccoijltaxop3g" path="res://assets/textures/GrassUV.png" id="19_l7q7o"]
 [ext_resource type="Texture2D" uid="uid://2oom5iqkqw2i" path="res://assets/textures/Bench_BenchUV.png" id="23_u4s1d"]
 [ext_resource type="ArrayMesh" uid="uid://d16ks0v4f4ho1" path="res://assets/meshes/Bench_Cube_008.res" id="24_2u5ri"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cnn2w"]
-albedo_color = Color(0.0509804, 0.454902, 0.109804, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_oi2if"]
 
@@ -184,7 +182,7 @@ visible = false
 
 [node name="Floor" type="MeshInstance3D" parent="World"]
 transform = Transform3D(6.59847, 0, 0, 0, 1, 0, 0, 0, 5.36472, 0, -0.099, 1.206)
-material_override = SubResource("StandardMaterial3D_cnn2w")
+material_override = ExtResource("14_ryih7")
 mesh = SubResource("PlaneMesh_oi2if")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]

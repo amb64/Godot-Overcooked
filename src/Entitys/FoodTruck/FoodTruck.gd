@@ -4,6 +4,13 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var body
+
+func _ready():
+	body = $P
+	Global.FoodTruck = self
+	position = Global.Game.vanPos
+	body.rotation = Global.Game.vanRot
 
 func _physics_process(delta):
 	if get_parent().visible == true:
@@ -15,14 +22,14 @@ func _physics_process(delta):
 		var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 		var dir = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if dir:
-			$Body/GPUParticles3D.emitting = true
+			$P/Body/GPUParticles3D.emitting = true
 			velocity.x = dir.x * SPEED
 			velocity.z = dir.z * SPEED
 
 			# Body Mesh rotation. - Rotates body to where the player is moving
-			$Body.rotation.y = lerp_angle($Body.rotation.y, atan2(velocity.x, velocity.z), delta * 1.5)
+			$P.rotation.y = lerp_angle($P.rotation.y, atan2(velocity.x, velocity.z), delta * 1.5)
 		else:
-			$Body/GPUParticles3D.emitting = false
+			$P/Body/GPUParticles3D.emitting = false
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			velocity.z = move_toward(velocity.z, 0, SPEED)
 

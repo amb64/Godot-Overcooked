@@ -5,9 +5,9 @@ var starOffset: int = 20
 var starArr: Array = [] ##  How many stars should be displayed
 
 # Star textures
-@export var fullStar: Texture = preload("res://assets/UXUI/StarFull.png")
+@export var fullStar: Texture = preload("res://assets/UXUI/Icons/StarFull.png")
 #@export var halfStar: Texture
-@export var emptyStar: Texture = preload("res://assets/UXUI/StarEmpty.png")
+@export var emptyStar: Texture = preload("res://assets/UXUI/Icons/StarEmpty.png")
 
 ## Select a level number
 @export var Level: int = 0
@@ -21,6 +21,7 @@ func _ready():
 	# Checks if the database is greater than level AKA if theres too many next levels and not a lot of data then it wont get data 
 	if dict.size() > Level:
 		$SubViewport/Panel/Panel/CenterContainer/LockIcon2.visible = false
+		$SubViewport/Panel/Label.visible = true
 		for key in dict[Level].keys():
 			for point in dict[Level][key]:
 				if point == int(): # Checks if its an int value
@@ -48,11 +49,14 @@ func _ready():
 			$SubViewport/Panel/Panel/CenterContainer/LockIcon.visible = true
 	else:
 		$SubViewport/Panel/Panel/CenterContainer/LockIcon2.visible = true
+		$SubViewport/Panel/Label.visible = false
 
 # Process input stuff
 func _process(_delta):
 	if isCol and isUnLocked == true:
 		if Input.is_action_just_pressed("interact"):
+			Global.Game.vanPos = Global.FoodTruck.position
+			Global.Game.vanRot = Global.FoodTruck.body.rotation
 			Global.Game.load_level(Level)
 			
 
@@ -66,12 +70,12 @@ func _on_area_3d_body_exited(body):
 		isCol = false
 
 # stars GUI mechanic
-func update_stars(newHealth: int):
+func update_stars(newStar: int):
 	# Loop through the star array and update each star
 	for i in range(maxStars):
 		var star = starArr[i]
 		# Display if the star is full, half or empty
-		if i < newHealth:
+		if i < newStar:
 			# Full
 			star.texture = fullStar
 		else:
