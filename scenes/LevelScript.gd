@@ -1,6 +1,8 @@
 extends Node3D
 
+## Please select the ID num of the level for this to work
 @export var Level: int = 0
+## Time is based on seconds
 @export var time: float = 0.0
 var minutes: int = 0
 var seconds: int = 0
@@ -21,7 +23,7 @@ func _process(delta):
 	
 	if minutes == 0:
 		if seconds == 0:
-			if msec == 0:
+			if msec <= 0:
 				stop()
 				
 # stop when timer is 0 

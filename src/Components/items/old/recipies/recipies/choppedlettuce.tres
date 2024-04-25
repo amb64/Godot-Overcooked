@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=4 format=3 uid="uid://d076fg7qhekof"]
+
+[ext_resource type="Script" path="res://src/Components/items/old/recipies/base_item.gd" id="1_qqp7v"]
+[ext_resource type="Script" path="res://src/Components/items/recipe.gd" id="2_dqasf"]
+
+[sub_resource type="Resource" id="Resource_vfkdw"]
+resource_local_to_scene = true
+script = ExtResource("1_qqp7v")
+item_name = &"lettuce"
+state = 1
+
+[resource]
+script = ExtResource("2_dqasf")
+recipe_name = &"chopped lettuce"
+product = SubResource("Resource_vfkdw")
+additionals = Array[ExtResource("1_qqp7v")]([])

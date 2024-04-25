@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu8vuynvyd7go"]
+
+[ext_resource type="Script" path="res://src/Components/new ontology/scripts/itemInstance.gd" id="1_ybybn"]
+[ext_resource type="Resource" uid="uid://cqpkadhunqypn" path="res://src/Components/new ontology/items/tomato.tres" id="2_c506y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwcyl"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_prsvd"]
+material = SubResource("StandardMaterial3D_iwcyl")
+
+[node name="Item" type="MeshInstance3D"]
+mesh = SubResource("SphereMesh_prsvd")
+script = ExtResource("1_ybybn")
+item = ExtResource("2_c506y")

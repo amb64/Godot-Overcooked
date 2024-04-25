@@ -1,17 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://mfnrdf15quje"]
+[gd_scene load_steps=10 format=3 uid="uid://dbntnslquaowq"]
 
-[ext_resource type="Script" path="res://src/Components/counters/primitives/modifier.gd" id="1_8l80t"]
-[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://materials/counter.tres" id="2_gbtei"]
+[ext_resource type="Script" path="res://src/Components/counters/primitives/mod.gd" id="1_5rtgl"]
+[ext_resource type="Resource" uid="uid://bam33kkdpy0ji" path="res://src/Components/new ontology/processes/chopping/choppedtomato.tres" id="2_auf1e"]
+[ext_resource type="PackedScene" uid="uid://bu8vuynvyd7go" path="res://src/Components/new ontology/item instances/tomato.tscn" id="3_pmmqr"]
+[ext_resource type="Resource" uid="uid://ctm3tirxd23et" path="res://src/Components/new ontology/processes/chopping/choppedtomato2.tres" id="3_wfdtj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chmj8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
-material = ExtResource("2_gbtei")
+material = SubResource("StandardMaterial3D_chmj8")
 size = Vector3(1.5, 1, 2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0xxgy"]
 data = PackedVector3Array(-0.75, 0.5, 1, 0.75, 0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, -1, 0.75, -0.5, -1, -0.75, 0.5, -1, -0.75, -0.5, -1, 0.75, -0.5, -1, 0.75, 0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, -1, 0.75, -0.5, 1, -0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, 0.5, 1, -0.75, 0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, 0.5, -1, 0.75, 0.5, -1, -0.75, -0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, -0.5, 1, 0.75, -0.5, -1, -0.75, -0.5, -1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwcyl"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_prsvd"]
+material = SubResource("StandardMaterial3D_iwcyl")
+
 [node name="Counter" type="Node3D" node_paths=PackedStringArray("item_slots")]
-script = ExtResource("1_8l80t")
+script = ExtResource("1_5rtgl")
+proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("2_auf1e"), ExtResource("3_wfdtj")])
 item_slots = [NodePath("ItemSlots")]
 
 [node name="CounterMesh" type="MeshInstance3D" parent="."]
@@ -25,3 +36,6 @@ shape = SubResource("ConcavePolygonShape3D_0xxgy")
 
 [node name="ItemSlots" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Item" parent="ItemSlots" instance=ExtResource("3_pmmqr")]
+mesh = SubResource("SphereMesh_prsvd")

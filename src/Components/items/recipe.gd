@@ -16,4 +16,4 @@ class_name Recipe extends Resource
 
 #check to see if it matches ingredient signature
 func item_meets_criteria(item : BaseItem) -> bool:
-	return product == item
+	return product.is_equal(item)

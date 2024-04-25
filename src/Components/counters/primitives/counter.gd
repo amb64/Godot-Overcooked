@@ -1,6 +1,4 @@
-class_name Counter
-extends Node3D
-
+class_name Counter extends Node3D
 
 @export var item_slots : Array[Node3D]
 
@@ -24,10 +22,19 @@ func drop(source : Node3D) -> bool:
 		if slot.get_child_count() > 0:
 			continue
 
+		cleanup()
 		source.get_child(0).reparent(slot, false)
 		return true
 			
 	return false
+
+func action(source : Node3D) -> void:
+	print("action")
+	return
+
+#calls on successful pickup
+func cleanup() -> void:
+	return
 
 func get_free_slots() -> int:
 	var slots : int = item_slots.size()
@@ -48,3 +55,4 @@ func is_slot_occupied(index : int) -> bool:
 		return true
 		
 	return item_slots[index].get_child_count() > 0
+
