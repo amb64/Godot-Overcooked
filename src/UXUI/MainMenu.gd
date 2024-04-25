@@ -8,7 +8,7 @@ func _on_host_button_pressed():
 	get_parent().load_world()
 
 func _on_join_button_pressed():
-	pass
+	self.visible = false
 
 func _on_options_button_pressed():
 	$Menu.visible = false

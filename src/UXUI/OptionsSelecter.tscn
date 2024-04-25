@@ -14,7 +14,7 @@ bg_color = Color(0.235294, 0.235294, 0.235294, 0.631373)
 bg_color = Color(0.164706, 0.164706, 0.164706, 0.729412)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sn6ou"]
-bg_color = Color(0.235294, 0.235294, 0.235294, 0.360784)
+bg_color = Color(0.235294, 0.235294, 0.235294, 0.901961)
 
 [node name="OptionsSelecter" type="Control"]
 layout_mode = 3
@@ -68,7 +68,6 @@ anchors_preset = -1
 anchor_left = 0.2
 anchor_right = 0.8
 anchor_bottom = 1.0
-theme_override_fonts/font = ExtResource("2_o86pa")
 text = "###"
 horizontal_alignment = 1
 vertical_alignment = 1

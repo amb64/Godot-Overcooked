@@ -1,19 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://db1fdkniwgypp"]
+[gd_scene load_steps=7 format=3 uid="uid://db1fdkniwgypp"]
 
+[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/textures/UXUI/Button.png" id="1_7iejm"]
 [ext_resource type="PackedScene" uid="uid://dxla2l2t126bj" path="res://src/UXUI/List.tscn" id="1_45xhq"]
-[ext_resource type="Script" path="res://src/UXUI/HUD.gd" id="1_gj2u4"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="1_kqkhy"]
-[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/UXUI/Settings/Button.png" id="2_tkej1"]
-[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/UXUI/Settings/Button1.png" id="3_twgoc"]
-[ext_resource type="Texture2D" uid="uid://x2hd0vbkvxjm" path="res://assets/UXUI/Icons/TimerIcon.png" id="5_44mjt"]
-[ext_resource type="Texture2D" uid="uid://dgqohiqba4suj" path="res://assets/UXUI/Icons/TipIcon.png" id="6_4ha4i"]
+[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/textures/UXUI/Button1.png" id="3_3w06e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q7mkd"]
-texture = ExtResource("2_tkej1")
+texture = ExtResource("1_7iejm")
 modulate_color = Color(0.32549, 0.32549, 0.32549, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3cmx"]
-texture = ExtResource("3_twgoc")
+texture = ExtResource("3_3w06e")
 modulate_color = Color(0.32549, 0.32549, 0.32549, 1)
 
 [node name="HUD" type="Control"]
@@ -23,72 +20,53 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gj2u4")
 
-[node name="PanelTimer" type="TextureRect" parent="."]
+[node name="Button" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = 1640.0
+offset_left = 1576.0
 offset_top = 40.0
-offset_right = 2240.0
+offset_right = 2321.0
 offset_bottom = 400.0
 scale = Vector2(0.44, 0.266667)
-texture = ExtResource("2_tkej1")
+texture = ExtResource("1_7iejm")
 
-[node name="PanelTip" type="TextureRect" parent="."]
+[node name="Button3" type="TextureRect" parent="."]
 modulate = Color(0, 0, 0, 1)
-layout_mode = 0
-offset_left = 1632.0
-offset_top = 152.0
-offset_right = 2232.0
-offset_bottom = 512.0
+offset_left = 1568.0
+offset_top = 160.0
+offset_right = 2313.0
+offset_bottom = 490.0
 scale = Vector2(0.44, 0.266667)
-texture = ExtResource("3_twgoc")
+texture = ExtResource("3_3w06e")
 
 [node name="TimerPanel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1656.0
+offset_left = 1576.0
 offset_top = 32.0
 offset_right = 1896.0
 offset_bottom = 128.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_q7mkd")
 
-[node name="Mins" type="Label" parent="TimerPanel"]
+[node name="TimerLabel" type="Label" parent="TimerPanel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.043
 anchor_top = 0.111
 anchor_right = 0.957
 anchor_bottom = 0.889
-offset_left = 62.0241
-offset_top = 13.344
-offset_right = -99.0239
-offset_bottom = -5.344
+offset_left = 0.0879998
+offset_top = 0.00799942
+offset_right = -0.0879974
+offset_bottom = -0.00800323
 theme_override_fonts/font = ExtResource("1_kqkhy")
 theme_override_font_sizes/font_size = 30
-text = "##:"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="Secs" type="Label" parent="TimerPanel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.043
-anchor_top = 0.111
-anchor_right = 0.957
-anchor_bottom = 0.889
-offset_left = 118.024
-offset_top = 13.344
-offset_right = -52.0239
-offset_bottom = -5.344
-theme_override_fonts/font = ExtResource("1_kqkhy")
-theme_override_font_sizes/font_size = 30
-text = "##"
+text = "##:##"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TipPanel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1640.0
+offset_left = 1576.0
 offset_top = 144.0
 offset_right = 1896.0
 offset_bottom = 240.0
@@ -111,34 +89,6 @@ text = "##"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TimerIcon" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.837
-anchor_top = 0.03
-anchor_right = 0.887
-anchor_bottom = 0.119
-offset_left = 0.959961
-offset_top = -0.400002
-offset_right = 0.959961
-offset_bottom = -0.520004
-texture = ExtResource("5_44mjt")
-expand_mode = 1
-
-[node name="CoinIcon" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.837
-anchor_top = 0.141
-anchor_right = 0.887
-anchor_bottom = 0.23
-offset_left = 0.959961
-offset_top = -0.279999
-offset_right = 0.959961
-offset_bottom = -0.400009
-texture = ExtResource("6_4ha4i")
-expand_mode = 1
-
 [node name="List" parent="." instance=ExtResource("1_45xhq")]
 layout_mode = 1
 
@@ -148,7 +98,3 @@ layout_mode = 1
 
 [node name="TipSFX" type="AudioStreamPlayer" parent="."]
 bus = &"SFX"
-
-[node name="StarSFX" type="AudioStreamPlayer" parent="."]
-
-[node name="TimerSFX" type="AudioStreamPlayer" parent="."]
