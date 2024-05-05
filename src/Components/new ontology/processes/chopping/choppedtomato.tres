@@ -6,5 +6,5 @@
 
 [resource]
 script = ExtResource("1_71uij")
-input = ExtResource("1_5118v")
+input = Array[Resource("res://src/Components/new ontology/scripts/item.gd")]([ExtResource("1_5118v")])
 output = ExtResource("2_d07sc")

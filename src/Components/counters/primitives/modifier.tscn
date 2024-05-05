@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbntnslquaowq"]
+[gd_scene load_steps=11 format=3 uid="uid://dbntnslquaowq"]
 
 [ext_resource type="Script" path="res://src/Components/counters/primitives/mod.gd" id="1_5rtgl"]
 [ext_resource type="Resource" uid="uid://bam33kkdpy0ji" path="res://src/Components/new ontology/processes/chopping/choppedtomato.tres" id="2_auf1e"]
 [ext_resource type="PackedScene" uid="uid://bu8vuynvyd7go" path="res://src/Components/new ontology/item instances/tomato.tscn" id="3_pmmqr"]
 [ext_resource type="Resource" uid="uid://ctm3tirxd23et" path="res://src/Components/new ontology/processes/chopping/choppedtomato2.tres" id="3_wfdtj"]
+[ext_resource type="Resource" uid="uid://cc5y70okokup8" path="res://src/Components/new ontology/processes/chopping/test.tres" id="4_awd37"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chmj8"]
 
@@ -22,7 +23,7 @@ material = SubResource("StandardMaterial3D_iwcyl")
 
 [node name="Counter" type="Node3D" node_paths=PackedStringArray("item_slots")]
 script = ExtResource("1_5rtgl")
-proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("2_auf1e"), ExtResource("3_wfdtj")])
+proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("2_auf1e"), ExtResource("3_wfdtj"), ExtResource("4_awd37")])
 item_slots = [NodePath("ItemSlots")]
 
 [node name="CounterMesh" type="MeshInstance3D" parent="."]
@@ -35,7 +36,7 @@ mesh = SubResource("BoxMesh_fdo3b")
 shape = SubResource("ConcavePolygonShape3D_0xxgy")
 
 [node name="ItemSlots" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.421373)
 
 [node name="Item" parent="ItemSlots" instance=ExtResource("3_pmmqr")]
 mesh = SubResource("SphereMesh_prsvd")
