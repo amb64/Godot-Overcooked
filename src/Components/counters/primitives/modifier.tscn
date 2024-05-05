@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dbntnslquaowq"]
 
-[ext_resource type="Script" path="res://src/Components/counters/primitives/mod.gd" id="1_5rtgl"]
+[ext_resource type="Script" path="res://src/Components/counters/primitives/modifier.gd" id="1_rt4xe"]
 [ext_resource type="Resource" uid="uid://bam33kkdpy0ji" path="res://src/Components/new ontology/processes/chopping/choppedtomato.tres" id="2_auf1e"]
 [ext_resource type="PackedScene" uid="uid://bu8vuynvyd7go" path="res://src/Components/new ontology/item instances/tomato.tscn" id="3_pmmqr"]
 [ext_resource type="Resource" uid="uid://ctm3tirxd23et" path="res://src/Components/new ontology/processes/chopping/choppedtomato2.tres" id="3_wfdtj"]
@@ -22,7 +22,7 @@ albedo_color = Color(1, 0, 0, 1)
 material = SubResource("StandardMaterial3D_iwcyl")
 
 [node name="Counter" type="Node3D" node_paths=PackedStringArray("item_slots")]
-script = ExtResource("1_5rtgl")
+script = ExtResource("1_rt4xe")
 proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("2_auf1e"), ExtResource("3_wfdtj"), ExtResource("4_awd37")])
 item_slots = [NodePath("ItemSlots")]
 

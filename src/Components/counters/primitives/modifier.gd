@@ -8,7 +8,6 @@ func action(_source : Node3D) -> void:
 		return
 	
 	if not item_slots[0].get_child(0) is ItemInstance:
-		print("nop")
 		return
 	
 	var items : Array[ItemInstance]
@@ -17,8 +16,6 @@ func action(_source : Node3D) -> void:
 		var item = item_slots[i].get_child(0) #error keeps happening here, no clue why, but causes no problems
 		if item != null && item is ItemInstance:
 			items.append(item_slots[i].get_child(0))
-	
-	print("yup")
 	
 	for IO : ItemIO in proccesses:
 		if IO.does_apply(items):
