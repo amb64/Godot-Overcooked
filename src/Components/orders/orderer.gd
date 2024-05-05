@@ -36,4 +36,13 @@ func _process(delta):
 		delete_order_counter = 0
 		delete_order()
 
+#returns if completion was successful
+func complete_order(item : ItemInstance) -> bool:
+	for i in range(0, orders.size()):
+		if(item.item.is_equal(orders[i].item)):
+			orders.remove_at(i)
+			delete_order_counter = 0
+			return true
+			
+	return false
 	
