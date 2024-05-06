@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://b2k2y68puhb47"]
+[gd_scene load_steps=27 format=3 uid="uid://b2k2y68puhb47"]
 
+[ext_resource type="Script" path="res://scenes/LevelScript.gd" id="1_4l2px"]
 [ext_resource type="PackedScene" uid="uid://dn6g4khocwvw1" path="res://src/Entitys/Player/player.tscn" id="1_k07at"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="2_8s43x"]
 [ext_resource type="PackedScene" uid="uid://lyq6cihrp803" path="res://src/Components/items/plate.tscn" id="3_6hl5f"]
@@ -64,6 +65,9 @@ data = PackedVector3Array(-10.5, 1.5, 0.5, 10.5, 1.5, 0.5, -10.5, -1.5, 0.5, 10.
 data = PackedVector3Array(-10.5, 1.5, 0.5, 10.5, 1.5, 0.5, -10.5, -1.5, 0.5, 10.5, 1.5, 0.5, 10.5, -1.5, 0.5, -10.5, -1.5, 0.5, 10.5, 1.5, -0.5, -10.5, 1.5, -0.5, 10.5, -1.5, -0.5, -10.5, 1.5, -0.5, -10.5, -1.5, -0.5, 10.5, -1.5, -0.5, 10.5, 1.5, 0.5, 10.5, 1.5, -0.5, 10.5, -1.5, 0.5, 10.5, 1.5, -0.5, 10.5, -1.5, -0.5, 10.5, -1.5, 0.5, -10.5, 1.5, -0.5, -10.5, 1.5, 0.5, -10.5, -1.5, -0.5, -10.5, 1.5, 0.5, -10.5, -1.5, 0.5, -10.5, -1.5, -0.5, 10.5, 1.5, 0.5, -10.5, 1.5, 0.5, 10.5, 1.5, -0.5, -10.5, 1.5, 0.5, -10.5, 1.5, -0.5, 10.5, 1.5, -0.5, -10.5, -1.5, 0.5, 10.5, -1.5, 0.5, -10.5, -1.5, -0.5, 10.5, -1.5, 0.5, 10.5, -1.5, -0.5, -10.5, -1.5, -0.5)
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_4l2px")
+Level = 1
+time = 3.0
 
 [node name="Counters_Counter9_ItemHolder#Plate" parent="." instance=ExtResource("3_6hl5f")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.000374317, -0.368759, 0.0252056)

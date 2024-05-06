@@ -22,8 +22,9 @@ Config="*res://autoloads/Config.gd"
 
 [display]
 
-window/size/viewport_width=720
-window/size/viewport_height=480
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/per_pixel_transparency/allowed=true
 
 [dotnet]
 
@@ -32,8 +33,12 @@ project/assembly_name="Overcooked Godot Level"
 [file_customization]
 
 folder_colors={
-"res://materials/": "green",
+"res://assets/": "red",
+"res://autoloads/": "orange",
 "res://prefabs/counters/primitives_old/": "gray",
+"res://resources/": "yellow",
+"res://scenes/": "green",
+"res://src/": "blue",
 "res://src/Components/items/[THIS FOLDER IS DEPRECATED]/": "red"
 }
 
@@ -92,7 +97,3 @@ action={
 3d_physics/layer_2="world"
 3d_physics/layer_3="item"
 3d_physics/layer_4="counter"
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"

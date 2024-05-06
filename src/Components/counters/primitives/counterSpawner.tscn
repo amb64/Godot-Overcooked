@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/Components/counters/primitives/counterSpawner.gd" id="1_qblcf"]
 [ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://src/Components/items/item.tscn" id="2_7ckn6"]
-[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://materials/counter.tres" id="3_1kp27"]
+[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://resources/materials/counter.tres" id="3_1kp27"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
 material = ExtResource("3_1kp27")
