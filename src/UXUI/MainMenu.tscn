@@ -1,60 +1,47 @@
-[gd_scene load_steps=33 format=3 uid="uid://b1w811aaok70t"]
+[gd_scene load_steps=31 format=3 uid="uid://b1w811aaok70t"]
 
 [ext_resource type="Script" path="res://src/UXUI/MainMenu.gd" id="1_lec4c"]
 [ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/UXUI/Settings/Button.png" id="2_hxu1x"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="2_q8fg1"]
 [ext_resource type="PackedScene" uid="uid://bqjbtsu1jcben" path="res://src/UXUI/OptionsMenu.tscn" id="2_qob6l"]
-[ext_resource type="Texture2D" uid="uid://djh1ay001e0vg" path="res://assets/textures/TitleLogo.png" id="2_unvmm"]
+[ext_resource type="Texture2D" uid="uid://bl3ckjn6fb1v3" path="res://assets/UXUI/TitleLogo.png" id="2_rw8tv"]
 [ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/UXUI/Settings/Button1.png" id="3_fy4fi"]
-[ext_resource type="StyleBox" uid="uid://dt373x02xlmyb" path="res://materials/UXUI/Button1Normal.tres" id="5_182hq"]
-[ext_resource type="StyleBox" uid="uid://bcb5qj0pcogko" path="res://materials/UXUI/Button1Hover.tres" id="6_wc3f6"]
-[ext_resource type="StyleBox" uid="uid://dh2vqu8bmbcwm" path="res://materials/UXUI/Button1Pressed.tres" id="7_l13rm"]
-[ext_resource type="StyleBox" uid="uid://dj8t756h4bqjd" path="res://materials/UXUI/Button2Normal.tres" id="8_jcwmn"]
-[ext_resource type="StyleBox" uid="uid://bhbf6r4t6m65f" path="res://materials/UXUI/ButtonFocus.tres" id="8_jxvam"]
-[ext_resource type="StyleBox" uid="uid://c6l0ot5dy2fij" path="res://materials/UXUI/Button2Hover.tres" id="9_u834w"]
-[ext_resource type="StyleBox" uid="uid://1ulot5p4who5" path="res://materials/UXUI/Button2Pressed.tres" id="10_2xorh"]
-[ext_resource type="PackedScene" uid="uid://eqn8atx3eso6" path="res://src/UXUI/colour_blind_ux.tscn" id="13_vr64p"]
-[ext_resource type="Material" uid="uid://1q3qxo8bea4a" path="res://materials/FoodTruck.tres" id="13_w3u6d"]
-[ext_resource type="ArrayMesh" uid="uid://cfejdvjpjg3pa" path="res://assets/meshes/truck_Cube_009.res" id="14_gj1xf"]
-[ext_resource type="Material" uid="uid://jn37axupqyqs" path="res://materials/GrassFloor.tres" id="14_ryih7"]
-[ext_resource type="ArrayMesh" uid="uid://5tf2t3vgxvvh" path="res://assets/meshes/truck_Cube_010.res" id="15_awglu"]
-[ext_resource type="ArrayMesh" uid="uid://id4cw18js01x" path="res://assets/meshes/truck_Cylinder_009.res" id="16_ng6xw"]
-[ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://assets/meshes/truck_Cylinder_008.res" id="17_qtk2p"]
-[ext_resource type="ArrayMesh" uid="uid://dgla1vnfh65ys" path="res://assets/meshes/Grass_Plane_002.res" id="18_hcgo8"]
-[ext_resource type="Shader" path="res://materials/shaders/Foliage.gdshader" id="18_ufru7"]
-[ext_resource type="Texture2D" uid="uid://ccoijltaxop3g" path="res://assets/textures/GrassUV.png" id="19_l7q7o"]
-[ext_resource type="Texture2D" uid="uid://2oom5iqkqw2i" path="res://assets/textures/Bench_BenchUV.png" id="23_u4s1d"]
-[ext_resource type="ArrayMesh" uid="uid://d16ks0v4f4ho1" path="res://assets/meshes/Bench_Cube_008.res" id="24_2u5ri"]
+[ext_resource type="StyleBox" uid="uid://dt373x02xlmyb" path="res://resources/UXUI/Button1Normal.tres" id="6_abg05"]
+[ext_resource type="StyleBox" uid="uid://bcb5qj0pcogko" path="res://resources/UXUI/Button1Hover.tres" id="7_n5r2a"]
+[ext_resource type="StyleBox" uid="uid://dh2vqu8bmbcwm" path="res://resources/UXUI/Button1Pressed.tres" id="8_ww5oe"]
+[ext_resource type="StyleBox" uid="uid://bhbf6r4t6m65f" path="res://resources/UXUI/ButtonFocus.tres" id="9_d6n2h"]
+[ext_resource type="StyleBox" uid="uid://dj8t756h4bqjd" path="res://resources/UXUI/Button2Normal.tres" id="10_cd5mj"]
+[ext_resource type="StyleBox" uid="uid://c6l0ot5dy2fij" path="res://resources/UXUI/Button2Hover.tres" id="11_bmrlv"]
+[ext_resource type="StyleBox" uid="uid://1ulot5p4who5" path="res://resources/UXUI/Button2Pressed.tres" id="12_2u37m"]
+[ext_resource type="Material" uid="uid://c3ml1pbxb64uk" path="res://resources/materials/GrassMain.tres" id="14_4ofyr"]
+[ext_resource type="ArrayMesh" uid="uid://boad403rh7he8" path="res://resources/models/Environment/Grass.res" id="15_xwpxw"]
+[ext_resource type="Material" uid="uid://1q3qxo8bea4a" path="res://resources/materials/FoodTruck.tres" id="16_ah85q"]
+[ext_resource type="ArrayMesh" uid="uid://cfejdvjpjg3pa" path="res://resources/models/FoodTruck/Truck.res" id="17_gfmk8"]
+[ext_resource type="ArrayMesh" uid="uid://5tf2t3vgxvvh" path="res://resources/models/FoodTruck/Truck_Windows.res" id="18_k60by"]
+[ext_resource type="ArrayMesh" uid="uid://id4cw18js01x" path="res://resources/models/FoodTruck/Truck_Wheels.res" id="19_kbr8r"]
+[ext_resource type="Texture2D" uid="uid://dqri3s0skoey3" path="res://assets/textures/GrassUV.png" id="19_l7q7o"]
+[ext_resource type="Shader" path="res://resources/shaders/Foliage.gdshader" id="20_pu7tx"]
+[ext_resource type="Texture2D" uid="uid://b4d8a1k4hhp0y" path="res://assets/textures/BenchUV.png" id="22_53yrv"]
+[ext_resource type="ArrayMesh" uid="uid://6q834pftm43w" path="res://resources/models/Environment/Bench.res" id="23_uanxk"]
+[ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://resources/models/FoodTruck/Truck_Umbrella.res" id="24_0lf6h"]
+[ext_resource type="Material" uid="uid://bnhrrew75xy7g" path="res://resources/materials/Trees.tres" id="25_64q8b"]
+[ext_resource type="ArrayMesh" uid="uid://dbhga1lbqs7sl" path="res://resources/models/Environment/ForestTree1.res" id="25_ekpsl"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_oi2if"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hdu0l"]
 render_priority = 0
-shader = ExtResource("18_ufru7")
+shader = ExtResource("20_pu7tx")
 shader_parameter/grass_texture = ExtResource("19_l7q7o")
 
 [sub_resource type="MultiMesh" id="MultiMesh_nxpyb"]
 transform_format = 1
 instance_count = 200
-mesh = ExtResource("18_hcgo8")
+mesh = ExtResource("15_xwpxw")
 buffer = PackedFloat32Array(-0.278274, 0, 0, -0.742286, 0, 0.278274, 0, -0.0991437, 0, 0, -0.278274, -2.94275, 0, 0, -0.0575779, 1.70733, 0, 0.0575779, 0, -0.0991437, 0.0575779, 0, 0, 3.07942, 0, 0, -0.149195, 3.22833, 0, 0.149195, 0, -0.0991437, 0.149195, 0, 0, -1.04019, 0, 0, -0.310391, 0.802385, 0, 0.310391, 0, -0.0991437, 0.310391, 0, 0, 3.52, -0.0395083, 0, 0, 1.32154, 0, 0.0395083, 0, -0.0991437, 0, 0, -0.0395083, -0.93285, 0, 0, -0.0128151, 3.85804, 0, 0.0128151, 0, -0.0991437, 0.0128151, 0, 0, 2.10065, -0.337358, 0, 0, -3.44778, 0, 0.337358, 0, -0.0991437, 0, 0, -0.337358, 2.96927, 0, 0, -0.192616, -1.95319, 0, 0.192616, 0, -0.0991437, 0.192616, 0, 0, 2.45847, 0, 0, -0.00871664, -1.98504, 0, 0.00871664, 0, -0.0991437, 0.00871664, 0, 0, 3.42605, -0.00699356, 0, 0, 0.0834107, 0, 0.00699356, 0, -0.0991437, 0, 0, -0.00699356, -0.645925, -0.167496, 0, 0, -5.16034, 0, 0.167496, 0, -0.0991437, 0, 0, -0.167496, -3.96924, -0.204314, 0, 0, -3.91956, 0, 0.204314, 0, -0.0991437, 0, 0, -0.204314, -4.4188, 0, 0, -0.123892, 1.97695, 0, 0.123892, 0, -0.0991437, 0.123892, 0, 0, 4.82804, -0.118836, 0, 0, -1.32623, 0, 0.118836, 0, -0.0991437, 0, 0, -0.118836, -4.44556, 0, 0, -0.0783877, 3.72476, 0, 0.0783877, 0, -0.0991437, 0.0783877, 0, 0, 5.44349, 0, 0, -0.228635, 6.27176, 0, 0.228635, 0, -0.0991437, 0.228635, 0, 0, 3.51531, -0.200548, 0, 0, -1.33656, 0, 0.200548, 0, -0.0991437, 0, 0, -0.200548, 0.553151, 0, 0, -0.328665, 5.67941, 0, 0.328665, 0, -0.0991437, 0.328665, 0, 0, -0.868043, -0.072567, 0, 0, -5.66254, 0, 0.072567, 0, -0.0991437, 0, 0, -0.072567, 3.86425, -0.342229, 0, 0, -2.01538, 0, 0.342229, 0, -0.0991437, 0, 0, -0.342229, -2.87959, -0.0375182, 0, 0, -2.29443, 0, 0.0375182, 0, -0.0991437, 0, 0, -0.0375182, -0.0717729, -0.302706, 0, 0, -3.0942, 0, 0.302706, 0, -0.0991437, 0, 0, -0.302706, -1.26542, 0, 0, -0.370641, -2.86609, 0, 0.370641, 0, -0.0991437, 0.370641, 0, 0, 3.54586, 0, 0, -0.215494, 6.0904, 0, 0.215494, 0, -0.0991437, 0.215494, 0, 0, 3.02652, 0, 0, -0.0406907, 2.07996, 0, 0.0406907, 0, -0.0991437, 0.0406907, 0, 0, -0.679569, 0, 0, -0.167878, 5.40094, 0, 0.167878, 0, -0.0991437, 0.167878, 0, 0, 1.01362, 0, 0, -0.0378525, -0.877038, 0, 0.0378525, 0, -0.0991437, 0.0378525, 0, 0, 3.12296, -0.119874, 0, 0, -3.63461, 0, 0.119874, 0, -0.0991437, 0, 0, -0.119874, 2.54265, 0, 0, -0.330594, 0.602808, 0, 0.330594, 0, -0.0991437, 0.330594, 0, 0, 4.64781, -0.164664, 0, 0, -3.42905, 0, 0.164664, 0, -0.0991437, 0, 0, -0.164664, -3.42518, -0.34291, 0, 0, -5.74054, 0, 0.34291, 0, -0.0991437, 0, 0, -0.34291, -1.62486, -0.096626, 0, 0, 0.252206, 0, 0.096626, 0, -0.0991437, 0, 0, -0.096626, -1.10027, -0.378015, 0, 0, -0.962858, 0, 0.378015, 0, -0.0991437, 0, 0, -0.378015, 0.936578, -0.154458, 0, 0, -4.94506, 0, 0.154458, 0, -0.0991437, 0, 0, -0.154458, -2.25345, -0.108284, 0, 0, 0.806216, 0, 0.108284, 0, -0.0991437, 0, 0, -0.108284, -3.0592, -0.289515, 0, 0, -6.29116, 0, 0.289515, 0, -0.0991437, 0, 0, -0.289515, -2.76571, -0.150071, 0, 0, 1.14623, 0, 0.150071, 0, -0.0991437, 0, 0, -0.150071, -4.12608, 0, 0, -0.383418, -0.652185, 0, 0.383418, 0, -0.0991437, 0.383418, 0, 0, 2.00983, 0, 0, -0.233817, -4.85478, 0, 0.233817, 0, -0.0991437, 0.233817, 0, 0, 5.10441, 0, 0, -0.0766919, -2.90113, 0, 0.0766919, 0, -0.0991437, 0.0766919, 0, 0, 3.2345, -0.266967, 0, 0, 2.57477, 0, 0.266967, 0, -0.0991437, 0, 0, -0.266967, -2.97063, 0, 0, -0.10901, -0.803091, 0, 0.10901, 0, -0.0991437, 0.10901, 0, 0, 4.72383, -0.134646, 0, 0, -1.75338, 0, 0.134646, 0, -0.0991437, 0, 0, -0.134646, -4.11094, 0, 0, -0.377772, -1.57753, 0, 0.377772, 0, -0.0991437, 0.377772, 0, 0, 3.78248, 0, 0, -0.30208, -0.788744, 0, 0.30208, 0, -0.0991437, 0.30208, 0, 0, 2.00324, -0.349326, 0, 0, 2.57415, 0, 0.349326, 0, -0.0991437, 0, 0, -0.349326, -2.73716, 0, 0, -0.103203, 4.15121, 0, 0.103203, 0, -0.0991437, 0.103203, 0, 0, 3.52834, -0.354643, 0, 0, 0.0293906, 0, 0.354643, 0, -0.0991437, 0, 0, -0.354643, -2.53754, -0.20891, 0, 0, 2.17718, 0, 0.20891, 0, -0.0991437, 0, 0, -0.20891, -4.79871, -0.144534, 0, 0, -1.94003, 0, 0.144534, 0, -0.0991437, 0, 0, -0.144534, -3.18338, 0, 0, -0.0216079, 5.74326, 0, 0.0216079, 0, -0.0991437, 0.0216079, 0, 0, -2.81879, 0, 0, -0.011525, 1.76183, 0, 0.011525, 0, -0.0991437, 0.011525, 0, 0, -0.888598, -0.00406779, 0, 0, 4.67289, 0, 0.00406779, 0, -0.0991437, 0, 0, -0.00406779, -3.29367, -0.330589, 0, 0, -6.55242, 0, 0.330589, 0, -0.0991437, 0, 0, -0.330589, -0.454567, 0, 0, -0.379943, 2.30763, 0, 0.379943, 0, -0.0991437, 0.379943, 0, 0, 2.25933, 0, 0, -0.0822015, 1.30577, 0, 0.0822015, 0, -0.0991437, 0.0822015, 0, 0, 2.95948, -0.112116, 0, 0, -5.30815, 0, 0.112116, 0, -0.0991437, 0, 0, -0.112116, -0.777388, -0.188541, 0, 0, -2.67169, 0, 0.188541, 0, -0.0991437, 0, 0, -0.188541, 2.65903, -0.379979, 0, 0, -2.1566, 0, 0.379979, 0, -0.0991437, 0, 0, -0.379979, 0.0736089, 0, 0, -0.232934, 2.81863, 0, 0.232934, 0, -0.0991437, 0.232934, 0, 0, -1.15822, -0.28992, 0, 0, -1.15055, 0, 0.28992, 0, -0.0991437, 0, 0, -0.28992, -1.59474, -0.164621, 0, 0, 0.507385, 0, 0.164621, 0, -0.0991437, 0, 0, -0.164621, -3.51896, 0, 0, -0.151332, -0.278045, 0, 0.151332, 0, -0.0991437, 0.151332, 0, 0, 1.03419, -0.282698, 0, 0, -1.74277, 0, 0.282698, 0, -0.0991437, 0, 0, -0.282698, 0.0877681, -0.355912, 0, 0, 1.33574, 0, 0.355912, 0, -0.0991437, 0, 0, -0.355912, -1.46158, -0.142116, 0, 0, 2.83099, 0, 0.142116, 0, -0.0991437, 0, 0, -0.142116, -1.79919, -0.180847, 0, 0, -4.21469, 0, 0.180847, 0, -0.0991437, 0, 0, -0.180847, -0.871677, 0, 0, -0.0787222, -3.49669, 0, 0.0787222, 0, -0.0991437, 0.0787222, 0, 0, 4.74242, 0, 0, -0.261504, 5.10011, 0, 0.261504, 0, -0.0991437, 0.261504, 0, 0, -3.38934, -0.113477, 0, 0, 5.85629, 0, 0.113477, 0, -0.0991437, 0, 0, -0.113477, -4.40719, 0, 0, -0.374537, -3.12163, 0, 0.374537, 0, -0.0991437, 0.374537, 0, 0, 4.81792, -0.120689, 0, 0, -4.63182, 0, 0.120689, 0, -0.0991437, 0, 0, -0.120689, 2.39752, 0, 0, -0.0551564, 4.77374, 0, 0.0551564, 0, -0.0991437, 0.0551564, 0, 0, 4.31791, 0, 0, -0.14219, 0.901885, 0, 0.14219, 0, -0.0991437, 0.14219, 0, 0, 3.96054, 0, 0, -0.110996, -2.73199, 0, 0.110996, 0, -0.0991437, 0.110996, 0, 0, 5.52244, 0, 0, -0.352496, 3.50692, 0, 0.352496, 0, -0.0991437, 0.352496, 0, 0, 0.180269, 0, 0, -0.118266, 2.43188, 0, 0.118266, 0, -0.0991437, 0.118266, 0, 0, 4.56492, 0, 0, -0.304981, 4.93422, 0, 0.304981, 0, -0.0991437, 0.304981, 0, 0, -2.62444, -0.363228, 0, 0, -0.133991, 0, 0.363228, 0, -0.0991437, 0, 0, -0.363228, 0.189361, 0, 0, -0.121694, 4.34483, 0, 0.121694, 0, -0.0991437, 0.121694, 0, 0, -0.0950723, -0.149716, 0, 0, -5.02861, 0, 0.149716, 0, -0.0991437, 0, 0, -0.149716, -2.24759, 0, 0, -0.164611, -5.1498, 0, 0.164611, 0, -0.0991437, 0.164611, 0, 0, 5.64803, -0.100477, 0, 0, -4.92299, 0, 0.100477, 0, -0.0991437, 0, 0, -0.100477, 3.10647, 0, 0, -0.225175, 2.21454, 0, 0.225175, 0, -0.0991437, 0.225175, 0, 0, 5.71221, -0.374322, 0, 0, 1.91383, 0, 0.374322, 0, -0.0991437, 0, 0, -0.374322, -2.9661, 0, 0, -0.0576348, 2.20004, 0, 0.0576348, 0, -0.0991437, 0.0576348, 0, 0, -0.710403, 0, 0, -0.152315, 2.77131, 0, 0.152315, 0, -0.0991437, 0.152315, 0, 0, 3.24837, 0, 0, -0.215761, -1.25274, 0, 0.215761, 0, -0.0991437, 0.215761, 0, 0, 3.97145, 0, 0, -0.319672, 4.63153, 0, 0.319672, 0, -0.0991437, 0.319672, 0, 0, -2.11873, 0, 0, -0.11452, -1.19267, 0, 0.11452, 0, -0.0991437, 0.11452, 0, 0, 3.94834, 0, 0, -0.0223744, 1.82808, 0, 0.0223744, 0, -0.0991437, 0.0223744, 0, 0, 1.07167, -0.0357719, 0, 0, 2.99982, 0, 0.0357719, 0, -0.0991437, 0, 0, -0.0357719, -4.71763, 0, 0, -0.210139, 1.48328, 0, 0.210139, 0, -0.0991437, 0.210139, 0, 0, 2.32391, 0, 0, -0.187218, 6.14987, 0, 0.187218, 0, -0.0991437, 0.187218, 0, 0, -0.841735, 0, 0, -0.133057, 5.05736, 0, 0.133057, 0, -0.0991437, 0.133057, 0, 0, 1.80564, -0.235359, 0, 0, -3.02265, 0, 0.235359, 0, -0.0991437, 0, 0, -0.235359, -4.11819, -0.374367, 0, 0, -5.11224, 0, 0.374367, 0, -0.0991437, 0, 0, -0.374367, -3.31901, 0, 0, -0.335434, -1.22294, 0, 0.335434, 0, -0.0991437, 0.335434, 0, 0, 2.48794, 0, 0, -0.372807, 3.9545, 0, 0.372807, 0, -0.0991437, 0.372807, 0, 0, 1.98767, -0.295777, 0, 0, -0.103645, 0, 0.295777, 0, -0.0991437, 0, 0, -0.295777, -2.17717, -0.189205, 0, 0, 5.7923, 0, 0.189205, 0, -0.0991437, 0, 0, -0.189205, -4.22027, -0.0243167, 0, 0, -3.28929, 0, 0.0243167, 0, -0.0991437, 0, 0, -0.0243167, 1.46117, -0.0637749, 0, 0, -3.81535, 0, 0.0637749, 0, -0.0991437, 0, 0, -0.0637749, 3.00545, 0, 0, -0.116321, 2.13245, 0, 0.116321, 0, -0.0991437, 0.116321, 0, 0, 2.62227, -0.0659705, 0, 0, -6.3487, 0, 0.0659705, 0, -0.0991437, 0, 0, -0.0659705, -0.429457, -0.38322, 0, 0, -3.76365, 0, 0.38322, 0, -0.0991437, 0, 0, -0.38322, -1.19164, 0, 0, -0.3814, 0.130263, 0, 0.3814, 0, -0.0991437, 0.3814, 0, 0, 1.8724, -0.121311, 0, 0, 3.23133, 0, 0.121311, 0, -0.0991437, 0, 0, -0.121311, -2.4863, 0, 0, -0.194172, -3.45102, 0, 0.194172, 0, -0.0991437, 0.194172, 0, 0, 5.08622, -0.352594, 0, 0, -5.32655, 0, 0.352594, 0, -0.0991437, 0, 0, -0.352594, -0.521093, 0, 0, -0.238389, 2.99666, 0, 0.238389, 0, -0.0991437, 0.238389, 0, 0, 1.09159, -0.361231, 0, 0, -1.09112, 0, 0.361231, 0, -0.0991437, 0, 0, -0.361231, -4.80743, -0.340817, 0, 0, 1.11807, 0, 0.340817, 0, -0.0991437, 0, 0, -0.340817, -4.74215, 0, 0, -0.143501, 0.360127, 0, 0.143501, 0, -0.0991437, 0.143501, 0, 0, 1.79281, 0, 0, -0.0961804, -1.84036, 0, 0.0961804, 0, -0.0991437, 0.0961804, 0, 0, 3.16748, 0, 0, -0.0397628, 6.38335, 0, 0.0397628, 0, -0.0991437, 0.0397628, 0, 0, 3.39194, 0, 0, -0.0744441, 3.52711, 0, 0.0744441, 0, -0.0991437, 0.0744441, 0, 0, 5.47017, -0.314156, 0, 0, -2.02305, 0, 0.314156, 0, -0.0991437, 0, 0, -0.314156, 1.67575, -0.0311658, 0, 0, -3.0108, 0, 0.0311658, 0, -0.0991437, 0, 0, -0.0311658, -0.159585, -0.157288, 0, 0, -1.02013, 0, 0.157288, 0, -0.0991437, 0, 0, -0.157288, 1.21204, 0, 0, -0.160143, 1.84396, 0, 0.160143, 0, -0.0991437, 0.160143, 0, 0, 0.463546, -0.258472, 0, 0, 4.8361, 0, 0.258472, 0, -0.0991437, 0, 0, -0.258472, -4.52864, -0.0650446, 0, 0, -1.02322, 0, 0.0650446, 0, -0.0991437, 0, 0, -0.0650446, -3.28091, 0, 0, -0.320741, -0.430114, 0, 0.320741, 0, -0.0991437, 0.320741, 0, 0, 3.86728, -0.283473, 0, 0, -0.253802, 0, 0.283473, 0, -0.0991437, 0, 0, -0.283473, 0.402612, -0.207405, 0, 0, -4.14515, 0, 0.207405, 0, -0.0991437, 0, 0, -0.207405, 1.47924, 0, 0, -0.336837, 1.17938, 0, 0.336837, 0, -0.0991437, 0.336837, 0, 0, 2.03482, 0, 0, -0.0788061, 4.14322, 0, 0.0788061, 0, -0.0991437, 0.0788061, 0, 0, -1.95478, -0.162451, 0, 0, -3.16638, 0, 0.162451, 0, -0.0991437, 0, 0, -0.162451, -3.80649, 0, 0, -0.211084, -4.13182, 0, 0.211084, 0, -0.0991437, 0.211084, 0, 0, 4.97294, 0, 0, -0.179467, 0.200526, 0, 0.179467, 0, -0.0991437, 0.179467, 0, 0, 1.97712, -0.0183847, 0, 0, -5.04456, 0, 0.0183847, 0, -0.0991437, 0, 0, -0.0183847, -3.51564, -0.211075, 0, 0, -5.12729, 0, 0.211075, 0, -0.0991437, 0, 0, -0.211075, -1.63442, -0.0561738, 0, 0, -4.56582, 0, 0.0561738, 0, -0.0991437, 0, 0, -0.0561738, -4.58582, -0.252473, 0, 0, -2.15918, 0, 0.252473, 0, -0.0991437, 0, 0, -0.252473, -0.521837, -0.341466, 0, 0, -5.56211, 0, 0.341466, 0, -0.0991437, 0, 0, -0.341466, -1.87581, -0.132029, 0, 0, 0.776092, 0, 0.132029, 0, -0.0991437, 0, 0, -0.132029, -2.80512, -0.272766, 0, 0, -5.94231, 0, 0.272766, 0, -0.0991437, 0, 0, -0.272766, 1.48265, 0, 0, -0.154797, 3.57631, 0, 0.154797, 0, -0.0991437, 0.154797, 0, 0, 1.8315, 0, 0, -0.273818, -1.05938, 0, 0.273818, 0, -0.0991437, 0.273818, 0, 0, 5.52531, -0.193844, 0, 0, -4.06111, 0, 0.193844, 0, -0.0991437, 0, 0, -0.193844, 3.01397, -0.248017, 0, 0, -1.57287, 0, 0.248017, 0, -0.0991437, 0, 0, -0.248017, -3.1959, 0, 0, -0.0764594, 4.93134, 0, 0.0764594, 0, -0.0991437, 0.0764594, 0, 0, -2.89412, -0.39647, 0, 0, -0.212216, 0, 0.39647, 0, -0.0991437, 0, 0, -0.39647, -0.0318329, 0, 0, -0.379914, 0.264306, 0, 0.379914, 0, -0.0991437, 0.379914, 0, 0, 0.662795, 0, 0, -0.00497369, 6.34952, 0, 0.00497369, 0, -0.0991437, 0.00497369, 0, 0, -1.69611, 0, 0, -0.124869, 4.72681, 0, 0.124869, 0, -0.0991437, 0.124869, 0, 0, 1.09825, -0.19517, 0, 0, -5.06373, 0, 0.19517, 0, -0.0991437, 0, 0, -0.19517, 1.01878, -0.256628, 0, 0, 0.481999, 0, 0.256628, 0, -0.0991437, 0, 0, -0.256628, -2.00191, 0, 0, -0.00531328, -0.842569, 0, 0.00531328, 0, -0.0991437, 0.00531328, 0, 0, 3.39499, -0.344858, 0, 0, -1.21836, 0, 0.344858, 0, -0.0991437, 0, 0, -0.344858, -2.37342, 0, 0, -0.289991, -4.38351, 0, 0.289991, 0, -0.0991437, 0.289991, 0, 0, 5.63052, 0, 0, -0.162573, -4.04518, 0, 0.162573, 0, -0.0991437, 0.162573, 0, 0, 4.50521, 0, 0, -0.336736, 5.97524, 0, 0.336736, 0, -0.0991437, 0.336736, 0, 0, -3.20605, -0.309332, 0, 0, -0.846134, 0, 0.309332, 0, -0.0991437, 0, 0, -0.309332, -1.57883, -0.180373, 0, 0, 3.47681, 0, 0.180373, 0, -0.0991437, 0, 0, -0.180373, -2.80712, 0, 0, -0.313577, 2.24786, 0, 0.313577, 0, -0.0991437, 0.313577, 0, 0, 2.736, 0, 0, -0.228267, -3.02036, 0, 0.228267, 0, -0.0991437, 0.228267, 0, 0, 5.23981, -0.144883, 0, 0, -4.76455, 0, 0.144883, 0, -0.0991437, 0, 0, -0.144883, 3.17747, 0, 0, -0.307207, 3.66788, 0, 0.307207, 0, -0.0991437, 0.307207, 0, 0, 3.01092, -0.209431, 0, 0, -6.12289, 0, 0.209431, 0, -0.0991437, 0, 0, -0.209431, 1.30893, 0, 0, -0.123402, 1.71658, 0, 0.123402, 0, -0.0991437, 0.123402, 0, 0, 0.130596, -0.346022, 0, 0, -1.57387, 0, 0.346022, 0, -0.0991437, 0, 0, -0.346022, -4.4565, -0.0217708, 0, 0, -2.33779, 0, 0.0217708, 0, -0.0991437, 0, 0, -0.0217708, 2.38829, -0.20165, 0, 0, 0.552254, 0, 0.20165, 0, -0.0991437, 0, 0, -0.20165, -4.44533, -0.297313, 0, 0, -4.05285, 0, 0.297313, 0, -0.0991437, 0, 0, -0.297313, -1.6899, 0, 0, -0.0877657, 5.4743, 0, 0.0877657, 0, -0.0991437, 0.0877657, 0, 0, 3.8914, 0, 0, -0.160207, 2.2801, 0, 0.160207, 0, -0.0991437, 0.160207, 0, 0, -0.256906, -0.267417, 0, 0, -3.07209, 0, 0.267417, 0, -0.0991437, 0, 0, -0.267417, 1.9002, 0, 0, -0.160465, -4.15242, 0, 0.160465, 0, -0.0991437, 0.160465, 0, 0, 4.72424, -0.0992426, 0, 0, -4.84057, 0, 0.0992426, 0, -0.0991437, 0, 0, -0.0992426, 3.72185, -0.0706153, 0, 0, -4.03837, 0, 0.0706153, 0, -0.0991437, 0, 0, -0.0706153, -2.41997, 0, 0, -0.0838469, 3.70444, 0, 0.0838469, 0, -0.0991437, 0.0838469, 0, 0, 0.34047, -0.00224237, 0, 0, -0.282698, 0, 0.00224237, 0, -0.0991437, 0, 0, -0.00224237, -3.72588, -0.107086, 0, 0, -5.10529, 0, 0.107086, 0, -0.0991437, 0, 0, -0.107086, -4.18418, 0, 0, -0.0121344, -0.473617, 0, 0.0121344, 0, -0.0991437, 0.0121344, 0, 0, 2.83415, -0.329688, 0, 0, -4.9327, 0, 0.329688, 0, -0.0991437, 0, 0, -0.329688, -0.18521, -0.159906, 0, 0, -0.827383, 0, 0.159906, 0, -0.0991437, 0, 0, -0.159906, -4.82785, 0, 0, -0.312535, 0.860081, 0, 0.312535, 0, -0.0991437, 0.312535, 0, 0, 0.010416, -0.100185, 0, 0, -1.89535, 0, 0.100185, 0, -0.0991437, 0, 0, -0.100185, 0.904849, 0, 0, -0.394817, 4.91605, 0, 0.394817, 0, -0.0991437, 0.394817, 0, 0, 0.16737, 0, 0, -0.216442, -2.77986, 0, 0.216442, 0, -0.0991437, 0.216442, 0, 0, 3.51107, 0, 0, -0.224965, 2.64045, 0, 0.224965, 0, -0.0991437, 0.224965, 0, 0, 4.69718, -0.342005, 0, 0, -5.87545, 0, 0.342005, 0, -0.0991437, 0, 0, -0.342005, 3.84456, -0.225971, 0, 0, -5.82851, 0, 0.225971, 0, -0.0991437, 0, 0, -0.225971, 1.00963, 0, 0, -0.196791, 3.9396, 0, 0.196791, 0, -0.0991437, 0.196791, 0, 0, 3.36255, 0, 0, -0.30236, 3.62421, 0, 0.30236, 0, -0.0991437, 0.30236, 0, 0, 5.37338, -0.179097, 0, 0, -2.36873, 0, 0.179097, 0, -0.0991437, 0, 0, -0.179097, 1.68091, 0, 0, -0.198827, 4.83291, 0, 0.198827, 0, -0.0991437, 0.198827, 0, 0, -2.89904, -0.296822, 0, 0, -2.89699, 0, 0.296822, 0, -0.0991437, 0, 0, -0.296822, 0.591319, -0.0364784, 0, 0, -1.14977, 0, 0.0364784, 0, -0.0991437, 0, 0, -0.0364784, -3.12924, 0, 0, -0.106669, 0.620536, 0, 0.106669, 0, -0.0991437, 0.106669, 0, 0, 4.39706, 0, 0, -0.220133, 2.87611, 0, 0.220133, 0, -0.0991437, 0.220133, 0, 0, 4.35539, -0.172739, 0, 0, 5.02395, 0, 0.172739, 0, -0.0991437, 0, 0, -0.172739, -4.39603, 0, 0, -0.0453618, 5.30946, 0, 0.0453618, 0, -0.0991437, 0.0453618, 0, 0, 2.25375, 0, 0, -0.0720171, 3.95331, 0, 0.0720171, 0, -0.0991437, 0.0720171, 0, 0, 4.06151, 0, 0, -0.347106, 2.00837, 0, 0.347106, 0, -0.0991437, 0.347106, 0, 0, 4.73088, 0, 0, -0.385528, 3.75264, 0, 0.385528, 0, -0.0991437, 0.385528, 0, 0, 0.933722, 0, 0, -0.0360239, 5.9259, 0, 0.0360239, 0, -0.0991437, 0.0360239, 0, 0, 2.03573, 0, 0, -0.29675, -2.02661, 0, 0.29675, 0, -0.0991437, 0.29675, 0, 0, 5.75147)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0vvdp"]
-albedo_texture = ExtResource("23_u4s1d")
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jwex2"]
-sky_top_color = Color(0.160784, 0.486275, 0.619608, 1)
-sky_horizon_color = Color(0.647059, 0.682353, 0.466667, 1)
-sky_curve = 0.166435
-ground_bottom_color = Color(0.25098, 0.145098, 0.0862745, 1)
-ground_horizon_color = Color(0.796078, 0.627451, 0.266667, 1)
-
-[sub_resource type="Sky" id="Sky_2gyfy"]
-sky_material = SubResource("ProceduralSkyMaterial_jwex2")
-
-[sub_resource type="Environment" id="Environment_2hc7b"]
-background_mode = 2
-sky = SubResource("Sky_2gyfy")
+albedo_texture = ExtResource("22_53yrv")
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_lec4c")
@@ -62,57 +49,61 @@ script = ExtResource("1_lec4c")
 [node name="Menu" type="Control" parent="."]
 process_priority = 1
 layout_mode = 3
-anchors_preset = 0
-offset_left = 1416.0
-offset_top = 448.0
-offset_right = 1456.0
-offset_bottom = 488.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TitleLogo" type="TextureRect" parent="Menu"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -27.4
-anchor_top = -15.6
-anchor_right = 4.6
-anchor_bottom = 2.4
-offset_right = -1.52588e-05
-texture = ExtResource("2_unvmm")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -416.0
+offset_right = 416.0
+offset_bottom = 384.0
+grow_horizontal = 2
+texture = ExtResource("2_rw8tv")
+expand_mode = 1
 
 [node name="Button" type="TextureRect" parent="Menu"]
 modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
 layout_mode = 0
-offset_top = 8.0
-offset_right = 600.0
-offset_bottom = 308.0
+offset_left = 1528.0
+offset_top = 616.0
+offset_right = 2128.0
+offset_bottom = 916.0
 scale = Vector2(0.44, 0.266667)
 texture = ExtResource("2_hxu1x")
 
 [node name="Button2" type="TextureRect" parent="Menu"]
 modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
 layout_mode = 0
-offset_top = 208.0
-offset_right = 600.0
-offset_bottom = 508.0
+offset_left = 1528.0
+offset_top = 816.0
+offset_right = 2128.0
+offset_bottom = 1116.0
 scale = Vector2(0.44, 0.266667)
 texture = ExtResource("2_hxu1x")
 
 [node name="Button3" type="TextureRect" parent="Menu"]
 modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
 layout_mode = 0
-offset_left = -8.0
-offset_top = 112.0
-offset_right = 592.0
-offset_bottom = 412.0
+offset_left = 1520.0
+offset_top = 720.0
+offset_right = 2120.0
+offset_bottom = 1020.0
 scale = Vector2(0.44, 0.266667)
 texture = ExtResource("3_fy4fi")
 
 [node name="Button4" type="TextureRect" parent="Menu"]
 modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
 layout_mode = 0
-offset_left = -8.0
-offset_top = 312.0
-offset_right = 592.0
-offset_bottom = 612.0
+offset_left = 1520.0
+offset_top = 920.0
+offset_right = 2120.0
+offset_bottom = 1220.0
 scale = Vector2(0.44, 0.266667)
 texture = ExtResource("3_fy4fi")
 
@@ -120,14 +111,14 @@ texture = ExtResource("3_fy4fi")
 custom_minimum_size = Vector2(1.515, 6.39)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 35.2
-anchor_top = 11.2
-anchor_right = 41.6
-anchor_bottom = 20.8
-offset_left = -1408.0
-offset_top = -448.0
-offset_right = -1408.0
-offset_bottom = -448.0
+anchor_left = 0.592
+anchor_top = 0.459
+anchor_right = 0.592
+anchor_bottom = 0.459
+offset_left = 391.36
+offset_top = 112.28
+offset_right = 647.36
+offset_bottom = 488.28
 theme_override_constants/separation = 23
 alignment = 1
 
@@ -136,10 +127,10 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_q8fg1")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("5_182hq")
-theme_override_styles/hover = ExtResource("6_wc3f6")
-theme_override_styles/pressed = ExtResource("7_l13rm")
-theme_override_styles/focus = ExtResource("8_jxvam")
+theme_override_styles/normal = ExtResource("6_abg05")
+theme_override_styles/hover = ExtResource("7_n5r2a")
+theme_override_styles/pressed = ExtResource("8_ww5oe")
+theme_override_styles/focus = ExtResource("9_d6n2h")
 text = "Host"
 
 [node name="JoinButton" type="Button" parent="Menu/VBoxContainer"]
@@ -147,10 +138,10 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_q8fg1")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("8_jcwmn")
-theme_override_styles/hover = ExtResource("9_u834w")
-theme_override_styles/pressed = ExtResource("10_2xorh")
-theme_override_styles/focus = ExtResource("8_jxvam")
+theme_override_styles/normal = ExtResource("10_cd5mj")
+theme_override_styles/hover = ExtResource("11_bmrlv")
+theme_override_styles/pressed = ExtResource("12_2u37m")
+theme_override_styles/focus = ExtResource("9_d6n2h")
 text = "Join"
 
 [node name="OptionsButton" type="Button" parent="Menu/VBoxContainer"]
@@ -158,10 +149,10 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_q8fg1")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("5_182hq")
-theme_override_styles/hover = ExtResource("6_wc3f6")
-theme_override_styles/pressed = ExtResource("7_l13rm")
-theme_override_styles/focus = ExtResource("8_jxvam")
+theme_override_styles/normal = ExtResource("6_abg05")
+theme_override_styles/hover = ExtResource("7_n5r2a")
+theme_override_styles/pressed = ExtResource("8_ww5oe")
+theme_override_styles/focus = ExtResource("9_d6n2h")
 text = "Settings"
 
 [node name="ExitButton" type="Button" parent="Menu/VBoxContainer"]
@@ -169,10 +160,10 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_q8fg1")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("8_jcwmn")
-theme_override_styles/hover = ExtResource("9_u834w")
-theme_override_styles/pressed = ExtResource("10_2xorh")
-theme_override_styles/focus = ExtResource("8_jxvam")
+theme_override_styles/normal = ExtResource("10_cd5mj")
+theme_override_styles/hover = ExtResource("11_bmrlv")
+theme_override_styles/pressed = ExtResource("12_2u37m")
+theme_override_styles/focus = ExtResource("9_d6n2h")
 text = "Exit"
 
 [node name="OptionsMenu" parent="." instance=ExtResource("2_qob6l")]
@@ -181,67 +172,79 @@ visible = false
 [node name="World" type="Node3D" parent="."]
 
 [node name="Floor" type="MeshInstance3D" parent="World"]
-transform = Transform3D(6.59847, 0, 0, 0, 1, 0, 0, 0, 5.36472, 0, -0.099, 1.206)
-material_override = ExtResource("14_ryih7")
+transform = Transform3D(10.2724, 0, 0, 0, 1, 0, 0, 0, 5.36472, 1.77705, -0.099, 1.206)
+material_override = ExtResource("14_4ofyr")
 mesh = SubResource("PlaneMesh_oi2if")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
 transform = Transform3D(0.986077, -0.0831437, 0.144009, -0.108374, 0.335512, 0.935781, -0.126121, -0.93836, 0.32183, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="World"]
-transform = Transform3D(-0.843391, 0, -0.5373, 0, 1, 0, 0.5373, 0, -0.843391, -2.24567, 1.106, -4.2394)
+transform = Transform3D(-0.876307, -0.106732, -0.469782, 0, 0.975149, -0.221548, 0.481754, -0.194144, -0.85453, -1, 0.5, -3)
 
 [node name="GrassSource" type="MeshInstance3D" parent="World"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.93676, 0, -6.32199)
 visible = false
-mesh = ExtResource("18_hcgo8")
+mesh = ExtResource("15_xwpxw")
 skeleton = NodePath("../..")
 
 [node name="TruckCube009" type="MeshInstance3D" parent="World"]
-transform = Transform3D(-0.595033, 0, 0.803701, 0, 1, 0, -0.803701, 0, -0.595033, 2.73901, 0, 2.77602)
-material_override = ExtResource("13_w3u6d")
-mesh = ExtResource("14_gj1xf")
+transform = Transform3D(0.0122171, 0, 0.999925, 0, 1, 0, -0.999925, 0, 0.0122171, 1.909, 0, 2.961)
+material_override = ExtResource("16_ah85q")
+mesh = ExtResource("17_gfmk8")
 
 [node name="TruckCube010" type="MeshInstance3D" parent="World/TruckCube009"]
-material_override = ExtResource("13_w3u6d")
-mesh = ExtResource("15_awglu")
+material_override = ExtResource("16_ah85q")
+mesh = ExtResource("18_k60by")
 skeleton = NodePath("../..")
 
 [node name="TruckCylinder009" type="MeshInstance3D" parent="World/TruckCube009"]
 transform = Transform3D(-1.09278e-08, -0.12, 0, 0.25, -5.24537e-09, 0, 0, 0, 0.25, 0, -0.0438052, 0)
-material_override = ExtResource("13_w3u6d")
-mesh = ExtResource("16_ng6xw")
+material_override = ExtResource("16_ah85q")
+mesh = ExtResource("19_kbr8r")
 skeleton = NodePath("../..")
 
-[node name="TruckCylinder008" type="MeshInstance3D" parent="World/TruckCube009"]
-material_override = ExtResource("13_w3u6d")
-mesh = ExtResource("17_qtk2p")
-skeleton = NodePath("../..")
+[node name="TruckUmbrella" type="MeshInstance3D" parent="World/TruckCube009"]
+transform = Transform3D(0.999935, 0, 0.0114143, 0, 1, 0, -0.0114143, 0, 0.999935, -0.0605786, 0, 0.0814395)
+mesh = ExtResource("24_0lf6h")
+skeleton = NodePath("../../..")
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="World"]
 transform = Transform3D(-0.907777, 0, 0.419452, 0, 1, 0, -0.419452, 0, -0.907777, -0.510096, 0, 1.63124)
 material_override = SubResource("ShaderMaterial_hdu0l")
 multimesh = SubResource("MultiMesh_nxpyb")
 
-[node name="BenchCube008" type="MeshInstance3D" parent="World"]
+[node name="Bench" type="MeshInstance3D" parent="World"]
 transform = Transform3D(0.577034, 0, 0, 0, 0.597944, 0, 0, 0, 0.60762, 1.604, 0.666, -1.694)
 material_override = SubResource("StandardMaterial3D_0vvdp")
-mesh = ExtResource("24_2u5ri")
+mesh = ExtResource("23_uanxk")
 skeleton = NodePath("../..")
 
-[node name="BenchCube009" type="MeshInstance3D" parent="World"]
+[node name="Bench1" type="MeshInstance3D" parent="World"]
 transform = Transform3D(0.109718, 0, 0.596535, 0, 0.597944, 0, -0.566507, 0, 0.115533, -1.659, 0.666, 1.776)
 material_override = SubResource("StandardMaterial3D_0vvdp")
-mesh = ExtResource("24_2u5ri")
+mesh = ExtResource("23_uanxk")
+skeleton = NodePath("../..")
+
+[node name="ForestTree1" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.870025, 0)
+material_override = ExtResource("25_64q8b")
+mesh = ExtResource("25_ekpsl")
+skeleton = NodePath("../..")
+
+[node name="ForestTree2" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.870025, 5)
+material_override = ExtResource("25_64q8b")
+mesh = ExtResource("25_ekpsl")
+skeleton = NodePath("../..")
+
+[node name="ForestTree3" type="MeshInstance3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5036, 0.870025, 5)
+material_override = ExtResource("25_64q8b")
+mesh = ExtResource("25_ekpsl")
 skeleton = NodePath("../..")
 
 [node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_2hc7b")
-
-[node name="ColourBlindUX" parent="." instance=ExtResource("13_vr64p")]
-layer = 1
 
 [connection signal="pressed" from="Menu/VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]

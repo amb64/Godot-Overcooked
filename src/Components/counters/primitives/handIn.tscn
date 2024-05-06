@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://0k2d370gg30f"]
+
+[ext_resource type="Script" path="res://src/Components/counters/primitives/handIn.gd" id="1_vw3gn"]
+[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://resources/materials/counter.tres" id="2_rbhkn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
+material = ExtResource("2_rbhkn")
+size = Vector3(1.5, 1, 2)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0xxgy"]
+data = PackedVector3Array(-0.75, 0.5, 1, 0.75, 0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, -1, 0.75, -0.5, -1, -0.75, 0.5, -1, -0.75, -0.5, -1, 0.75, -0.5, -1, 0.75, 0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, -1, 0.75, -0.5, 1, -0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, 0.5, 1, -0.75, 0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, 0.5, -1, 0.75, 0.5, -1, -0.75, -0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, -0.5, 1, 0.75, -0.5, -1, -0.75, -0.5, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mp0b"]
+albedo_color = Color(1, 0.788235, 0.87451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t5cb1"]
+material = SubResource("StandardMaterial3D_2mp0b")
+size = Vector3(1.5, 0.1, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hwdka"]
+data = PackedVector3Array(-1.75, 0.05, 0.5, 1.75, 0.05, 0.5, -1.75, -0.05, 0.5, 1.75, 0.05, 0.5, 1.75, -0.05, 0.5, -1.75, -0.05, 0.5, 1.75, 0.05, -0.5, -1.75, 0.05, -0.5, 1.75, -0.05, -0.5, -1.75, 0.05, -0.5, -1.75, -0.05, -0.5, 1.75, -0.05, -0.5, 1.75, 0.05, 0.5, 1.75, 0.05, -0.5, 1.75, -0.05, 0.5, 1.75, 0.05, -0.5, 1.75, -0.05, -0.5, 1.75, -0.05, 0.5, -1.75, 0.05, -0.5, -1.75, 0.05, 0.5, -1.75, -0.05, -0.5, -1.75, 0.05, 0.5, -1.75, -0.05, 0.5, -1.75, -0.05, -0.5, 1.75, 0.05, 0.5, -1.75, 0.05, 0.5, 1.75, 0.05, -0.5, -1.75, 0.05, 0.5, -1.75, 0.05, -0.5, 1.75, 0.05, -0.5, -1.75, -0.05, 0.5, 1.75, -0.05, 0.5, -1.75, -0.05, -0.5, 1.75, -0.05, 0.5, 1.75, -0.05, -0.5, -1.75, -0.05, -0.5)
+
+[node name="Counter" type="Node3D" node_paths=PackedStringArray("item_slots")]
+script = ExtResource("1_vw3gn")
+item_slots = [NodePath("ItemSlots")]
+
+[node name="CounterMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000374317, 0, -0.0252056)
+mesh = SubResource("BoxMesh_fdo3b")
+
+[node name="CounterBody" type="StaticBody3D" parent="CounterMesh"]
+
+[node name="CounterColliderShape" type="CollisionShape3D" parent="CounterMesh/CounterBody"]
+shape = SubResource("ConcavePolygonShape3D_0xxgy")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_t5cb1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mesh"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mesh/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hwdka")
+
+[node name="ItemSlots" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

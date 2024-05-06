@@ -1,7 +1,7 @@
 extends Control
 
 var maxStars: int = 3
-var starOffset: int = 320
+var starOffset: int = 330
 var starArr: Array = [] ##  How many stars should be displayed
 
 # Star textures
@@ -10,6 +10,7 @@ var starArr: Array = [] ##  How many stars should be displayed
 @export var emptyStar: Texture = preload("res://assets/UXUI/Icons/StarEmpty.png")
 
 func _ready():
+	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_VISIBLE)
 	for i in range(maxStars):
 		var star = Sprite2D.new()
 		star.texture = fullStar
@@ -17,18 +18,18 @@ func _ready():
 		$Panel.add_child(star)
 					
 					# Set the star's position
-		var heartWidth = star.texture.get_size().x
-		var xPos = i * (heartWidth + starOffset)
-		star.scale = Vector2(5.0, 5.0)
-		star.set_position(Vector2(xPos + 200.0, 150.0))
+		var xPos = i * starOffset
+		star.scale = Vector2(0.5, 0.5)
+		star.set_position(Vector2(xPos + 260.0, 150.0))
 	update_stars(get_parent().stars)
 
 	$TipAmount.text = str(get_parent().tips)
 
 func _on_button_pressed():
 	Engine.time_scale = 1.0
-	Global.Game.editLevelConfig(get_parent().Level, get_parent().stars)
-	get_parent().get_parent().returnTour()
+	# convert level stringname to string then int
+	Global.Game.editLevelConfig(int(str(get_parent().name)), get_parent().stars)
+	get_parent().get_parent().load_world()
 
 # stars GUI mechanic
 func update_stars(newStar: int):

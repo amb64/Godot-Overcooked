@@ -6,6 +6,7 @@ func _ready():
 
 func _on_host_button_pressed():
 	get_parent().load_world()
+	queue_free()
 
 func _on_join_button_pressed():
 	pass
