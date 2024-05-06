@@ -11,6 +11,7 @@ var counter : Counter
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	var is_interacting : bool = Input.is_action_just_pressed("interact")
+	var is_actioning : bool = Input.is_action_just_pressed("action")
 	
 	#pickup on spawner
 	if(is_interacting && is_over_counter && !is_holding_item && counter is CounterSpawner):
@@ -25,6 +26,10 @@ func _process(_delta):
 	#drop
 	elif(is_interacting && is_over_counter && is_holding_item && counter_is_free()):
 		drop()
+		pass
+		
+	elif(is_over_counter && is_actioning):
+		action()
 		pass
 
 func _on_body_entered(body : Node3D):
@@ -50,3 +55,7 @@ func pickup():
 
 func drop():
 	is_holding_item = !counter.drop(player_item_holder)
+	
+func action():
+	counter.action(player_item_holder)
+	return

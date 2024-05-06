@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://2ya7ebrxext7"]
 
 [ext_resource type="PackedScene" uid="uid://cw08pv8s8cqtw" path="res://src/Components/counters/primitives/counterSpawner.tscn" id="1_lkv8p"]
-[ext_resource type="PackedScene" uid="uid://bbfp0d4lhvjtp" path="res://src/Components/items/raw_ingredients/salmon.tscn" id="2_2xiqe"]
+[ext_resource type="PackedScene" uid="uid://bbfp0d4lhvjtp" path="res://src/Components/items/old/raw_ingredients/salmon.tscn" id="2_2xiqe"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3i66"]
 albedo_color = Color(0.298039, 0.678431, 0.780392, 1)

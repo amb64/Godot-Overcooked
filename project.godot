@@ -12,8 +12,13 @@ config_version=5
 
 config/name="Overcooked Godot Level"
 run/main_scene="res://scenes/levels/level1.tscn"
-config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://autoloads/Global.gd"
+Config="*res://autoloads/Config.gd"
 
 [display]
 
@@ -28,7 +33,8 @@ project/assembly_name="Overcooked Godot Level"
 
 folder_colors={
 "res://materials/": "green",
-"res://prefabs/counters/primitives_old/": "gray"
+"res://prefabs/counters/primitives_old/": "gray",
+"res://src/Components/items/[THIS FOLDER IS DEPRECATED]/": "red"
 }
 
 [input]

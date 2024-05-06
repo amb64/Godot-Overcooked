@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqjbtsu1jcben"]
+[gd_scene load_steps=23 format=3 uid="uid://bqjbtsu1jcben"]
 
 [ext_resource type="Script" path="res://src/UXUI/OptionsMenu.gd" id="1_apjq0"]
 [ext_resource type="PackedScene" uid="uid://cy86asgwodbdp" path="res://src/UXUI/InputButton.tscn" id="2_ryc7h"]
 [ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="3_3afyl"]
-[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/textures/UXUI/Button1.png" id="3_tx8w0"]
-[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/textures/UXUI/Button.png" id="3_vuyd1"]
+[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/UXUI/Settings/Button1.png" id="3_tx8w0"]
+[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/UXUI/Settings/Button.png" id="3_vuyd1"]
 [ext_resource type="PackedScene" uid="uid://mea1an3v6qag" path="res://src/UXUI/OptionsSelecter.tscn" id="4_i3pvx"]
 [ext_resource type="StyleBox" uid="uid://dt373x02xlmyb" path="res://materials/UXUI/Button1Normal.tres" id="5_t0t4t"]
 [ext_resource type="StyleBox" uid="uid://bcb5qj0pcogko" path="res://materials/UXUI/Button1Hover.tres" id="6_8wix5"]
@@ -13,6 +13,19 @@
 [ext_resource type="StyleBox" uid="uid://dh2vqu8bmbcwm" path="res://materials/UXUI/Button1Pressed.tres" id="7_tavq3"]
 [ext_resource type="StyleBox" uid="uid://1ulot5p4who5" path="res://materials/UXUI/Button2Pressed.tres" id="8_kbumr"]
 [ext_resource type="StyleBox" uid="uid://bhbf6r4t6m65f" path="res://materials/UXUI/ButtonFocus.tres" id="8_udpk8"]
+[ext_resource type="StyleBox" uid="uid://dwckyj323d081" path="res://materials/UXUI/CheckBoxNormal.tres" id="13_te7g1"]
+[ext_resource type="StyleBox" uid="uid://cnu6pds4gvxvl" path="res://materials/UXUI/SliderLine.tres" id="13_vq52v"]
+[ext_resource type="StyleBox" uid="uid://bg3tv3jml7w0k" path="res://materials/UXUI/CheckBoxPressed.tres" id="14_03ijd"]
+[ext_resource type="StyleBox" uid="uid://cfwvohs2l1ynr" path="res://materials/UXUI/SliderGrabberHighlight.tres" id="14_l8n1d"]
+[ext_resource type="StyleBox" uid="uid://dkomy37uckmjb" path="res://materials/UXUI/SliderGrabberLine.tres" id="15_7pq4o"]
+[ext_resource type="StyleBox" uid="uid://dnk1qn7sjcmoe" path="res://materials/UXUI/CheckBoxHover.tres" id="15_hw1xs"]
+[ext_resource type="StyleBox" uid="uid://bxgmmrn7a8hkt" path="res://materials/UXUI/CheckBoxHoverPressed.tres" id="16_s25f8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6jykb"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ag2y8"]
+color = Color(0.956863, 0.67451, 0, 1)
+thickness = 10
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -24,6 +37,7 @@ grow_vertical = 2
 script = ExtResource("1_apjq0")
 
 [node name="Menu" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -129,7 +143,6 @@ theme_override_styles/focus = ExtResource("8_udpk8")
 text = "Exit"
 
 [node name="Video" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -210,21 +223,29 @@ list = Array[StringName]([&"Default", &"Protanopia", &"Deuteranopia", &"Tritanop
 
 [node name="VsyncCheckBox" type="CheckBox" parent="Video"]
 layout_mode = 2
-offset_left = 1072.0
-offset_top = 576.0
-offset_right = 1096.0
-offset_bottom = 600.0
-theme_override_fonts/font = ExtResource("3_3afyl")
-theme_override_font_sizes/font_size = 15
+offset_left = 1064.0
+offset_top = 568.0
+offset_right = 1104.0
+offset_bottom = 608.0
+theme_override_styles/normal = ExtResource("13_te7g1")
+theme_override_styles/pressed = ExtResource("14_03ijd")
+theme_override_styles/hover = ExtResource("15_hw1xs")
+theme_override_styles/hover_pressed = ExtResource("16_s25f8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6jykb")
 
 [node name="ScreenShakeCheckBox" type="CheckBox" parent="Video"]
 layout_mode = 2
-offset_left = 1072.0
-offset_top = 640.0
-offset_right = 1096.0
-offset_bottom = 664.0
+offset_left = 1064.0
+offset_top = 632.0
+offset_right = 1104.0
+offset_bottom = 672.0
 theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("13_te7g1")
+theme_override_styles/pressed = ExtResource("14_03ijd")
+theme_override_styles/hover = ExtResource("15_hw1xs")
+theme_override_styles/hover_pressed = ExtResource("16_s25f8")
+theme_override_styles/focus = ExtResource("8_udpk8")
 
 [node name="Audio" type="Control" parent="."]
 visible = false
@@ -268,6 +289,9 @@ offset_left = 832.0
 offset_top = 528.0
 offset_right = 1200.0
 offset_bottom = 568.0
+theme_override_styles/slider = ExtResource("13_vq52v")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_ag2y8")
+theme_override_styles/grabber_area_highlight = ExtResource("14_l8n1d")
 min_value = -50.0
 max_value = 50.0
 
@@ -277,6 +301,9 @@ offset_left = 832.0
 offset_top = 568.0
 offset_right = 1200.0
 offset_bottom = 600.0
+theme_override_styles/slider = ExtResource("13_vq52v")
+theme_override_styles/grabber_area = ExtResource("15_7pq4o")
+theme_override_styles/grabber_area_highlight = ExtResource("14_l8n1d")
 min_value = -50.0
 max_value = 50.0
 
@@ -286,6 +313,9 @@ offset_left = 832.0
 offset_top = 600.0
 offset_right = 1200.0
 offset_bottom = 640.0
+theme_override_styles/slider = ExtResource("13_vq52v")
+theme_override_styles/grabber_area = ExtResource("15_7pq4o")
+theme_override_styles/grabber_area_highlight = ExtResource("14_l8n1d")
 min_value = -50.0
 max_value = 50.0
 
@@ -340,6 +370,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_forward"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton2" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -347,6 +379,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_back"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton3" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -354,6 +388,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_left"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton4" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -361,6 +397,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_right"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton5" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -368,6 +406,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "interact"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="InputButton6" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -375,6 +415,8 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "escape"
+theme_override_fonts/font = ExtResource("3_3afyl")
+theme_override_font_sizes/font_size = 20
 
 [node name="Label" type="Label" parent="Controls"]
 layout_mode = 2

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="BaseItem" load_steps=2 format=3 uid="uid://6uywy1lorvbl"]
-
-[ext_resource type="Script" path="res://src/Components/items/resources/base_item.gd" id="1_4vtyi"]
-
-[resource]
-resource_local_to_scene = true
-script = ExtResource("1_4vtyi")
-item_name = &"\"salmon\""
-state = 0
