@@ -46,6 +46,7 @@ grow_vertical = 2
 
 [node name="Button" type="TextureRect" parent="Menu"]
 modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
 offset_left = 1528.0
 offset_top = 616.0
 offset_right = 2128.0
@@ -55,6 +56,7 @@ texture = ExtResource("3_vuyd1")
 
 [node name="Button2" type="TextureRect" parent="Menu"]
 modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
 offset_left = 1528.0
 offset_top = 816.0
 offset_right = 2128.0
@@ -64,6 +66,7 @@ texture = ExtResource("3_vuyd1")
 
 [node name="Button4" type="TextureRect" parent="Menu"]
 modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
 offset_left = 1520.0
 offset_top = 720.0
 offset_right = 2120.0
@@ -73,6 +76,7 @@ texture = ExtResource("3_tx8w0")
 
 [node name="Button5" type="TextureRect" parent="Menu"]
 modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
 offset_left = 1520.0
 offset_top = 920.0
 offset_right = 2120.0
@@ -367,8 +371,6 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_forward"
-theme_override_fonts/font = ExtResource("3_3afyl")
-theme_override_font_sizes/font_size = 20
 
 [node name="InputButton2" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -376,8 +378,6 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_back"
-theme_override_fonts/font = ExtResource("3_3afyl")
-theme_override_font_sizes/font_size = 20
 
 [node name="InputButton3" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -385,8 +385,6 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_left"
-theme_override_fonts/font = ExtResource("3_3afyl")
-theme_override_font_sizes/font_size = 20
 
 [node name="InputButton4" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -394,8 +392,6 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "move_right"
-theme_override_fonts/font = ExtResource("3_3afyl")
-theme_override_font_sizes/font_size = 20
 
 [node name="InputButton5" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -403,8 +399,6 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "interact"
-theme_override_fonts/font = ExtResource("3_3afyl")
-theme_override_font_sizes/font_size = 20
 
 [node name="InputButton6" parent="Controls/VBoxContainer" instance=ExtResource("2_ryc7h")]
 layout_mode = 2
@@ -412,8 +406,6 @@ theme_override_fonts/font = ExtResource("3_3afyl")
 theme_override_font_sizes/font_size = 20
 text = "#"
 action = "escape"
-theme_override_fonts/font = ExtResource("3_3afyl")
-theme_override_font_sizes/font_size = 20
 
 [node name="Label" type="Label" parent="Controls"]
 layout_mode = 2

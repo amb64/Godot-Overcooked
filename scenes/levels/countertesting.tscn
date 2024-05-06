@@ -110,7 +110,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.189
 
 [node name="Spawner" parent="Level/Counters" instance=ExtResource("2_flxop")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0927, 0.996629, -6.3276)
-is_droppable = false
 
 [node name="NonInteractable" parent="Level/Counters" instance=ExtResource("3_5f06b")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.91346, 1, -6.32247)
