@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Game.gd" id="1_cngng"]
 [ext_resource type="PackedScene" uid="uid://b1w811aaok70t" path="res://src/UXUI/MainMenu.tscn" id="2_dp2h4"]
-[ext_resource type="PackedScene" uid="uid://cjrrobg5xd2nf" path="res://scenes/levels/O1Level3.tscn" id="4_q4yls"]
+[ext_resource type="PackedScene" uid="uid://cjrrobg5xd2nf" path="res://scenes/levels/O1Level3.tscn" id="4_fjaly"]
 [ext_resource type="PackedScene" uid="uid://c2636bqje3hxa" path="res://scenes/levels/level1.tscn" id="5_5lnb5"]
 [ext_resource type="PackedScene" uid="uid://b2k2y68puhb47" path="res://scenes/levels/level2.tscn" id="5_qu7c7"]
 [ext_resource type="Environment" uid="uid://cet3spqx8vfe7" path="res://resources/postprocess/MainMenu.tres" id="6_1oiio"]
@@ -10,7 +10,7 @@
 
 [node name="Game" type="Node"]
 script = ExtResource("1_cngng")
-levels = Array[PackedScene]([ExtResource("5_5lnb5"), ExtResource("5_qu7c7"), ExtResource("4_q4yls")])
+levels = Array[PackedScene]([ExtResource("5_5lnb5"), ExtResource("5_qu7c7"), ExtResource("4_fjaly")])
 
 [node name="MainMenu" parent="." instance=ExtResource("2_dp2h4")]
 
@@ -20,7 +20,4 @@ environment = ExtResource("6_1oiio")
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 
 [node name="ColourBlindUX" parent="." instance=ExtResource("7_go2fo")]
-layer = 1
-
-[node name="ColourBlindUX" parent="ColourBlindUX" instance=ExtResource("7_go2fo")]
 layer = 1

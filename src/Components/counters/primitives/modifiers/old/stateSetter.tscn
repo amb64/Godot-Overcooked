@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cuaced4l6l6h2"]
 
 [ext_resource type="Script" path="res://src/Components/counters/primitives/modifiers/old/stateSetter.gd" id="1_s01wc"]
-[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://resources/materials/counter.tres" id="2_7lhpo"]
+[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://materials/counter.tres" id="2_7lhpo"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
 material = ExtResource("2_7lhpo")

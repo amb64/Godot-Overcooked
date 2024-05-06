@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://mfnrdf15quje"]
 
 [ext_resource type="Script" path="res://src/Components/counters/primitives/modifiers/old/modifier.gd" id="1_x1rci"]
-[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://resources/materials/counter.tres" id="2_sl4ra"]
+[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://materials/counter.tres" id="2_sl4ra"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
 material = ExtResource("2_sl4ra")

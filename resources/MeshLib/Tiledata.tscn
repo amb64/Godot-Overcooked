@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dov02qw51ijle"]
 
-[ext_resource type="Material" uid="uid://jn37axupqyqs" path="res://resources/materials/GrassFloor.tres" id="1_cyxyc"]
 [ext_resource type="Material" uid="uid://ck475d32twrla" path="res://resources/materials/TileMap.tres" id="1_o0m7e"]
+[ext_resource type="Material" uid="uid://c3ml1pbxb64uk" path="res://resources/materials/GrassMain.tres" id="2_xhlcb"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ywu6u"]
 _surfaces = [{
@@ -59,7 +59,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 54,
 "index_data": PackedByteArray(2, 0, 32, 0, 20, 0, 2, 0, 6, 0, 32, 0, 7, 0, 25, 0, 33, 0, 7, 0, 4, 0, 25, 0, 9, 0, 31, 0, 24, 0, 9, 0, 16, 0, 31, 0, 1, 0, 19, 0, 13, 0, 1, 0, 3, 0, 19, 0, 15, 0, 35, 0, 30, 0, 15, 0, 21, 0, 35, 0, 10, 0, 18, 0, 17, 0, 10, 0, 12, 0, 18, 0, 29, 0, 27, 0, 22, 0, 29, 0, 34, 0, 27, 0, 23, 0, 14, 0, 8, 0, 23, 0, 28, 0, 14, 0, 5, 0, 11, 0, 26, 0, 5, 0, 0, 0, 11, 0),
-"material": ExtResource("1_cyxyc"),
+"material": ExtResource("2_xhlcb"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 36,
@@ -85,5 +85,6 @@ shape = SubResource("BoxShape3D_t44d7")
 [node name="Tile" type="Node3D" parent="."]
 
 [node name="TileFloor" type="MeshInstance3D" parent="Tile"]
+material_override = ExtResource("2_xhlcb")
 mesh = SubResource("ArrayMesh_u3qfo")
 skeleton = NodePath("")

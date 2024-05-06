@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8bp221rdnnv1"]
 
 [ext_resource type="Script" path="res://src/Components/counters/primitives/counterDeleter.gd" id="1_00f51"]
-[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://resources/materials/counter.tres" id="2_4ifsl"]
+[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://materials/counter.tres" id="2_4ifsl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
 material = ExtResource("2_4ifsl")

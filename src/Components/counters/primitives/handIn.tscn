@@ -1,19 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cw08pv8s8cqtw"]
+[gd_scene load_steps=5 format=3 uid="uid://0k2d370gg30f"]
 
-[ext_resource type="Script" path="res://src/Components/counters/primitives/counterSpawner.gd" id="1_qblcf"]
-[ext_resource type="PackedScene" uid="uid://bwsjen8c4slew" path="res://src/Components/items/item.tscn" id="2_7ckn6"]
-[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://materials/counter.tres" id="3_1kp27"]
+[ext_resource type="Script" path="res://src/Components/counters/primitives/handIn.gd" id="1_vw3gn"]
+[ext_resource type="Material" uid="uid://cvntemjhcy1ec" path="res://materials/counter.tres" id="2_rbhkn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fdo3b"]
-material = ExtResource("3_1kp27")
+material = ExtResource("2_rbhkn")
 size = Vector3(1.5, 1, 2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0xxgy"]
 data = PackedVector3Array(-0.75, 0.5, 1, 0.75, 0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, -1, 0.75, -0.5, -1, -0.75, 0.5, -1, -0.75, -0.5, -1, 0.75, -0.5, -1, 0.75, 0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, 1, 0.75, 0.5, -1, 0.75, -0.5, -1, 0.75, -0.5, 1, -0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, -1, -0.75, 0.5, 1, -0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, 0.5, 1, -0.75, 0.5, 1, 0.75, 0.5, -1, -0.75, 0.5, 1, -0.75, 0.5, -1, 0.75, 0.5, -1, -0.75, -0.5, 1, 0.75, -0.5, 1, -0.75, -0.5, -1, 0.75, -0.5, 1, 0.75, -0.5, -1, -0.75, -0.5, -1)
 
 [node name="Counter" type="Node3D" node_paths=PackedStringArray("item_slots")]
-script = ExtResource("1_qblcf")
-item_to_spawn = ExtResource("2_7ckn6")
+script = ExtResource("1_vw3gn")
 item_slots = [NodePath("ItemSlots")]
 
 [node name="CounterMesh" type="MeshInstance3D" parent="."]
@@ -26,4 +24,4 @@ mesh = SubResource("BoxMesh_fdo3b")
 shape = SubResource("ConcavePolygonShape3D_0xxgy")
 
 [node name="ItemSlots" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.526348, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

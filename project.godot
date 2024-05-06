@@ -22,9 +22,8 @@ Config="*res://autoloads/Config.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/per_pixel_transparency/allowed=true
+window/size/viewport_width=720
+window/size/viewport_height=480
 
 [dotnet]
 
@@ -38,7 +37,7 @@ folder_colors={
 "res://prefabs/counters/primitives_old/": "gray",
 "res://resources/": "yellow",
 "res://scenes/": "green",
-"res://src/": "blue",
+"res://src/": "teal",
 "res://src/Components/items/[THIS FOLDER IS DEPRECATED]/": "red"
 }
 
