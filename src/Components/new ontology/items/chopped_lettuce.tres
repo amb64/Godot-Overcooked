@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dtbacysbnpbd5"]
+
+[ext_resource type="Script" path="res://src/Components/new ontology/scripts/item.gd" id="1_mp0xc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjh63"]
+albedo_color = Color(0.372549, 0.607843, 0.211765, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mwtbu"]
+material = SubResource("StandardMaterial3D_sjh63")
+
+[resource]
+script = ExtResource("1_mp0xc")
+name = "chopped lettuce"
+mesh = SubResource("BoxMesh_mwtbu")
