@@ -32,8 +32,12 @@ project/assembly_name="Overcooked Godot Level"
 [file_customization]
 
 folder_colors={
-"res://materials/": "green",
+"res://assets/": "red",
+"res://autoloads/": "orange",
 "res://prefabs/counters/primitives_old/": "gray",
+"res://resources/": "yellow",
+"res://scenes/": "green",
+"res://src/": "teal",
 "res://src/Components/items/[THIS FOLDER IS DEPRECATED]/": "red"
 }
 

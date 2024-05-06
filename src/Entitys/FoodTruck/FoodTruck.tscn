@@ -1,19 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://w4infiu0xuyv"]
+[gd_scene load_steps=11 format=3 uid="uid://w4infiu0xuyv"]
 
 [ext_resource type="Script" path="res://src/Entitys/FoodTruck/FoodTruck.gd" id="1_q8kfu"]
-[ext_resource type="ArrayMesh" uid="uid://cfpln2ci8bgyv" path="res://assets/meshes/cloudsmoke_Mesh.res" id="2_r3slj"]
-[ext_resource type="Material" uid="uid://1q3qxo8bea4a" path="res://materials/FoodTruck.tres" id="3_0hjkg"]
-[ext_resource type="ArrayMesh" uid="uid://cfejdvjpjg3pa" path="res://assets/meshes/truck_Cube_009.res" id="3_acyjp"]
-[ext_resource type="ArrayMesh" uid="uid://5tf2t3vgxvvh" path="res://assets/meshes/truck_Cube_010.res" id="4_g5yle"]
-[ext_resource type="ArrayMesh" uid="uid://id4cw18js01x" path="res://assets/meshes/truck_Cylinder_009.res" id="5_n6x30"]
-[ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://assets/meshes/truck_Cylinder_008.res" id="7_m7e8x"]
+[ext_resource type="ArrayMesh" uid="uid://cfpln2ci8bgyv" path="res://resources/models/Cloudsmoke.res" id="2_r3slj"]
+[ext_resource type="Material" uid="uid://1q3qxo8bea4a" path="res://resources/materials/FoodTruck.tres" id="3_0hjkg"]
+[ext_resource type="ArrayMesh" uid="uid://cfejdvjpjg3pa" path="res://resources/models/FoodTruck/Truck.res" id="3_acyjp"]
+[ext_resource type="ArrayMesh" uid="uid://5tf2t3vgxvvh" path="res://resources/models/FoodTruck/Truck_Windows.res" id="4_g5yle"]
+[ext_resource type="ArrayMesh" uid="uid://id4cw18js01x" path="res://resources/models/FoodTruck/Truck_Wheels.res" id="5_n6x30"]
+[ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://resources/models/FoodTruck/Truck_Umbrella.res" id="7_m7e8x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfvl4"]
 size = Vector3(0.685364, 0.688751, 1.26122)
 
 [sub_resource type="BoxMesh" id="BoxMesh_t804w"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_8bvhi"]
 
 [sub_resource type="Curve" id="Curve_7446d"]
 _data = [Vector2(0, 0.536842), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.79812, 0.0, 0, 0]
@@ -38,11 +36,6 @@ transform = Transform3D(-0.773667, 0, -1.524e-07, 0, 1.6586, 0, 6.76361e-08, 0, 
 material_override = ExtResource("3_0hjkg")
 mesh = ExtResource("4_g5yle")
 skeleton = NodePath("../..")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="P/Body"]
-transform = Transform3D(-1.17235, 0, 0, 0, 0.567601, 0, 0, 0, 0.234679, -7.40149e-16, 0.796165, -1.94917)
-mesh = SubResource("BoxMesh_8bvhi")
-skeleton = NodePath("../../..")
 
 [node name="TruckBody" type="MeshInstance3D" parent="P/Body"]
 material_override = ExtResource("3_0hjkg")
