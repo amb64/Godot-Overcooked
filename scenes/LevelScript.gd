@@ -16,7 +16,7 @@ var stats: PackedScene = preload("res://src/UXUI/stats_board_ui.tscn")
 @export var stars: int = 1
 
 func _ready():
-	#get_parent().set_postprocess(postProcess)
+	get_parent().set_postprocess(postProcess)
 	add_child(HUD.instantiate())
 	if time != 0:
 		set_process(true)
