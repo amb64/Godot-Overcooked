@@ -15,5 +15,5 @@ func action(_source : Node3D) -> void:
 	var success : bool = orderer.complete_order(item)
 	
 	if success:
-		item_slots[0].queue_free()
+		item_slots[0].get_child(0).queue_free()
 		print("yipee!!")

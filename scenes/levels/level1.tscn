@@ -438,19 +438,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, -2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, -2)
 orderer = NodePath("../Orderer")
 
-[node name="Serving Area2" parent="." node_paths=PackedStringArray("orderer", "item_slots") instance=ExtResource("18_2nxjc")]
+[node name="Serving Area2" parent="." node_paths=PackedStringArray("orderer") instance=ExtResource("18_2nxjc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, 0)
 orderer = NodePath("../Orderer")
-item_slots = [NodePath("../Serving Area/ItemSlots")]
 
 [node name="Cutting Board" parent="." instance=ExtResource("10_lj5qx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0.5, 5)
 proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("11_hk7ja"), ExtResource("12_m6u72"), ExtResource("15_plnvh")])
 
-[node name="Cutting Board2" parent="." node_paths=PackedStringArray("item_slots") instance=ExtResource("10_lj5qx")]
+[node name="Cutting Board2" parent="." instance=ExtResource("10_lj5qx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0.5, 5)
 proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("11_hk7ja"), ExtResource("12_m6u72"), ExtResource("15_plnvh")])
-item_slots = [NodePath("../Cutting Board/ItemSlots")]
 
 [editable path="Counters/Counter"]
 [editable path="Counters/Counter2"]
@@ -466,3 +464,7 @@ item_slots = [NodePath("../Cutting Board/ItemSlots")]
 [editable path="Counters/Counter12"]
 [editable path="Counters/Counter13"]
 [editable path="Counters/Counter14"]
+[editable path="Serving Area"]
+[editable path="Serving Area2"]
+[editable path="Cutting Board"]
+[editable path="Cutting Board2"]
