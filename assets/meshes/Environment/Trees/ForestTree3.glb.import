@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cxi165tjnboet"
-path="res://.godot/imported/Grass.glb-8afa6bf42e0bb105c10cc3f85699f919.scn"
+uid="uid://bcnj4qnc6mcte"
+path="res://.godot/imported/ForestTree3.glb-775cb56d93e80720e37c4913e99af5ec.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Environment/Grass.glb"
-dest_files=["res://.godot/imported/Grass.glb-8afa6bf42e0bb105c10cc3f85699f919.scn"]
+source_file="res://assets/meshes/Environment/Trees/ForestTree3.glb"
+dest_files=["res://.godot/imported/ForestTree3.glb-775cb56d93e80720e37c4913e99af5ec.scn"]
 
 [params]
 
@@ -30,14 +30,8 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
-"materials": {
-"Material": {
-"use_external/enabled": true,
-"use_external/path": "res://assets/meshes/Material.tres"
-}
-},
 "meshes": {
-"Grass_Plane_002": {
+"ForestTree3_Cone_010": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -45,7 +39,17 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://assets/meshes/Grass_Plane_002.res"
+"save_to_file/path": "res://resources/models/ForestTree3_Cone_010.res"
+},
+"ForestTree3_Cone_011": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://resources/models/ForestTree3_Cone_011.res"
 }
 }
 }

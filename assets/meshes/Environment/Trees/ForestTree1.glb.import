@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dxil7f2e7e3ss"
-path="res://.godot/imported/Bench.glb-b71d0cbf97f88bf48285fd7d625dea15.scn"
+uid="uid://y2dk36ln60tw"
+path="res://.godot/imported/ForestTree1.glb-b16baada267e2f367804ee77b41b9c30.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Environment/Bench.glb"
-dest_files=["res://.godot/imported/Bench.glb-b71d0cbf97f88bf48285fd7d625dea15.scn"]
+source_file="res://assets/meshes/Environment/Trees/ForestTree1.glb"
+dest_files=["res://.godot/imported/ForestTree1.glb-b16baada267e2f367804ee77b41b9c30.scn"]
 
 [params]
 
@@ -31,7 +31,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "meshes": {
-"Bench_Cube_008": {
+"ForestTree1_Mesh": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -39,7 +39,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://assets/meshes/Bench_Cube_008.res"
+"save_to_file/path": "res://resources/models/ForestTree1_Mesh.res"
 }
 }
 }

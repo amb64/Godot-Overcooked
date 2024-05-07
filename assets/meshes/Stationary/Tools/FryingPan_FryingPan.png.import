@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drl2yxqi3603d"
-path.s3tc="res://.godot/imported/Bench_BenchUV (1).png-74b075be0072bb44955b05e378a67602.s3tc.ctex"
+uid="uid://dpuio4oaqmvg"
+path.s3tc="res://.godot/imported/FryingPan_FryingPan.png-f0a8e2ca1d91e398f56cdcac1ba2fa33.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/meshes/Environment/Bench_BenchUV (1).png"
-dest_files=["res://.godot/imported/Bench_BenchUV (1).png-74b075be0072bb44955b05e378a67602.s3tc.ctex"]
+source_file="res://assets/meshes/Stationary/Tools/FryingPan_FryingPan.png"
+dest_files=["res://.godot/imported/FryingPan_FryingPan.png-f0a8e2ca1d91e398f56cdcac1ba2fa33.s3tc.ctex"]
 
 [params]
 

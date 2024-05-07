@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://sgobynhir2l8"
-path="res://.godot/imported/ForestTree2.glb-5ecf3603f3608fb9bf08c9f109310495.scn"
+uid="uid://b7u1jlp7lahw3"
+path="res://.godot/imported/TileWall.glb-62647590fa5c58d788b069d4da8d3e6f.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Environment/ForestTree2.glb"
-dest_files=["res://.godot/imported/ForestTree2.glb-5ecf3603f3608fb9bf08c9f109310495.scn"]
+source_file="res://assets/meshes/Tiles/TileWall.glb"
+dest_files=["res://.godot/imported/TileWall.glb-62647590fa5c58d788b069d4da8d3e6f.scn"]
 
 [params]
 
@@ -31,7 +31,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "meshes": {
-"ForestTree2_Cone_006": {
+"TileWall_Cube": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -39,7 +39,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://resources/models/ForestTree2_Cone_006.res"
+"save_to_file/path": "res://assets/meshes/TileWall_Cube.res"
 }
 }
 }

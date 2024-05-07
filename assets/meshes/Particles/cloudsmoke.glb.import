@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://y2dk36ln60tw"
-path="res://.godot/imported/ForestTree1.glb-141d734e98b4e39c7edc7045e72bb30a.scn"
+uid="uid://eaw0gmfx67ej"
+path="res://.godot/imported/cloudsmoke.glb-1cf5d7dea9718221cdb3c2d9288c7439.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Environment/ForestTree1.glb"
-dest_files=["res://.godot/imported/ForestTree1.glb-141d734e98b4e39c7edc7045e72bb30a.scn"]
+source_file="res://assets/meshes/Particles/cloudsmoke.glb"
+dest_files=["res://.godot/imported/cloudsmoke.glb-1cf5d7dea9718221cdb3c2d9288c7439.scn"]
 
 [params]
 
@@ -31,7 +31,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "meshes": {
-"ForestTree1_Mesh": {
+"cloudsmoke_Mesh": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -39,7 +39,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://resources/models/ForestTree1_Mesh.res"
+"save_to_file/path": "res://assets/meshes/cloudsmoke_Mesh.res"
 }
 }
 }

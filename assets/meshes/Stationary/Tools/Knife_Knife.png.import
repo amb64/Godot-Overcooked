@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jgqwqjctcyto"
-path.s3tc="res://.godot/imported/Grass_GrassTEXT.png-fad09fc0800f1f80d8e0fce42eb7203d.s3tc.ctex"
+uid="uid://de6m5pxv1ifv7"
+path.s3tc="res://.godot/imported/Knife_Knife.png-dbae8a4f5c0c0b7c4d88414d7507eb00.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/meshes/Environment/Grass_GrassTEXT.png"
-dest_files=["res://.godot/imported/Grass_GrassTEXT.png-fad09fc0800f1f80d8e0fce42eb7203d.s3tc.ctex"]
+source_file="res://assets/meshes/Stationary/Tools/Knife_Knife.png"
+dest_files=["res://.godot/imported/Knife_Knife.png-dbae8a4f5c0c0b7c4d88414d7507eb00.s3tc.ctex"]
 
 [params]
 
