@@ -5,9 +5,9 @@ var starOffset: int = 100
 var starArr: Array = [] ##  How many stars should be displayed
 
 # Star textures
-@export var fullStar: Texture = preload("res://assets/Textures/UXUI/Icons/StarFull.png")
+@export var fullStar: Texture = preload("res://assets/UXUI/Icons/StarFull.png")
 #@export var halfStar: Texture
-@export var emptyStar: Texture = preload("res://assets/Textures/UXUI/Icons/StarEmpty.png")
+@export var emptyStar: Texture = preload("res://assets/UXUI/Icons/StarEmpty.png")
 
 ## Select a level number
 @export var Level: int = 0

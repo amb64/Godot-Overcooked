@@ -35,4 +35,4 @@ func _on_options_button_pressed():
 
 # Return back to main menu
 func _on_exit_button_pressed():
-	get_parent().get_parent().returnMenu()
+	get_parent().get_parent().get_parent().returnMenu()

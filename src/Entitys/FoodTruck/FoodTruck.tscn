@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://w4infiu0xuyv"]
 
 [ext_resource type="Script" path="res://src/Entitys/FoodTruck/FoodTruck.gd" id="1_q8kfu"]
-[ext_resource type="ArrayMesh" uid="uid://cfpln2ci8bgyv" path="res://assets/meshes/Particles/Cloudsmoke.res" id="2_r3slj"]
+[ext_resource type="ArrayMesh" uid="uid://cfpln2ci8bgyv" path="res://resources/models/Cloudsmoke.res" id="2_r3slj"]
 [ext_resource type="Material" uid="uid://1q3qxo8bea4a" path="res://resources/materials/FoodTruck.tres" id="3_0hjkg"]
-[ext_resource type="ArrayMesh" uid="uid://cfejdvjpjg3pa" path="res://assets/meshes/FoodTruck/Truck.res" id="3_acyjp"]
-[ext_resource type="ArrayMesh" uid="uid://5tf2t3vgxvvh" path="res://assets/meshes/FoodTruck/Truck_Windows.res" id="4_g5yle"]
-[ext_resource type="ArrayMesh" uid="uid://id4cw18js01x" path="res://assets/meshes/FoodTruck/Truck_Wheels.res" id="5_n6x30"]
-[ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://assets/meshes/FoodTruck/Truck_Umbrella.res" id="7_m7e8x"]
+[ext_resource type="ArrayMesh" uid="uid://cfejdvjpjg3pa" path="res://resources/models/FoodTruck/Truck.res" id="3_acyjp"]
+[ext_resource type="ArrayMesh" uid="uid://5tf2t3vgxvvh" path="res://resources/models/FoodTruck/Truck_Windows.res" id="4_g5yle"]
+[ext_resource type="ArrayMesh" uid="uid://id4cw18js01x" path="res://resources/models/FoodTruck/Truck_Wheels.res" id="5_n6x30"]
+[ext_resource type="ArrayMesh" uid="uid://c283q4qlaltn" path="res://resources/models/FoodTruck/Truck_Umbrella.res" id="7_m7e8x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfvl4"]
 size = Vector3(0.685364, 0.688751, 1.26122)
