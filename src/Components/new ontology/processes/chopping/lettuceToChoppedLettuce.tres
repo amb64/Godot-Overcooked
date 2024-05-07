@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemIO" load_steps=4 format=3 uid="uid://bqunf1suq8bqn"]
+
+[ext_resource type="Resource" uid="uid://dwevotjhj0h0e" path="res://src/Components/new ontology/items/lettuce.tres" id="1_j6awp"]
+[ext_resource type="Resource" uid="uid://dtbacysbnpbd5" path="res://src/Components/new ontology/items/chopped_lettuce.tres" id="2_41q1w"]
+[ext_resource type="Script" path="res://src/Components/new ontology/scripts/itemIO.gd" id="3_beear"]
+
+[resource]
+script = ExtResource("3_beear")
+input = Array[Resource("res://src/Components/new ontology/scripts/item.gd")]([ExtResource("1_j6awp")])
+output = ExtResource("2_41q1w")

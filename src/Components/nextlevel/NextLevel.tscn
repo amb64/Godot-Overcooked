@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://blkuyflhl23b7"]
 
 [ext_resource type="Script" path="res://src/Components/nextlevel/NextLevel.gd" id="1_t1pfa"]
-[ext_resource type="Texture2D" uid="uid://bh7rtvgbo7d0y" path="res://assets/UXUI/Panel.png" id="2_1spjf"]
-[ext_resource type="Texture2D" uid="uid://7joyvq4pe5yr" path="res://assets/UXUI/New Project.png" id="2_5kb4s"]
-[ext_resource type="Texture2D" uid="uid://ckys5q38v25su" path="res://assets/UXUI/Icons/LockIcon.png" id="2_brfc3"]
-[ext_resource type="Texture2D" uid="uid://d127df5p3cmfy" path="res://assets/UXUI/Icons/WARNING.png" id="3_qoyat"]
+[ext_resource type="Texture2D" uid="uid://bh7rtvgbo7d0y" path="res://assets/textures/UXUI/Panel.png" id="2_1spjf"]
+[ext_resource type="Texture2D" uid="uid://7joyvq4pe5yr" path="res://assets/textures/UXUI/New Project.png" id="2_5kb4s"]
+[ext_resource type="Texture2D" uid="uid://ckys5q38v25su" path="res://assets/textures/UXUI/Icons/LockIcon.png" id="2_brfc3"]
+[ext_resource type="Texture2D" uid="uid://d127df5p3cmfy" path="res://assets/textures/UXUI/Icons/WARNING.png" id="3_qoyat"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_81yw7"]
 height = 0.348757

@@ -6,6 +6,7 @@ var msec: int = 0
 
 var HUD: PackedScene = preload("res://src/UXUI/HUD.tscn")
 var stats: PackedScene = preload("res://src/UXUI/stats_board_ui.tscn")
+var pauseMenu: PackedScene = preload("res://src/UXUI/PauseMenu.tscn")
 
 ## Time is based on seconds
 @export var time: float = 0.0
@@ -18,6 +19,7 @@ var stats: PackedScene = preload("res://src/UXUI/stats_board_ui.tscn")
 func _ready():
 	get_parent().set_postprocess(postProcess)
 	add_child(HUD.instantiate())
+	add_child(pauseMenu.instantiate())
 	if time != 0:
 		set_process(true)
 	else:

@@ -5,9 +5,9 @@ var starOffset: int = 330
 var starArr: Array = [] ##  How many stars should be displayed
 
 # Star textures
-@export var fullStar: Texture = preload("res://assets/UXUI/Icons/StarFull.png")
+@export var fullStar: Texture = preload("res://assets/Textures/UXUI/Icons/StarFull.png")
 #@export var halfStar: Texture
-@export var emptyStar: Texture = preload("res://assets/UXUI/Icons/StarEmpty.png")
+@export var emptyStar: Texture = preload("res://assets/Textures/UXUI/Icons/StarEmpty.png")
 
 func _ready():
 	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_VISIBLE)

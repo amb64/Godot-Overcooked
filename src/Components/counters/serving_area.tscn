@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="1_sgphw"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2mp0b"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnf5e"]
 albedo_color = Color(1, 0.788235, 0.87451, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_hxa6a"]
-material = SubResource("StandardMaterial3D_2mp0b")
+material = SubResource("StandardMaterial3D_lnf5e")
 size = Vector3(3.5, 0.1, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pnyo5"]
