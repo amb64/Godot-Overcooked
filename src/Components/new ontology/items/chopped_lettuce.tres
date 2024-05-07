@@ -3,10 +3,11 @@
 [ext_resource type="Script" path="res://src/Components/new ontology/scripts/item.gd" id="1_mp0xc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjh63"]
-albedo_color = Color(0.372549, 0.607843, 0.211765, 1)
+albedo_color = Color(0.858824, 0.968627, 0.788235, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mwtbu"]
 material = SubResource("StandardMaterial3D_sjh63")
+size = Vector3(0.3, 0.1, 1)
 
 [resource]
 script = ExtResource("1_mp0xc")

@@ -18,6 +18,8 @@
 [ext_resource type="Resource" uid="uid://cqpkadhunqypn" path="res://src/Components/new ontology/items/tomato.tres" id="16_e3opb"]
 [ext_resource type="Script" path="res://src/Components/orders/orderer.gd" id="17_q4wah"]
 [ext_resource type="PackedScene" uid="uid://0k2d370gg30f" path="res://src/Components/counters/primitives/handIn.tscn" id="18_2nxjc"]
+[ext_resource type="Resource" uid="uid://xcpuj8ar752l" path="res://src/Components/new ontology/processes/chopping/tunaToChoppedTuna.tres" id="19_sopvf"]
+[ext_resource type="Resource" uid="uid://djx5oe1401osx" path="res://src/Components/new ontology/processes/chopping/salmonToChoppedSalmon.tres" id="20_fbmtc"]
 
 [sub_resource type="Gradient" id="Gradient_e7fpw"]
 offsets = PackedFloat32Array(0, 0.201681, 0.462185, 0.638655, 0.831933)
@@ -454,11 +456,11 @@ orderer = NodePath("../Orderer")
 
 [node name="Cutting Board" parent="." instance=ExtResource("10_lj5qx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0.5, 5)
-proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("11_hk7ja"), ExtResource("12_m6u72"), ExtResource("15_plnvh")])
+proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("11_hk7ja"), ExtResource("12_m6u72"), ExtResource("15_plnvh"), ExtResource("19_sopvf"), ExtResource("20_fbmtc")])
 
 [node name="Cutting Board2" parent="." instance=ExtResource("10_lj5qx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0.5, 5)
-proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("11_hk7ja"), ExtResource("12_m6u72"), ExtResource("15_plnvh")])
+proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("11_hk7ja"), ExtResource("12_m6u72"), ExtResource("15_plnvh"), ExtResource("19_sopvf"), ExtResource("20_fbmtc")])
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

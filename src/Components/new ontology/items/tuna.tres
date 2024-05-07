@@ -1,14 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dt15372o6bwtr"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dt15372o6bwtr"]
 
 [ext_resource type="Script" path="res://src/Components/new ontology/scripts/item.gd" id="1_d1gx2"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwcyl"]
-albedo_color = Color(0.690196, 0.329412, 0.917647, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_prsvd"]
-material = SubResource("StandardMaterial3D_iwcyl")
+[ext_resource type="ArrayMesh" uid="uid://b70gh7363axry" path="res://assets/meshes/Food/tuna.res" id="1_ogcau"]
 
 [resource]
 script = ExtResource("1_d1gx2")
 name = "tuna"
-mesh = SubResource("SphereMesh_prsvd")
+mesh = ExtResource("1_ogcau")

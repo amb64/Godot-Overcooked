@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dn6g4khocwvw1"]
+[gd_scene load_steps=13 format=3 uid="uid://dn6g4khocwvw1"]
 
 [ext_resource type="Script" path="res://src/Entitys/Player/player.gd" id="1_2hrb2"]
 [ext_resource type="Script" path="res://src/Entitys/Player/RigidBody3DController.gd" id="1_526f1"]
 [ext_resource type="Script" path="res://src/Entitys/Player/CounterHandler.gd" id="2_8rywc"]
 [ext_resource type="Script" path="res://src/Entitys/Player/RigidBody3D2.gd" id="4_hwpne"]
+[ext_resource type="AudioStream" uid="uid://rd35bmr7pkw3" path="res://assets/audio/placeItem.wav" id="4_q2yka"]
+[ext_resource type="AudioStream" uid="uid://bscv45tx2et0a" path="res://assets/audio/chopping.wav" id="5_qwfo8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nxyb"]
 albedo_color = Color(0.415686, 0.396078, 0.972549, 1)
@@ -50,6 +52,14 @@ shape = SubResource("BoxShape3D_ol63t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/Director/Area3D"]
 mesh = SubResource("BoxMesh_epkss")
+
+[node name="placeItem" type="AudioStreamPlayer" parent="RigidBody3D/Director/Area3D"]
+stream = ExtResource("4_q2yka")
+volume_db = -48.721
+
+[node name="chopItem" type="AudioStreamPlayer" parent="RigidBody3D/Director/Area3D"]
+stream = ExtResource("5_qwfo8")
+volume_db = -63.713
 
 [node name="ItemHolder" type="Node3D" parent="RigidBody3D/Director"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0310211, -0.0196157, 0.993621)

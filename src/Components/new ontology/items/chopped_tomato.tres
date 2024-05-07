@@ -1,14 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://da0ap23lvykoe"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://da0ap23lvykoe"]
 
+[ext_resource type="ArrayMesh" uid="uid://bigstgyuf1jgb" path="res://assets/meshes/Food/tomatoSliced.res" id="1_f8wom"]
 [ext_resource type="Script" path="res://src/Components/new ontology/scripts/item.gd" id="1_g1x3b"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjh63"]
-albedo_color = Color(0.619608, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_mwtbu"]
-material = SubResource("StandardMaterial3D_sjh63")
 
 [resource]
 script = ExtResource("1_g1x3b")
 name = "chopped tomato"
-mesh = SubResource("BoxMesh_mwtbu")
+mesh = ExtResource("1_f8wom")
