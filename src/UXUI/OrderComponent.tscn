@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://epp157d7n3jq"]
+[gd_scene load_steps=2 format=3 uid="uid://epp157d7n3jq"]
+
+[ext_resource type="Texture2D" uid="uid://bg3esvxxdsvp5" path="res://assets/UXUI/Settings/FoodNotes.png" id="1_e5cuu"]
 
 [node name="Orders" type="Control"]
 layout_mode = 3
@@ -9,10 +11,11 @@ offset_bottom = -0.152008
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 76.0
+offset_bottom = 83.0
+texture = ExtResource("1_e5cuu")
+expand_mode = 1
 
 [node name="Animation" type="AnimationPlayer" parent="."]

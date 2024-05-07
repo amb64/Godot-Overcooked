@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=3 uid="uid://cv7omsg6gmg0b"]
+
+[ext_resource type="Script" path="res://src/UXUI/HelpScreen.gd" id="1_ukmww"]
+[ext_resource type="Texture2D" uid="uid://nbbnhvq7sqq7" path="res://assets/UXUI/Settings/Button.png" id="2_jv1e8"]
+[ext_resource type="Texture2D" uid="uid://dph2sy421r3n4" path="res://assets/UXUI/Settings/Button1.png" id="3_xty6i"]
+[ext_resource type="FontFile" uid="uid://dcivfl3rw1qcn" path="res://assets/font/FogSans-Re46.otf" id="4_pbg5x"]
+[ext_resource type="StyleBox" uid="uid://bhbf6r4t6m65f" path="res://resources/UXUI/ButtonFocus.tres" id="8_lbaf5"]
+[ext_resource type="StyleBox" uid="uid://dj8t756h4bqjd" path="res://resources/UXUI/Button2Normal.tres" id="9_7p0al"]
+[ext_resource type="StyleBox" uid="uid://c6l0ot5dy2fij" path="res://resources/UXUI/Button2Hover.tres" id="10_yr71o"]
+[ext_resource type="StyleBox" uid="uid://1ulot5p4who5" path="res://resources/UXUI/Button2Pressed.tres" id="11_25cxg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rij2y"]
+font_size = 30
+
+[node name="HelpScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ukmww")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button5" type="TextureRect" parent="Menu"]
+modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
+offset_left = 1520.0
+offset_top = 920.0
+offset_right = 2120.0
+offset_bottom = 1220.0
+scale = Vector2(0.44, 0.266667)
+texture = ExtResource("3_xty6i")
+
+[node name="Button3" type="TextureRect" parent="."]
+visible = false
+modulate = Color(0.0901961, 0.0901961, 0.0901961, 1)
+layout_mode = 0
+offset_left = 872.0
+offset_top = 712.0
+offset_right = 1472.0
+offset_bottom = 1012.0
+scale = Vector2(0.44, 0.266667)
+texture = ExtResource("2_jv1e8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 256.0
+offset_right = 1533.0
+offset_bottom = 962.0
+color = Color(0.470588, 0.470588, 0.470588, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 232.0
+offset_right = 1534.0
+offset_bottom = 993.0
+text = "How to play:
+
+Walk with the WASD keys to an ingredient box to pick up an ingredient. 
+You can spawn an ingredient using F, and pick up and drop objects using E. 
+Head to a cutting board and place your item on it with E, then press F to cut it. 
+Take your item to the serving station and place it with E, then press F to serve it. 
+Try and make as many orders as possible within the time limit!
+
+Move - WASD
+Pick up and drop items - E
+Interact with stations - F"
+label_settings = SubResource("LabelSettings_rij2y")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1.515, 6.39)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.433
+anchor_top = 0.296
+anchor_right = 0.604
+anchor_bottom = 0.652
+offset_left = 696.24
+offset_top = 287.92
+offset_right = 787.12
+offset_bottom = 201.04
+theme_override_constants/separation = 23
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_pbg5x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("9_7p0al")
+theme_override_styles/hover = ExtResource("10_yr71o")
+theme_override_styles/pressed = ExtResource("11_25cxg")
+theme_override_styles/focus = ExtResource("8_lbaf5")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

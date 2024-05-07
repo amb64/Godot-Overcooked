@@ -7,6 +7,10 @@ func _ready():
 func _on_host_button_pressed():
 	get_parent().load_world()
 	queue_free()
+	
+func _on_tutorial_button_press():
+	$Menu.visible = false
+	$HelpScreen.visible = true
 
 func _on_join_button_pressed():
 	pass

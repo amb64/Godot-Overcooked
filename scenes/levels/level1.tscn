@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://c2636bqje3hxa"]
+[gd_scene load_steps=46 format=3 uid="uid://c2636bqje3hxa"]
 
 [ext_resource type="Script" path="res://scenes/LevelScript.gd" id="1_ibao1"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="2_6u3pk"]
@@ -108,6 +108,14 @@ material = SubResource("StandardMaterial3D_v21jw")
 height = 0.1
 radial_segments = 16
 rings = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_1luq6"]
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0x4t5"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ibao1")
@@ -325,11 +333,13 @@ mesh = SubResource("BoxMesh_wf1qi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
 mesh = SubResource("BoxMesh_wf1qi")
 
-[node name="Orderer" type="Node" parent="."]
+[node name="Orderer" type="Node" parent="." node_paths=PackedStringArray("orderText", "scoreText")]
 script = ExtResource("17_q4wah")
 available_items = Array[Resource("res://src/Components/new ontology/scripts/item.gd")]([ExtResource("5_o1mmm"), ExtResource("6_akb6t"), ExtResource("7_384c6")])
-time_between_orders = 5.0
-time_between_deletion = 10.0
+time_between_orders = 7.0
+time_between_deletion = 15.0
+orderText = NodePath("../UI/Text Display/Label2")
+scoreText = NodePath("../UI/Score display/Label5")
 
 [node name="Tomato Spawner" type="Node3D" parent="." node_paths=PackedStringArray("item_slots")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, 2)
@@ -449,6 +459,69 @@ proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd
 [node name="Cutting Board2" parent="." instance=ExtResource("10_lj5qx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, 0.5, 5)
 proccesses = Array[Resource("res://src/Components/new ontology/scripts/itemIO.gd")]([ExtResource("11_hk7ja"), ExtResource("12_m6u72"), ExtResource("15_plnvh")])
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+size_flags_vertical = 8
+
+[node name="Text Display" type="Node" parent="UI"]
+
+[node name="ColorRect" type="ColorRect" parent="UI/Text Display"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 232.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="UI/Text Display"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -156.0
+offset_right = 109.0
+offset_bottom = -114.0
+grow_vertical = 0
+text = "Orders:"
+label_settings = SubResource("LabelSettings_1luq6")
+
+[node name="Label2" type="Label" parent="UI/Text Display"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -127.0
+offset_right = 232.0
+offset_bottom = -43.0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_0x4t5")
+text_overrun_behavior = 4
+
+[node name="Score display" type="Node" parent="UI"]
+
+[node name="Label4" type="Label" parent="UI/Score display"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -29.0
+offset_right = 80.0
+offset_bottom = 13.0
+grow_vertical = 0
+text = "Score:"
+label_settings = SubResource("LabelSettings_1luq6")
+text_overrun_behavior = 4
+
+[node name="Label5" type="Label" parent="UI/Score display"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -29.0
+offset_right = 160.0
+offset_bottom = 13.0
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_1luq6")
+text_overrun_behavior = 4
 
 [editable path="Counters/Counter"]
 [editable path="Counters/Counter2"]
