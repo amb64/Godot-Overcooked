@@ -5,7 +5,8 @@ var player_item : Node3D
 
 var is_over_counter : bool = false
 var is_holding_item : bool = false
-
+@onready var placeItem = $placeItem
+@onready var chopItem = $chopItem
 var counter : Counter
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,10 +27,13 @@ func _process(_delta):
 	#drop
 	elif(is_interacting && is_over_counter && is_holding_item && counter_is_free()):
 		drop()
+		placeItem.play() #Plays placing sound when player places an item
 		pass
 		
 	elif(is_over_counter && is_actioning):
 		action()
+		if (counter is CounterModifier):
+			chopItem.play() #Plays chopping sound when player interacts with chopping board
 		pass
 
 func _on_body_entered(body : Node3D):

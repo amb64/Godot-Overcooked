@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://6obev7fwdx5f"]
+[gd_scene load_steps=9 format=3 uid="uid://6obev7fwdx5f"]
 
 [ext_resource type="Script" path="res://Game.gd" id="1_cngng"]
 [ext_resource type="PackedScene" uid="uid://b1w811aaok70t" path="res://src/UXUI/MainMenu.tscn" id="2_dp2h4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b2k2y68puhb47" path="res://scenes/levels/level2.tscn" id="5_qu7c7"]
 [ext_resource type="Environment" uid="uid://cet3spqx8vfe7" path="res://resources/postprocess/MainMenu.tres" id="6_1oiio"]
 [ext_resource type="PackedScene" uid="uid://eqn8atx3eso6" path="res://src/UXUI/colour_blind_ux.tscn" id="7_go2fo"]
+[ext_resource type="AudioStream" uid="uid://c0j2oeo11wasj" path="res://assets/audio/bg_music.mp3" id="7_win70"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_cngng")
@@ -18,6 +19,9 @@ levels = Array[PackedScene]([ExtResource("5_5lnb5"), ExtResource("5_qu7c7"), Ext
 environment = ExtResource("6_1oiio")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_win70")
+volume_db = -76.828
+autoplay = true
 
 [node name="ColourBlindUX" parent="." instance=ExtResource("7_go2fo")]
 layer = 1
