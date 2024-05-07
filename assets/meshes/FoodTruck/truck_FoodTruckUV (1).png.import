@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5brxo3lq3web"
-path.s3tc="res://.godot/imported/BenchUV.png-905f2ee2db3b3fa2587e271cda608677.s3tc.ctex"
+uid="uid://ebetyvesejvh"
+path.s3tc="res://.godot/imported/truck_FoodTruckUV (1).png-7089904d677d0dce5b69e41a1ff2e748.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://assets/meshes/Environment/Bench/BenchUV.png"
-dest_files=["res://.godot/imported/BenchUV.png-905f2ee2db3b3fa2587e271cda608677.s3tc.ctex"]
+source_file="res://assets/meshes/FoodTruck/truck_FoodTruckUV (1).png"
+dest_files=["res://.godot/imported/truck_FoodTruckUV (1).png-7089904d677d0dce5b69e41a1ff2e748.s3tc.ctex"]
 
 [params]
 
