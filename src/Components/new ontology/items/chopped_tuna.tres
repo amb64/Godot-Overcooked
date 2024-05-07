@@ -1,14 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bgx0s7riddbun"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bgx0s7riddbun"]
 
 [ext_resource type="Script" path="res://src/Components/new ontology/scripts/item.gd" id="1_3r36g"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3ig3"]
-albedo_color = Color(0.690196, 0.329412, 0.917647, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_uthl4"]
-material = SubResource("StandardMaterial3D_j3ig3")
+[ext_resource type="ArrayMesh" uid="uid://c0d2f8ccjh4sr" path="res://assets/meshes/Food/tunaSlice.res" id="1_okfep"]
 
 [resource]
 script = ExtResource("1_3r36g")
 name = "chopped tuna"
-mesh = SubResource("CylinderMesh_uthl4")
+mesh = ExtResource("1_okfep")
