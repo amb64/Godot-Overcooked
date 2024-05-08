@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://c2636bqje3hxa"]
+[gd_scene load_steps=48 format=3 uid="uid://c2636bqje3hxa"]
 
 [ext_resource type="Script" path="res://scenes/LevelScript.gd" id="1_ibao1"]
 [ext_resource type="PackedScene" uid="uid://bh5n44m6rkqqw" path="res://src/Components/counters/primitives/counter.tscn" id="2_6u3pk"]
